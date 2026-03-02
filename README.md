@@ -82,13 +82,13 @@ AgentChat 是一个现代化的智能对话系统，基于大语言模型构建�
 <img width="800" height="450" alt="73f74567-7a97-4cd8-ab05-34759efa25cc" src="https://github.com/user-attachments/assets/b0cb4ccf-b868-4f1b-9b26-8a882d8130da" />
 
 
-### 🏠 智言平台首页
+### 🏠 AI辅助测试平台首页
 *简洁现代的主界面，提供直观的功能导航*
 <img width="800" height="450" alt="d0aaf6bb-d1db-487b-b78b-2a5c6ef565d2" src="https://github.com/user-attachments/assets/dc626494-4797-4a86-b350-3a0759d52d64" />
 
 
 
-### 🔐 智言平台登录页
+### 🔐 AI辅助测试平台登录页
 *安全便捷的用户认证系统*
 
 <img width="800" height="450" alt="d67ba546-b3bd-40e0-b09c-9b1615afda29" src="https://github.com/user-attachments/assets/87b6e15c-a4aa-47c5-b588-0bc977599311" />

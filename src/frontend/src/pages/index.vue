@@ -23,7 +23,7 @@ const agentCardStore = useAgentCardStore()
 const userStore = useUserStore()
 const route = useRoute()
 const router = useRouter()
-const itemName = ref("智言平台")
+const itemName = ref("AI辅助测试平台")
 const showAppCenterMenu = ref(false)
 let appCenterHoverTimer: any = null
 
@@ -176,7 +176,7 @@ watch(
           <img :src="robotIcon" alt="Logo" class="logo" />
         </div>
         <div class="nav-links">
-          <img src="../assets/agentchat.svg" alt="智言平台" class="brand-logo-img" />
+          <span class="brand-logo-text">AI辅助测试平台</span>
         </div>
       </div>
       <div class="right">
@@ -499,6 +499,76 @@ watch(
 
         .app-center {
         position: relative;
+        }
+
+        .brand-logo-text {
+          height: 45px;
+          width: auto;
+          display: flex;
+          align-items: center;
+          font-size: 24px;
+          font-weight: 600;
+          color: #3b82f6;
+          filter: drop-shadow(0 2px 6px rgba(59, 130, 246, 0.25));
+          user-select: none;
+          letter-spacing: 1px;
+        }
+
+        /* 更美观的主题色块：工作台与应用中心区分配色，带磨砂效果 */
+        .workspace-link {
+          background: linear-gradient(135deg, rgba(59,130,246,0.18), rgba(99,102,241,0.18));
+          border-color: rgba(99,102,241,0.24);
+          backdrop-filter: saturate(120%) blur(3px);
+
+          &:hover {
+            background: linear-gradient(135deg, rgba(59,130,246,0.26), rgba(99,102,241,0.26));
+          }
+
+          &.active {
+            background: #eef2ff; /* very light indigo */
+            border-color: #c7d2fe;
+            color: #0f172a;
+            box-shadow: inset 0 0 0 1px rgba(99,102,241,0.25);
+
+            &::after {
+              content: '';
+              position: absolute;
+              left: 12px;
+              right: 12px;
+              bottom: -5px;
+              height: 2px;
+              border-radius: 2px;
+              background: rgba(99,102,241,0.6);
+            }
+          }
+        }
+
+        .appcenter-link {
+          background: linear-gradient(135deg, rgba(16,185,129,0.16), rgba(59,130,246,0.16));
+          border-color: rgba(59,130,246,0.22);
+          backdrop-filter: saturate(120%) blur(3px);
+
+          &:hover {
+            background: linear-gradient(135deg, rgba(16,185,129,0.24), rgba(59,130,246,0.24));
+          }
+
+          &.active {
+            background: #ebf5ff; /* very light blue */
+            border-color: #bfdbfe;
+            color: #0f172a;
+            box-shadow: inset 0 0 0 1px rgba(59,130,246,0.22);
+
+            &::after {
+              content: '';
+              position: absolute;
+              left: 12px;
+              right: 12px;
+              bottom: -5px;
+              height: 2px;
+              border-radius: 2px;
+              background: rgba(59,130,246,0.55);
+            }
+          }
         }
 
         .brand-title {

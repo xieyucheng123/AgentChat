@@ -245,7 +245,7 @@ onMounted(async () => {
           <img src="../../assets/robot.svg" alt="Logo" class="logo" />
         </div>
         <div class="nav-links">
-          <img src="../../assets/agentchat.svg" alt="智言平台" class="brand-logo-img" />
+          <span class="brand-logo-text">AI辅助测试平台</span>
         </div>
       </div>
       <div class="nav-right">
@@ -390,26 +390,17 @@ onMounted(async () => {
       margin-left: 8px;
       gap: 10px;
 
-        .brand-title {
-          font-family: 'Zhi Mang Xing', 'Ma Shan Zheng', 'ZCOOL KuaiLe', 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans CN', 'Noto Sans CJK SC', 'Helvetica Neue', Arial, sans-serif;
-          font-size: 28px;
-          font-weight: 700;
-          letter-spacing: 0.5px;
-          background: linear-gradient(135deg, #1f2937 0%, #3b82f6 50%, #8b5cf6 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          -webkit-text-stroke: 0.4px rgba(31, 41, 55, 0.06);
-          text-shadow: 0 3px 12px rgba(59, 130, 246, 0.3);
-          user-select: none;
-        }
-
-        .brand-logo-img {
+        .brand-logo-text {
           height: 45px;
           width: auto;
-          display: block;
+          display: flex;
+          align-items: center;
+          font-size: 24px;
+          font-weight: 600;
+          color: #3b82f6;
           filter: drop-shadow(0 2px 6px rgba(59, 130, 246, 0.25));
           user-select: none;
+          letter-spacing: 1px;
         }
 
       .nav-link {
