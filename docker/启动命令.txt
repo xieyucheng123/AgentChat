@@ -1,0 +1,42 @@
+部署主机地址：124.70.86.90
+redis 启动命令
+docker run -d \
+  --name my-redis \
+  --cap-add SYS_ADMIN \
+  -p 6379:6379 \
+  -e REDIS_PASSWORD=yourpassword \
+  redis:latest \
+  redis-server --requirepass yourpassword --appendonly yes
+
+
+mysql 启动命令
+  docker run -d \
+  --name mysql8 \
+  --security-opt seccomp=unconfined \
+  -p 3306:3306 \
+  -e MYSQL_ROOT_PASSWORD=yourpassword \
+  mysql:8 \
+  --character-set-server=utf8mb4 \
+  --collation-server=utf8mb4_unicode_ci
+
+  # 华为云ModelArts LLM配置
+llm_api_key=ONcj3rDwXdpVUKWoIeGMMlJnNDFQMNm8z1RjSQ6owsRSaCjDiXjYHCwOkI4Np7us2jyR25SaAaufLK-yG5PBMA
+llm_api_base=https://api.modelarts-maas.com/v2
+llm_model_name=deepseek-v3.2
+llm_temperature=0.7
+llm_max_tokens=1000
+llm_timeout=30
+
+
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3000 --openapi-spec http://localhost:7860/openapi.json --api-base-url http://localhost:7860 --headers "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ7XCJ1c2VyX25hbWVcIjogXCJhZG1pblwiLCBcInVzZXJfaWRcIjogXCIzXCIsIFwicm9sZVwiOiBbXX0iLCJpYXQiOjE3NzIyNjY2MjksIm5iZiI6MTc3MjI2NjYyOSwianRpIjoiNmU1YzAzMDMtNGZmMS00ZWFhLWFmYzItMmFkM2Y2ZmY2OTc1IiwiZXhwIjoxNzcyMzUzMDI5LCJ0eXBlIjoiYWNjZXNzIiwiZnJlc2giOmZhbHNlfQ.m2erKvX94kHNYHXf0tdtZfGJiuFnE8awzY-Mt2vZE8E"
+
+
+
+后端启动命令
+conda activate agentchat-py312
+cd .\src\backend\
+uvicorn agentchat.main:app --host 0.0.0.0 --port 7860
+
+前端启动命令
+cd src/frontend
+npm run dev -- --host 0.0.0.0 --port 8090
