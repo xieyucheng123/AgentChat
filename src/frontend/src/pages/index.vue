@@ -307,18 +307,6 @@ watch(
           <div class="sidebar-footer">
             <div class="help-links">
               <a
-                href="https://github.com/Shy2593666979/AgentChat"
-                target="_blank"
-                class="help-link"
-                title="GitHub 仓库"
-              >
-                <img
-                  src="../assets/github.png"
-                  alt="GitHub"
-                  class="help-icon"
-                />
-              </a>
-              <a
                 href="https://shy2593666979.github.io/agentchat-docs/"
                 target="_blank"
                 class="help-link"
