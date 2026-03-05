@@ -1,4 +1,4 @@
-from langchain_openai import ChatOpenAI
+from agentchat.core.models.modelarts_chat import ModelArtsChat
 from langchain_core.language_models import BaseChatModel
 
 from agentchat.core.models.embedding import EmbeddingModel
@@ -12,7 +12,7 @@ class ModelManager:
     def get_tool_invocation_model(cls, **kwargs) -> BaseChatModel:
         tool_call_model = app_settings.multi_models.tool_call_model
 
-        return ChatOpenAI(
+        return ModelArtsChat(
             stream_usage=True,
             model=tool_call_model.model_name,
             api_key=tool_call_model.api_key,
@@ -23,7 +23,7 @@ class ModelManager:
     def get_conversation_model(cls, **kwargs) -> BaseChatModel:
         conversation_model = app_settings.multi_models.conversation_model
 
-        return ChatOpenAI(
+        return ModelArtsChat(
             stream_usage=True,
             model=conversation_model.model_name,
             api_key=conversation_model.api_key,
@@ -44,7 +44,7 @@ class ModelManager:
     def get_lingseek_intent_model(cls, **kwargs) -> BaseChatModel:
         lingseek_intent_model = app_settings.multi_models.tool_call_model
 
-        return ChatOpenAI(
+        return ModelArtsChat(
             stream_usage=True,
             model=lingseek_intent_model.model_name,
             api_key=lingseek_intent_model.api_key,
@@ -55,7 +55,7 @@ class ModelManager:
     def get_qwen_vl_model(cls) -> BaseChatModel:
         qwen_vl_model = app_settings.multi_models.qwen_vl
 
-        return ChatOpenAI(
+        return ModelArtsChat(
             stream_usage=True,
             model=qwen_vl_model.model_name,
             api_key=qwen_vl_model.api_key,
@@ -66,7 +66,7 @@ class ModelManager:
     def get_user_model(cls, **kwargs) -> BaseChatModel:
         user_model = kwargs
 
-        return ChatOpenAI(
+        return ModelArtsChat(
             stream_usage=True,
             model=user_model.get("model"),
             api_key=user_model.get("api_key"),
