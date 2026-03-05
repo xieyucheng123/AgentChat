@@ -133,6 +133,10 @@ class MarsAgent:
                     if self.reasoning_interrupt.is_set():
                         break
 
+                    # 安全检查：确保 chunk 包含有效的 choices
+                    if not hasattr(chunk, 'choices') or not chunk.choices:
+                        continue
+                        
                     delta = chunk.choices[0].delta
                     if hasattr(delta, "reasoning_content") and delta.reasoning_content is not None:
                         yield {
@@ -142,7 +146,7 @@ class MarsAgent:
                         }
 
                     if hasattr(delta, "content") and delta.content:
-                        if self.is_call_tool: # 如果调用Mars工具的话 使用工具里面的信息进行回答
+                        if self.is_call_tool: # 如果调用 Mars 工具的话 使用工具里面的信息进行回答
                             break
                         else:
                             yield {
@@ -151,7 +155,7 @@ class MarsAgent:
                                 "data": delta.content
                             }
             except Exception as e:
-                logger.error(f"推理模型流式输出错误: {e}")
+                logger.error(f"推理模型流式输出错误：{e}")
 
         # --- 主执行流程 ---
 

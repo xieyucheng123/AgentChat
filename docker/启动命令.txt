@@ -40,3 +40,8 @@ uvicorn agentchat.main:app --host 0.0.0.0 --port 7860
 前端启动命令
 cd src/frontend
 npm run dev -- --host 0.0.0.0 --port 8090
+
+npx @modelcontextprotocol/inspector
+
+
+

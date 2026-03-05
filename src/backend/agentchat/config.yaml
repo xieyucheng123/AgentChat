@@ -30,33 +30,32 @@ multi_models:
   reasoning_model:
     api_key: "ONcj3rDwXdpVUKWoIeGMMlJnNDFQMNm8z1RjSQ6owsRSaCjDiXjYHCwOkI4Np7us2jyR25SaAaufLK-yG5PBMA"
     base_url: "https://api.modelarts-maas.com/v2"
-    model_name: "deepseek-v3.2"
+    model_name: "glm-5"
   # 文生图模型配置
   text2image:
-    api_key: "sk-fc40dd0604f04142a******"
-    base_url: "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis"
-    model_name: "wanx2.0-t2i-turbo"
+    api_key: "ONcj3rDwXdpVUKWoIeGMMlJnNDFQMNm8z1RjSQ6owsRSaCjDiXjYHCwOkI4Np7us2jyR25SaAaufLK-yG5PBMA"
+    base_url: "https://api.modelarts-maas.com/v2"
+    model_name: "qwen-image"
   # 多模态 (视觉) 模型配置
   qwen_vl:
-    api_key: "sk-fc40dd0604f04142a******"
-    base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
-    model_name: "qwen-vl-plus"
+    api_key: "ONcj3rDwXdpVUKWoIeGMMlJnNDFQMNm8z1RjSQ6owsRSaCjDiXjYHCwOkI4Np7us2jyR25SaAaufLK-yG5PBMA"
+    base_url: "https://api.modelarts-maas.com/v2"
+    model_name: "Wan2.2-T2V-A14B"
 
   # Embedding 模型配置 (用于向量化)
-  # ⚠️ 注意：华为云ModelArts的embedding API暂不可用
-  # 需要替换为其他可用的embedding服务
   embedding:
-    api_key: "sk-fc40dd0604f04142a******"
-    base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
-    model_name: "text-embedding-v4"
+    api_key: "ONcj3rDwXdpVUKWoIeGMMlJnNDFQMNm8z1RjSQ6owsRSaCjDiXjYHCwOkI4Np7us2jyR25SaAaufLK-yG5PBMA"
+    base_url: "https://api.modelarts-maas.com/v1"
+    model_name: "bge-m3"
 
   # Rerank 模型配置 (用于重排序召回结果)
   rerank:
-    api_key: "sk-fc40dd0604f04142a******"
-    base_url: "https://dashscope.aliyuncs.com/api/v1/services/rerank/text-rerank/text-rerank"
-    model_name: "gte-rerank-v2"
+    api_key: "ONcj3rDwXdpVUKWoIeGMMlJnNDFQMNm8z1RjSQ6owsRSaCjDiXjYHCwOkI4Np7us2jyR25SaAaufLK-yG5PBMA"
+    base_url: "https://api.modelarts-maas.com/v1"
+    model_name: "bge-reranker-v2-m3"
 
 
+    
 # 外部工具 (Tool) 配置
 tools:
   # 高德地图天气 API 配置
@@ -65,7 +64,7 @@ tools:
     endpoint: "https://restapi.amap.com/v3/weather/weatherInfo?parameters"
   # Tavily 联网搜索 API 配置 (注意配额限制)
   tavily:
-    api_key: "tvly-dev-RMf7KBCQLyXhn3******"
+    api_key: "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"
   # SerpApi 上的 Google Search API 配置
   google:
     api_key: "cdc3b207606843b4c883849c3a0f833c13057811b*********"
