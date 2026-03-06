@@ -229,7 +229,7 @@ watch(
                 <span>工作台</span>
               </template>
             </el-menu-item>
-            <el-menu-item index="homepage" @click="goCurrent('homepage')">
+            <el-menu-item index="homepage" v-if="false" @click="goCurrent('homepage')">
               <template #title>
                 <el-icon>
                   <img src="../assets/explore.svg" width="22px" height="22px" />
