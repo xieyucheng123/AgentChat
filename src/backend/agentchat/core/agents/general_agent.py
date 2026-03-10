@@ -370,7 +370,10 @@ class GeneralAgent:
         try:
             async for token, metadata in self.react_agent.astream(
                     input={"messages": copy.deepcopy(messages), "model_call_count": 0, "user_id": self.agent_config.user_id},
-                    config={"callbacks": [usage_metadata_callback]},
+                    config={
+                        "callbacks": [usage_metadata_callback],
+                        "recursion_limit": 500  # 增加递归限制，避免复杂任务触发默认限制（25 次）
+                    },
                     stream_mode=["messages", "custom"],
             ):
                 if token == "custom":
