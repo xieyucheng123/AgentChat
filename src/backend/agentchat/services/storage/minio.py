@@ -6,17 +6,21 @@ from agentchat.settings import app_settings
 
 class MinioClient:
     def __init__(self):
-        self.client = Minio(
-            secure=False,
-            endpoint=app_settings.storage.minio.endpoint,
-            access_key=app_settings.storage.minio.access_key_id,
-            secret_key=app_settings.storage.minio.access_key_secret,
-        )
-        self.bucket_name = app_settings.storage.minio.bucket_name
-        if not self.client.bucket_exists(self.bucket_name):
-            self.client.make_bucket(self.bucket_name)
-            logger.success(f"Minio Bucket: {self.bucket_name} created success")
-
+        try:
+            self.client = Minio(
+                secure=False,
+                endpoint=app_settings.storage.minio.endpoint,
+                access_key=app_settings.storage.minio.access_key_id,
+                secret_key=app_settings.storage.minio.access_key_secret,
+            )
+            self.bucket_name = app_settings.storage.minio.bucket_name
+            if not self.client.bucket_exists(self.bucket_name):
+                self.client.make_bucket(self.bucket_name)
+                logger.success(f"Minio Bucket: {self.bucket_name} created success")
+        except Exception as e:
+            logger.warning(f"MinIO initialization failed: {e}. File storage features will be unavailable.")
+            self.client = None
+            self.bucket_name = None
 
     def upload_file(self, object_name, data):
         try:

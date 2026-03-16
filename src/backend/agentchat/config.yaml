@@ -5,6 +5,10 @@ server:
   project_name: "AgentChat"
   version: "2.4.0"
 
+# 默认配置
+default_config:
+  memory_collection_name: "memory" # 记忆存储的集合名称
+
 # MySQL数据库配置
 mysql:
   endpoint: "mysql+pymysql://root:yourpassword@124.70.86.90:3306/agentchat?charset=utf8mb4"
