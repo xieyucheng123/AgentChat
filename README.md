@@ -24,10 +24,40 @@
   <a href="https://shy2593666979.github.io/agentchat-docs/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8.html">🚀 快速开始</a> •
   <a href="https://shy2593666979.github.io/agentchat-docs/%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.html">📦 部署</a> •
   <a href="https://shy2593666979.github.io/agentchat-docs/">📖 在线文档</a> •
-  <a href="https://agentchat.cloud">💻 在线体验</a>
+  <a href="https://agentchat.cloud">💻 在线体验</a> •
+  <a href="https://github.com/Shy2593666979/agentchat-docs/blob/main/images/README.md">💬 微信群聊</a>
 </p>
 
 </div>
+
+---
+
+## 最新版本更新日志 (2026-3-8)
+
+### 1. 支持MiniO本地对象存储
+现在支持OSS和MiniO两种对象存储方式，参考文档: [本地安装MiniO](docs/development/install_minio_win.md)，感谢提供Issue的朋友:
+- 👤 [@xiaoyan011016](https://github.com/xiaoyan011016)
+- 👤 [@shenmi888](https://github.com/shenmi888)
+
+### 2. 优化Docker直接部署项目
+(1) 前版本docker部署经常会出现 `agentchat-frontend` 连不上 `agentchat-backend` 的网络失败情况，已经修复该bug
+
+(2) 缺少Win系统下的一键部署脚本，目前已经加上 (start_win.bat)
+
+感谢提供Issue朋友:
+- 👤 [@R-322](https://github.com/R-322)
+
+### 3. 支持自定义工具
+之前点击自定义工具是无事件，目前可通过上传 Swagger/OpenAPI 构建自己的工具，感谢提供Issue朋友：
+- 👤 [@shenmi888](https://github.com/shenmi888)
+
+### 4. 支持Skill
+现已支持通过创建 Skill 绑定到智能体渐进式加载 Prompt 去教模型如何做事，感谢提供Issue朋友：
+- 👤 [@opaquezxd](https://github.com/opaquezxd)
+
+### 5.优化页面样式
+前版本中系统设置为空白，现在已经去除，感谢提供Issue朋友：
+- 👤[@wxliu07](https://github.com/wxliu07)
 
 ---
 
@@ -191,7 +221,7 @@ AgentChat 是一个现代化的智能对话系统，基于大语言模型构建�
 **升级注意事项：**
 - 🔄 LangChain 1.0 引入了重大API变更
 - 📚 部分工具和Agent配置方式已更新
-- 🛠️ 建议查看[迁移指南](docs/migration.md)了解详细变更
+- 🛠️ 建议查看[迁移指南](docs/reference/migration.md)了解详细变更
 - 💡 新用户建议直接使用最新版本
 
 ---
@@ -644,8 +674,8 @@ npm run dev
 ## 📖 文档
 
 ### 📚 API文档
-- [AgentChat Document](docs/agentchat.md) - agentchat具体文档
-- [API Documentation v3.0](docs/api.md) - 最新API文档
+- [AgentChat Document](docs/reference/agentchat.md) - agentchat具体文档
+- [API Documentation v3.0](docs/reference/api.md) - 最新API文档
 
 ### 🔧 开发文档
 - **在线API文档**: 启动后端服务后访问 `/docs`
