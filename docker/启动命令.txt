@@ -54,7 +54,9 @@ mysql_mcp_server_pro --mode sse --envfile .env.mysql
 
 
 一半科技
-npx -y @ivotoby/openapi-mcp-server --transport http --port 3000 --openapi-spec https://huawei.yiban.com.cn/platform/swagger/Api/swagger.json --api-base-url https://huawei.yiban.com.cn/platform --headers "Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyT2lkIjoiMzRlYjU1OTYtNTdiNy00MDU2LWE1Y2QtMjRlYmE3ODAxMzJhIiwiTG9naW5JZCI6InN5c2FkbWluIiwiVXNlck5hbWUiOiLns7vnu5_nrqHnkIblkZgiLCJUb2tlbiI6ImE3ODdlOTM3LTc0NzItNDZlNS1hMWRjLWM0MDI1NDNmODFjZiIsIkNyZWF0b3IiOiJzeXMiLCJDcmVhdGVUaW1lIjoiMjAyNi0wMy0xMSAwOToyNTowMSIsIlNjaGVtYSI6InBsbSIsIlBsYXRmb3JtIjoicGMiLCJFeHBpcmVzIjoiMjAyNi0wMy0yMyAwOToyNTowMSIsIm5iZiI6MTc3MzE5MjMwMSwiZXhwIjoxNzc0MjI5MTAxLCJpc3MiOiJXZWJBcHBJc3N1ZXIiLCJhdWQiOiJXZWJBcHBBdWRpZW5jZSJ9.QFVauGX7x-zzzNIrN_5d2_ZvGbmOLEyCkcleHHZzyr8"
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3000 --openapi-spec "C:\Users\Administrator\workSpace\AI4T\AgentChat\swagger.optimized.json" --api-base-url https://huawei.yiban.com.cn/platform --headers "Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyT2lkIjoiMzRlYjU1OTYtNTdiNy00MDU2LWE1Y2QtMjRlYmE3ODAxMzJhIiwiTG9naW5JZCI6InN5c2FkbWluIiwiVXNlck5hbWUiOiLns7vnu5_nrqHnkIblkZgiLCJUb2tlbiI6ImUxN2U5ZDE1LWRlYjgtNDQzZS04MDEzLTYwOWVlMjU2MzU3NSIsIkNyZWF0b3IiOiJzeXMiLCJDcmVhdGVUaW1lIjoiMjAyNi0wMy0xMSAxNTozNTowOCIsIlNjaGVtYSI6InBsbSIsIlBsYXRmb3JtIjoicGMiLCJFeHBpcmVzIjoiMjAyNi0wMy0yMyAxNTozNTowOCIsIm5iZiI6MTc3MzIxNDUwOCwiZXhwIjoxNzc0MjUxMzA4LCJpc3MiOiJXZWJBcHBJc3N1ZXIiLCJhdWQiOiJXZWJBcHBBdWRpZW5jZSJ9.2k0w_vt6XCEex7wJmH--3JvLahURkDJzCwApcbCWIac"
+
+
 
 filesystem启动命令
 
@@ -64,6 +66,13 @@ cd c:\Users\Administrator\workSpace\agentchat\AgentChat && python mcp_filesystem
 
 
 npx @playwright/mcp@latest --browser chromium --port 8931
+
+
+
+
+
+
+npx mcp-proxy --port 3000 --debug -- npx -y @ivotoby/openapi-mcp-server --openapi-spec http://localhost:7860/openapi.json --api-base-url http://localhost:7860
 
 
 
