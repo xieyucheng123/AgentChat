@@ -108,7 +108,7 @@ rag:
 
 # 阿对象存储 OSS 配置
 storage:
-  mode: "minio" # or oss
+  mode: "oss" # or minio
 
   oss:
     access_key_id: "LTAI5tL85xWWx9gb*******"
