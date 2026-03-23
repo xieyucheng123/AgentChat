@@ -1,0 +1,986 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Yiban.PLM.Web.Platform Api",
+    "description": "Api API Document Create At 2026-03-11 10:42:49",
+    "termsOfService": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/platform",
+    "contact": {
+      "name": "PLM经典版SDK开发组(PLM-Classic SDK Develop Group)",
+      "url": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/"
+    },
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "../../",
+      "description": "Default"
+    },
+    {
+      "url": "http://localhost:6010/",
+      "description": "Service"
+    }
+  ],
+  "paths": {
+    "/api/platform/account/WeChatLogin": {
+      "get": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "微信登录接口",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformAccountWechatlogin"
+      }
+    },
+    "/api/platform/account/Login": {
+      "post": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "登录验证",
+        "parameters": [
+          {
+            "name": "account",
+            "in": "query",
+            "description": "绑定三方账号",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identify",
+            "in": "query",
+            "description": "绑定三方标识",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "绑定三方账号类型",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserLoginDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformAccountLogin"
+      }
+    },
+    "/api/platform/account/WeChatBind": {
+      "post": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "非自动登录 登录之后查看是否需要绑定微信",
+        "parameters": [
+          {
+            "name": "account",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identify",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountBindEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformAccountWechatbind"
+      }
+    },
+    "/api/platform/account/LogOut": {
+      "post": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "用户注销",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformAccountLogout"
+      }
+    },
+    "/api/platform/account/BindAccountList": {
+      "get": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "根据单账号多类型获取绑定信息",
+        "parameters": [
+          {
+            "name": "useroid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "types",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountBindEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformAccountBindaccountlist"
+      }
+    },
+    "/api/platform/account/BindTypes": {
+      "get": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "获取系统额外登录方式",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringArrayResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformAccountBindtypes"
+      }
+    },
+    "/api/platform/account/BindAccountListByOids": {
+      "get": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "根据多账号单类型获取绑定信息",
+        "parameters": [
+          {
+            "name": "useroids",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountBindEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformAccountBindaccountlistbyoids"
+      }
+    },
+    "/api/platform/account/BindAccountGet": {
+      "get": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "绑定账号 - 获取",
+        "parameters": [
+          {
+            "name": "account",
+            "in": "query",
+            "description": "绑定账户账户",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "identify",
+            "in": "query",
+            "description": "绑定账户标识",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "绑定账户类型",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountBindEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformAccountBindaccountget"
+      }
+    },
+    "/api/platform/account/BindAccountBind": {
+      "post": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "绑定账号 - 绑定",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ObjectAccountBindInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ObjectAccountBindInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ObjectAccountBindInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ObjectAccountBindInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountBindEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformAccountBindaccountbind"
+      }
+    },
+    "/api/platform/account/BindAccountUnBind": {
+      "post": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "绑定账号 - 解绑",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformAccountBindaccountunbind"
+      }
+    },
+    "/api/platform/account/UpdateValidate": {
+      "post": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "三方授权有效性更新",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "value",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformAccountUpdatevalidate"
+      }
+    },
+    "/api/platform/account/GetAuthNodeFullForLDAPAD": {
+      "get": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "LDAP-AD 相关 - 获取节点列表",
+        "parameters": [
+          {
+            "name": "withAccountValidate",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthLdapAdNodeModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "LdapApiPlatformAccountGetauthnodefullforldapad"
+      }
+    },
+    "/api/platform/account/AccountAuthNodeSyncForLDAPAD": {
+      "post": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "LDAP-AD 相关 - 账户同步",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccountAuthNodeSyncParamDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccountAuthNodeSyncParamDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccountAuthNodeSyncParamDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccountAuthNodeSyncParamDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "LdapApiPlatformAccountAccountauthnodesyncforldapad"
+      }
+    },
+    "/api/platform/account/HandleNodeSyncForLDAPAD": {
+      "get": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "任务中心-账户同步",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformAccountHandlenodesyncforldapad"
+      }
+    },
+    "/api/platform/account/BindAccountBindForLDAPAD": {
+      "post": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "LDAP-AD 相关 - 账户绑定",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthLdapAdNodeModelAccountBindInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthLdapAdNodeModelAccountBindInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthLdapAdNodeModelAccountBindInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthLdapAdNodeModelAccountBindInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountBindEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "LdapApiPlatformAccountBindaccountbindforldapad"
+      }
+    },
+    "/api/platform/account/GetDingTalkDept": {
+      "get": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "DINGTALK 相关 - 获取部门列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthDingTalkDeptModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "DingtalkApiPlatformAccountGetdingtalkdept"
+      }
+    },
+    "/api/platform/account/GetDingTalkDeptUsers": {
+      "get": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "DINGTALK 相关 - 获取部门用户列表",
+        "parameters": [
+          {
+            "name": "deptId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthDingTalkUserModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "DingtalkApiPlatformAccountGetdingtalkdeptusers"
+      }
+    },
+    "/api/platform/account/GetWeChatPublicUrl": {
+      "get": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "WECHAT 相关 - 获取微信公众号授权地址",
+        "parameters": [
+          {
+            "name": "redirect_uri",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "WechatApiPlatformAccountGetwechatpublicurl"
+      }
+    },
+    "/api/platform/account/UpdateDingTalkAccount": {
+      "post": {
+        "tags": [
+          "Platform_Account"
+        ],
+        "summary": "钉钉账号同步",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "F：冻结PLM账户",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformAccountUpdatedingtalkaccount"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Platform_Account",
+      "description": "Platform_Account API"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "AccountBindEntityResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/AccountBindEntity"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AuthLdapAdNodeModelAccountBindInput": {
+        "type": "object",
+        "properties": {
+          "userOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "account": {
+            "type": "string",
+            "nullable": true
+          },
+          "identify": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/AuthLdapAdNodeModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BooleanResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringArrayResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserLoginDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/UserLoginDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AuthDingTalkDeptModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AuthDingTalkDeptModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AccountAuthNodeSyncParamDto": {
+        "type": "object",
+        "properties": {
+          "nodes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "rootOrgOid": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AuthLdapAdNodeModelResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/AuthLdapAdNodeModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AuthDingTalkUserModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AuthDingTalkUserModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ObjectAccountBindInput": {
+        "type": "object",
+        "properties": {
+          "userOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "account": {
+            "type": "string",
+            "nullable": true
+          },
+          "identify": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AccountBindEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AccountBindEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

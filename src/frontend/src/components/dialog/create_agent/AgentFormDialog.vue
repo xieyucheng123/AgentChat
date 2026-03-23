@@ -246,17 +246,23 @@ const handleSubmit = async () => {
     await formRef.value?.validate()
     loading.value = true
     
+    // 确保 logo_url 不为空，使用默认机器人图标
+    const submitData = {
+      ...formData,
+      logo_url: formData.logo_url || '/src/assets/robot.svg'
+    }
+    
     if (isEditing.value) {
       // 编辑智能体
       if (!editingAgentId.value) {
-        ElMessage.error('缺少智能体ID，无法更新')
+        ElMessage.error('缺少智能体 ID，无法更新')
         loading.value = false
         return
       }
       
       const updateData = {
         agent_id: editingAgentId.value,
-        ...formData
+        ...submitData
       }
       
       console.log('更新智能体数据:', updateData)
@@ -264,8 +270,8 @@ const handleSubmit = async () => {
       ElMessage.success('智能体更新成功')
     } else {
       // 创建智能体
-      console.log('创建智能体数据:', formData)
-      await createAgentAPI(formData)
+      console.log('创建智能体数据:', submitData)
+      await createAgentAPI(submitData)
       ElMessage.success('智能体创建成功')
     }
     
@@ -886,4 +892,3 @@ defineExpose({ open, close })
     }
   }
 }
-</style> 

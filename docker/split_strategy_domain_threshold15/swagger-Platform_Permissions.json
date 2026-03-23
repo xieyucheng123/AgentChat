@@ -1,0 +1,3875 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Yiban.PLM.Web.Platform Api",
+    "description": "Api API Document Create At 2026-03-11 10:42:49",
+    "termsOfService": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/platform",
+    "contact": {
+      "name": "PLM经典版SDK开发组(PLM-Classic SDK Develop Group)",
+      "url": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/"
+    },
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "../../",
+      "description": "Default"
+    },
+    {
+      "url": "http://localhost:6010/",
+      "description": "Service"
+    }
+  ],
+  "paths": {
+    "/api/platform/permissions/GetWebModulePermissionList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取功能权限列表",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "roleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "nodeid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermissionListDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetwebmodulepermissionlist"
+      }
+    },
+    "/api/permissions/GetWebModulePermissionList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取功能权限列表",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "roleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "nodeid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermissionListDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetwebmodulepermissionlist"
+      }
+    },
+    "/api/platform/permissions/SavePermissionList": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取功能权限列表",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PermissionModel"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PermissionModel"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PermissionModel"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PermissionModel"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int32ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformPermissionsSavepermissionlist"
+      }
+    },
+    "/api/permissions/SavePermissionList": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取功能权限列表",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PermissionModel"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PermissionModel"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PermissionModel"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PermissionModel"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int32ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPermissionsSavepermissionlist"
+      }
+    },
+    "/api/platform/permissions/GetGrantWebModuleList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取菜单授权",
+        "parameters": [
+          {
+            "name": "parentName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicWebModuleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetgrantwebmodulelist"
+      }
+    },
+    "/api/permissions/GetGrantWebModuleList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取菜单授权",
+        "parameters": [
+          {
+            "name": "parentName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicWebModuleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetgrantwebmodulelist"
+      }
+    },
+    "/api/platform/permissions/GetGrantWebModuleOnlyList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "查询菜单模块的权限",
+        "parameters": [
+          {
+            "name": "parentName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicWebModuleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetgrantwebmoduleonlylist"
+      }
+    },
+    "/api/permissions/GetGrantWebModuleOnlyList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "查询菜单模块的权限",
+        "parameters": [
+          {
+            "name": "parentName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicWebModuleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetgrantwebmoduleonlylist"
+      }
+    },
+    "/api/platform/permissions/CheckGrantWebModuleList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "检测菜单授权",
+        "parameters": [
+          {
+            "name": "names",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicWebModuleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsCheckgrantwebmodulelist"
+      }
+    },
+    "/api/permissions/CheckGrantWebModuleList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "检测菜单授权",
+        "parameters": [
+          {
+            "name": "names",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicWebModuleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsCheckgrantwebmodulelist"
+      }
+    },
+    "/api/platform/permissions/GetGrantMetaClassList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类授权",
+        "parameters": [
+          {
+            "name": "parentName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetgrantmetaclasslist"
+      }
+    },
+    "/api/permissions/GetGrantMetaClassList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类授权",
+        "parameters": [
+          {
+            "name": "parentName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetgrantmetaclasslist"
+      }
+    },
+    "/api/platform/permissions/CheckGrantMetaClassList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "检测类授权",
+        "parameters": [
+          {
+            "name": "names",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsCheckgrantmetaclasslist"
+      }
+    },
+    "/api/permissions/CheckGrantMetaClassList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "检测类授权",
+        "parameters": [
+          {
+            "name": "names",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsCheckgrantmetaclasslist"
+      }
+    },
+    "/api/platform/permissions/GetGrantMetaRelationList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类授权",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaRelationDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetgrantmetarelationlist"
+      }
+    },
+    "/api/permissions/GetGrantMetaRelationList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类授权",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaRelationDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetgrantmetarelationlist"
+      }
+    },
+    "/api/platform/permissions/CheckGrantMetaRelationClassList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "检测类授权",
+        "parameters": [
+          {
+            "name": "names",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaRelationDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsCheckgrantmetarelationclasslist"
+      }
+    },
+    "/api/permissions/CheckGrantMetaRelationClassList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "检测类授权",
+        "parameters": [
+          {
+            "name": "names",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaRelationDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsCheckgrantmetarelationclasslist"
+      }
+    },
+    "/api/platform/permissions/GetProjectGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "检测项目权限",
+        "parameters": [
+          {
+            "name": "projectOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicWebModuleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetprojectgrant"
+      }
+    },
+    "/api/permissions/GetProjectGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "检测项目权限",
+        "parameters": [
+          {
+            "name": "projectOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicWebModuleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetprojectgrant"
+      }
+    },
+    "/api/platform/permissions/GetRoleClassGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类操作的数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "roleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oper",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "attr",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "rule",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRoleClassGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetroleclassgrant"
+      }
+    },
+    "/api/permissions/GetRoleClassGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类操作的数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "roleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oper",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "attr",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "rule",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRoleClassGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetroleclassgrant"
+      }
+    },
+    "/api/platform/permissions/GetSysRuleList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取系统规则",
+        "parameters": [
+          {
+            "name": "ruleType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRoleClassGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetsysrulelist"
+      }
+    },
+    "/api/permissions/GetSysRuleList": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取系统规则",
+        "parameters": [
+          {
+            "name": "ruleType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRoleClassGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetsysrulelist"
+      }
+    },
+    "/api/platform/permissions/SaveSysPermRuleGrant": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "保存系统规则权限授权",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleClassGrantDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleClassGrantDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleClassGrantDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleClassGrantDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformPermissionsSavesyspermrulegrant"
+      }
+    },
+    "/api/permissions/SaveSysPermRuleGrant": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "保存系统规则权限授权",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleClassGrantDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleClassGrantDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleClassGrantDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleClassGrantDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPermissionsSavesyspermrulegrant"
+      }
+    },
+    "/api/platform/permissions/SaveRoleClassGrant": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "保存类操作权限设置",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleClassGrantDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleClassGrantDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleClassGrantDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleClassGrantDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformPermissionsSaveroleclassgrant"
+      }
+    },
+    "/api/permissions/SaveRoleClassGrant": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "保存类操作权限设置",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleClassGrantDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleClassGrantDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleClassGrantDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleClassGrantDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPermissionsSaveroleclassgrant"
+      }
+    },
+    "/api/platform/permissions/GetRoleRelationGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类操作的数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "roleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oper",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "attr",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "rule",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRoleRelationGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetrolerelationgrant"
+      }
+    },
+    "/api/permissions/GetRoleRelationGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类操作的数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "roleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oper",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "attr",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "rule",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRoleRelationGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetrolerelationgrant"
+      }
+    },
+    "/api/platform/permissions/SaveRoleRelationGrant": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "保存类操作权限设置",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleRelationGrantDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleRelationGrantDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleRelationGrantDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleRelationGrantDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformPermissionsSaverolerelationgrant"
+      }
+    },
+    "/api/permissions/SaveRoleRelationGrant": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "保存类操作权限设置",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleRelationGrantDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleRelationGrantDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleRelationGrantDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRoleRelationGrantDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPermissionsSaverolerelationgrant"
+      }
+    },
+    "/api/platform/permissions/GetRoleFolderGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取文件夹操作的数据",
+        "parameters": [
+          {
+            "name": "folderOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "roleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oper",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRoleFolderGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetrolefoldergrant"
+      }
+    },
+    "/api/permissions/GetRoleFolderGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取文件夹操作的数据",
+        "parameters": [
+          {
+            "name": "folderOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "roleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oper",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRoleFolderGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetrolefoldergrant"
+      }
+    },
+    "/api/platform/permissions/GetRoleWebModuleGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取功能菜单操作的数据",
+        "parameters": [
+          {
+            "name": "webModuleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "roleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "module",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "btn",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRoleWebModuleGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetrolewebmodulegrant"
+      }
+    },
+    "/api/permissions/GetRoleWebModuleGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取功能菜单操作的数据",
+        "parameters": [
+          {
+            "name": "webModuleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "roleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "module",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "btn",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRoleWebModuleGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetrolewebmodulegrant"
+      }
+    },
+    "/api/platform/permissions/GetRoleWebModuleViewBtnGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取功能菜单操作的数据",
+        "parameters": [
+          {
+            "name": "roleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "webModuleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "typeCode",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRoleWebModuleGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetrolewebmoduleviewbtngrant"
+      }
+    },
+    "/api/permissions/GetRoleWebModuleViewBtnGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取功能菜单操作的数据",
+        "parameters": [
+          {
+            "name": "roleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "webModuleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "typeCode",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRoleWebModuleGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetrolewebmoduleviewbtngrant"
+      }
+    },
+    "/api/platform/permissions/GetClassAreaGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类授权的数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oper",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "attr",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermClassAreaGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetclassareagrant"
+      }
+    },
+    "/api/permissions/GetClassAreaGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类授权的数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oper",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "attr",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermClassAreaGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetclassareagrant"
+      }
+    },
+    "/api/platform/permissions/SaveClassAreaGrant": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "保存类授权的数据",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermClassAreaGrantDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermClassAreaGrantDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermClassAreaGrantDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermClassAreaGrantDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int32ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformPermissionsSaveclassareagrant"
+      }
+    },
+    "/api/permissions/SaveClassAreaGrant": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "保存类授权的数据",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermClassAreaGrantDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermClassAreaGrantDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermClassAreaGrantDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermClassAreaGrantDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int32ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPermissionsSaveclassareagrant"
+      }
+    },
+    "/api/platform/permissions/GetRelationAreaGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取关联授权的数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oper",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "attr",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRelationAreaGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetrelationareagrant"
+      }
+    },
+    "/api/permissions/GetRelationAreaGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取关联授权的数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oper",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "attr",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRelationAreaGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetrelationareagrant"
+      }
+    },
+    "/api/platform/permissions/SaveRelationAreaGrant": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "保存关联授权的数据",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRelationAreaGrantDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRelationAreaGrantDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRelationAreaGrantDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRelationAreaGrantDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int32ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformPermissionsSaverelationareagrant"
+      }
+    },
+    "/api/permissions/SaveRelationAreaGrant": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "保存关联授权的数据",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRelationAreaGrantDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRelationAreaGrantDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRelationAreaGrantDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRelationAreaGrantDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int32ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPermissionsSaverelationareagrant"
+      }
+    },
+    "/api/platform/permissions/GetUserClassGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类操作的数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "useroid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermUserClassGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetuserclassgrant"
+      }
+    },
+    "/api/permissions/GetUserClassGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类操作的数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "useroid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermUserClassGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetuserclassgrant"
+      }
+    },
+    "/api/platform/permissions/GetUserRelationGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类操作的数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "useroid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermUserRelationGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetuserrelationgrant"
+      }
+    },
+    "/api/permissions/GetUserRelationGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类操作的数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "useroid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermUserRelationGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetuserrelationgrant"
+      }
+    },
+    "/api/platform/permissions/GetUserFolderGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类操作的数据",
+        "parameters": [
+          {
+            "name": "folderoid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "useroid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermUserFolderGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetuserfoldergrant"
+      }
+    },
+    "/api/permissions/GetUserFolderGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类操作的数据",
+        "parameters": [
+          {
+            "name": "folderoid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "useroid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermUserFolderGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetuserfoldergrant"
+      }
+    },
+    "/api/platform/permissions/GetUserWebModuleGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类操作的数据",
+        "parameters": [
+          {
+            "name": "moduleoid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "useroid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermUserWebModuleGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetuserwebmodulegrant"
+      }
+    },
+    "/api/permissions/GetUserWebModuleGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取类操作的数据",
+        "parameters": [
+          {
+            "name": "moduleoid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "useroid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermUserWebModuleGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetuserwebmodulegrant"
+      }
+    },
+    "/api/platform/permissions/GetPermRule": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取规则权限详情",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRuleEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetpermrule"
+      }
+    },
+    "/api/permissions/GetPermRule": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取规则权限详情",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRuleEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetpermrule"
+      }
+    },
+    "/api/platform/permissions/CreatePermRule": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "创建规则权限",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRuleEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiPlatformPermissionsCreatepermrule"
+      }
+    },
+    "/api/permissions/CreatePermRule": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "创建规则权限",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRuleEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiPermissionsCreatepermrule"
+      }
+    },
+    "/api/platform/permissions/UpdatePermRule": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "编辑规则权限",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRuleEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformPermissionsUpdatepermrule"
+      }
+    },
+    "/api/permissions/UpdatePermRule": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "编辑规则权限",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRuleEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPermissionsUpdatepermrule"
+      }
+    },
+    "/api/platform/permissions/DeletePermRule": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "删除规则权限",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRuleEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformPermissionsDeletepermrule"
+      }
+    },
+    "/api/permissions/DeletePermRule": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "删除规则权限",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRuleEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPermissionsDeletepermrule"
+      }
+    },
+    "/api/platform/permissions/GetPermRuleClassGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取规则权限授权",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRuleClassGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetpermruleclassgrant"
+      }
+    },
+    "/api/permissions/GetPermRuleClassGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取规则权限授权",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRuleClassGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetpermruleclassgrant"
+      }
+    },
+    "/api/platform/permissions/SavePermRuleClassGrant": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "保存规则权限授权",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleClassGrantDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleClassGrantDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleClassGrantDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleClassGrantDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformPermissionsSavepermruleclassgrant"
+      }
+    },
+    "/api/permissions/SavePermRuleClassGrant": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "保存规则权限授权",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleClassGrantDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleClassGrantDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleClassGrantDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleClassGrantDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPermissionsSavepermruleclassgrant"
+      }
+    },
+    "/api/platform/permissions/GetPermRuleRelationGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取规则权限授权",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRuleRelationGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetpermrulerelationgrant"
+      }
+    },
+    "/api/permissions/GetPermRuleRelationGrant": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取规则权限授权",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermRuleRelationGrantDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetpermrulerelationgrant"
+      }
+    },
+    "/api/platform/permissions/SavePermRuleRelationGrant": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "保存规则权限授权",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleRelationGrantDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleRelationGrantDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleRelationGrantDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleRelationGrantDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformPermissionsSavepermrulerelationgrant"
+      }
+    },
+    "/api/permissions/SavePermRuleRelationGrant": {
+      "post": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "保存规则权限授权",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleRelationGrantDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleRelationGrantDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleRelationGrantDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PermRuleRelationGrantDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPermissionsSavepermrulerelationgrant"
+      }
+    },
+    "/api/platform/permissions/GetRoleGrantTree": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取树数据",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformPermissionsGetrolegranttree"
+      }
+    },
+    "/api/permissions/GetRoleGrantTree": {
+      "get": {
+        "tags": [
+          "Platform_Permissions"
+        ],
+        "summary": "获取树数据",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPermissionsGetrolegranttree"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Platform_Permissions",
+      "description": "Platform_Permissions API"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "PermRoleWebModuleGrantDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/PermRoleWebModuleGrantDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermUserWebModuleGrantDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/PermUserWebModuleGrantDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermClassAreaGrantDto": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "attrs": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PermRoleClassAttrGrantModel"
+              }
+            },
+            "nullable": true
+          },
+          "attrMap": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "nullable": true
+          },
+          "inheritAttrs": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PermRoleClassAttrGrantModel"
+              }
+            },
+            "nullable": true
+          },
+          "inheritAttrMap": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "opers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PermRoleClassGrantModel"
+              }
+            },
+            "nullable": true
+          },
+          "operMap": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "nullable": true
+          },
+          "inheritOpers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PermRoleClassGrantModel"
+              }
+            },
+            "nullable": true
+          },
+          "inheritOperMap": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "rules": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PermRoleClassAttrGrantModel"
+              }
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermUserRelationGrantDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/PermUserRelationGrantDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermRoleRelationGrantDto": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "attrs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PermRoleClassAttrGrantModel"
+            },
+            "nullable": true
+          },
+          "opers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PermRoleClassGrantModel"
+            },
+            "nullable": true
+          },
+          "rules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PermRoleClassRuleGrantModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Int32ResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermRoleClassGrantDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/PermRoleClassGrantDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermUserFolderGrantDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/PermUserFolderGrantDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermissionModel": {
+        "type": "object",
+        "properties": {
+          "operationClass": {
+            "type": "string",
+            "nullable": true
+          },
+          "operationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "operation": {
+            "type": "string",
+            "nullable": true
+          },
+          "operationGrant": {
+            "type": "string",
+            "nullable": true
+          },
+          "operationInheritGrant": {
+            "type": "string",
+            "nullable": true
+          },
+          "operationImmediateGrant": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_LEFTOBJ": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "operationOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_OID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "isDynamic": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermRuleEntity": {
+        "type": "object",
+        "properties": {
+          "plM_OID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "oid": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_ROLEOID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "roleOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_ENABLED": {
+            "type": "string",
+            "nullable": true
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "plM_INHERIT": {
+            "type": "string",
+            "nullable": true
+          },
+          "inherit": {
+            "type": "boolean"
+          },
+          "plM_CONDITION": {
+            "type": "string",
+            "nullable": true
+          },
+          "condition": {
+            "$ref": "#/components/schemas/Condition"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicWebModuleDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicWebModuleDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermissionListDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PermissionListDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermRuleRelationGrantDto": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "ruleOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "attrs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PermRuleClassAttrGrantModel"
+            },
+            "nullable": true
+          },
+          "opers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PermRuleClassGrantModel"
+            },
+            "nullable": true
+          },
+          "leftAttrs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PermRuleClassAttrGrantModel"
+            },
+            "nullable": true
+          },
+          "leftOpers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PermRuleClassGrantModel"
+            },
+            "nullable": true
+          },
+          "rightAttrs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PermRuleClassAttrGrantModel"
+            },
+            "nullable": true
+          },
+          "rightOpers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PermRuleClassGrantModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicMetaRelationDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicMetaRelationDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermRoleClassGrantDto": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "attrs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PermRoleClassAttrGrantModel"
+            },
+            "nullable": true
+          },
+          "opers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PermRoleClassGrantModel"
+            },
+            "nullable": true
+          },
+          "groups": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AttrGroupEntity"
+            },
+            "nullable": true
+          },
+          "rules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PermRoleClassRuleGrantModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermRuleRelationGrantDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/PermRuleRelationGrantDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermUserClassGrantDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/PermUserClassGrantDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicMetaClassDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicMetaClassDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermClassAreaGrantDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/PermClassAreaGrantDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermRelationAreaGrantDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/PermRelationAreaGrantDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermRelationAreaGrantDto": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "attrs": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PermRoleClassAttrGrantModel"
+              }
+            },
+            "nullable": true
+          },
+          "attrMap": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "nullable": true
+          },
+          "inheritAttrs": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PermRoleClassAttrGrantModel"
+              }
+            },
+            "nullable": true
+          },
+          "inheritAttrMap": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "opers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PermRoleClassGrantModel"
+              }
+            },
+            "nullable": true
+          },
+          "operMap": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "nullable": true
+          },
+          "inheritOpers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PermRoleClassGrantModel"
+              }
+            },
+            "nullable": true
+          },
+          "inheritOperMap": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "rules": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PermRoleClassAttrGrantModel"
+              }
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermRoleRelationGrantDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/PermRoleRelationGrantDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ObjectResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermRoleFolderGrantDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/PermRoleFolderGrantDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermRuleClassGrantDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/PermRuleClassGrantDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermRuleEntityResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/PermRuleEntity"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PermRuleClassGrantDto": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "ruleOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "attrs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PermRuleClassAttrGrantModel"
+            },
+            "nullable": true
+          },
+          "opers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PermRuleClassGrantModel"
+            },
+            "nullable": true
+          },
+          "groups": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AttrGroupEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

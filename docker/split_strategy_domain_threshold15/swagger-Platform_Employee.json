@@ -1,0 +1,2989 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Yiban.PLM.Web.Platform Api",
+    "description": "Api API Document Create At 2026-03-11 10:42:49",
+    "termsOfService": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/platform",
+    "contact": {
+      "name": "PLM经典版SDK开发组(PLM-Classic SDK Develop Group)",
+      "url": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/"
+    },
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "../../",
+      "description": "Default"
+    },
+    {
+      "url": "http://localhost:6010/",
+      "description": "Service"
+    }
+  ],
+  "paths": {
+    "/api/platform/employee/GetAllRoles": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallroles"
+      },
+      "post": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformEmployeeGetallroles"
+      }
+    },
+    "/api/employee/GetAllRoles": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallroles"
+      },
+      "post": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeGetallroles"
+      }
+    },
+    "/api/platform/employee/GetAllRoleGroups": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色组列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleGroupEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallrolegroups"
+      },
+      "post": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色组列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleGroupEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformEmployeeGetallrolegroups"
+      }
+    },
+    "/api/employee/GetAllRoleGroups": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色组列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleGroupEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallrolegroups"
+      },
+      "post": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色组列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleGroupEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeGetallrolegroups"
+      }
+    },
+    "/api/platform/employee/GetRolesInGroup": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色组内角色",
+        "parameters": [
+          {
+            "name": "groupOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetrolesingroup"
+      },
+      "post": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色组内角色",
+        "parameters": [
+          {
+            "name": "groupOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformEmployeeGetrolesingroup"
+      }
+    },
+    "/api/employee/GetRolesInGroup": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色组内角色",
+        "parameters": [
+          {
+            "name": "groupOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetrolesingroup"
+      },
+      "post": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色组内角色",
+        "parameters": [
+          {
+            "name": "groupOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeGetrolesingroup"
+      }
+    },
+    "/api/platform/employee/GetRolesInGroups": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色组内角色",
+        "parameters": [
+          {
+            "name": "groupOids",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetrolesingroups"
+      },
+      "post": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色组内角色",
+        "parameters": [
+          {
+            "name": "groupOids",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformEmployeeGetrolesingroups"
+      }
+    },
+    "/api/employee/GetRolesInGroups": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色组内角色",
+        "parameters": [
+          {
+            "name": "groupOids",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetrolesingroups"
+      },
+      "post": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色组内角色",
+        "parameters": [
+          {
+            "name": "groupOids",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeGetrolesingroups"
+      }
+    },
+    "/api/platform/employee/GetRolesTree": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色组内角色",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleGroupEntityBasicRoleDtoListBasicRecursiveExtraModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetrolestree"
+      },
+      "post": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色组内角色",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleGroupEntityBasicRoleDtoListBasicRecursiveExtraModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformEmployeeGetrolestree"
+      }
+    },
+    "/api/employee/GetRolesTree": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色组内角色",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleGroupEntityBasicRoleDtoListBasicRecursiveExtraModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetrolestree"
+      },
+      "post": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "角色组内角色",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleGroupEntityBasicRoleDtoListBasicRecursiveExtraModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeGetrolestree"
+      }
+    },
+    "/api/platform/employee/GetAllOrgByUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据人员 获取组织",
+        "parameters": [
+          {
+            "name": "userOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallorgbyuseroid"
+      }
+    },
+    "/api/employee/GetAllOrgByUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据人员 获取组织",
+        "parameters": [
+          {
+            "name": "userOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallorgbyuseroid"
+      }
+    },
+    "/api/platform/employee/GetAllLeadOrgByUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据人员 获取负责组织",
+        "parameters": [
+          {
+            "name": "userOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "leader",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/OrgLeaderTypeEnum"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallleadorgbyuseroid"
+      }
+    },
+    "/api/employee/GetAllLeadOrgByUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据人员 获取负责组织",
+        "parameters": [
+          {
+            "name": "userOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "leader",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/OrgLeaderTypeEnum"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallleadorgbyuseroid"
+      }
+    },
+    "/api/platform/employee/GetAllRoleByUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据人员 获取角色",
+        "parameters": [
+          {
+            "name": "userOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallrolebyuseroid"
+      }
+    },
+    "/api/employee/GetAllRoleByUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据人员 获取角色",
+        "parameters": [
+          {
+            "name": "userOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallrolebyuseroid"
+      }
+    },
+    "/api/platform/employee/GetAllUserByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据组织 获取人员",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withChild",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "enablestatus",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "AS"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetalluserbyorgoid"
+      }
+    },
+    "/api/employee/GetAllUserByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据组织 获取人员",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withChild",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "enablestatus",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "AS"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetalluserbyorgoid"
+      }
+    },
+    "/api/platform/employee/GetAllUserByRoleOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据角色 获取人员",
+        "parameters": [
+          {
+            "name": "roleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetalluserbyroleoid"
+      }
+    },
+    "/api/employee/GetAllUserByRoleOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据角色 获取人员",
+        "parameters": [
+          {
+            "name": "roleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetalluserbyroleoid"
+      }
+    },
+    "/api/platform/employee/GetAllLeadUserByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据组织 获取 负责人",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "leader",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/OrgLeaderTypeEnum"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallleaduserbyorgoid"
+      }
+    },
+    "/api/employee/GetAllLeadUserByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据组织 获取 负责人",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "leader",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/OrgLeaderTypeEnum"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallleaduserbyorgoid"
+      }
+    },
+    "/api/platform/employee/GetAllOrgOidsByUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据人员 获取组织",
+        "parameters": [
+          {
+            "name": "userOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallorgoidsbyuseroid"
+      }
+    },
+    "/api/employee/GetAllOrgOidsByUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据人员 获取组织",
+        "parameters": [
+          {
+            "name": "userOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallorgoidsbyuseroid"
+      }
+    },
+    "/api/platform/employee/GetAllLeadOrgOidsByUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据人员 获取负责组织",
+        "parameters": [
+          {
+            "name": "userOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "leader",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/OrgLeaderTypeEnum"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallleadorgoidsbyuseroid"
+      }
+    },
+    "/api/employee/GetAllLeadOrgOidsByUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据人员 获取负责组织",
+        "parameters": [
+          {
+            "name": "userOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "leader",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/OrgLeaderTypeEnum"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallleadorgoidsbyuseroid"
+      }
+    },
+    "/api/platform/employee/GetAllRoleOidsByUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据人员 获取角色",
+        "parameters": [
+          {
+            "name": "userOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallroleoidsbyuseroid"
+      }
+    },
+    "/api/employee/GetAllRoleOidsByUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据人员 获取角色",
+        "parameters": [
+          {
+            "name": "userOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallroleoidsbyuseroid"
+      }
+    },
+    "/api/platform/employee/GetAllUserOidsByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据组织 获取人员",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withChild",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "enablestatus",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "AS"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetalluseroidsbyorgoid"
+      }
+    },
+    "/api/employee/GetAllUserOidsByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据组织 获取人员",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withChild",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "enablestatus",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "AS"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetalluseroidsbyorgoid"
+      }
+    },
+    "/api/platform/employee/GetAllUserOidsByRoleOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据角色 获取人员",
+        "parameters": [
+          {
+            "name": "roleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetalluseroidsbyroleoid"
+      }
+    },
+    "/api/employee/GetAllUserOidsByRoleOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据角色 获取人员",
+        "parameters": [
+          {
+            "name": "roleOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetalluseroidsbyroleoid"
+      }
+    },
+    "/api/platform/employee/GetAllLeadUserOidsByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据组织 获取 负责人",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "leader",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/OrgLeaderTypeEnum"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallleaduseroidsbyorgoid"
+      }
+    },
+    "/api/employee/GetAllLeadUserOidsByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据组织 获取 负责人",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "leader",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/OrgLeaderTypeEnum"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallleaduseroidsbyorgoid"
+      }
+    },
+    "/api/platform/employee/GetValidOid": {
+      "post": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "验证 返回 有效的 人员 oid",
+        "parameters": [
+          {
+            "name": "enablestatus",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "AS"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringStringListDictionaryResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformEmployeeGetvalidoid"
+      }
+    },
+    "/api/employee/GetValidOid": {
+      "post": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "验证 返回 有效的 人员 oid",
+        "parameters": [
+          {
+            "name": "enablestatus",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "AS"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringStringListDictionaryResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeGetvalidoid"
+      }
+    },
+    "/api/platform/employee/GetAllBasicEmployeeDto": {
+      "post": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "返回 人员 组织 角色 列表信息",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllBasicEmployeeDtoInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllBasicEmployeeDtoInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllBasicEmployeeDtoInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllBasicEmployeeDtoInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringAbstractPrimaryModelIEnumerableDictionaryResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformEmployeeGetallbasicemployeedto"
+      }
+    },
+    "/api/employee/GetAllBasicEmployeeDto": {
+      "post": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "返回 人员 组织 角色 列表信息",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllBasicEmployeeDtoInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllBasicEmployeeDtoInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllBasicEmployeeDtoInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllBasicEmployeeDtoInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringAbstractPrimaryModelIEnumerableDictionaryResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeGetallbasicemployeedto"
+      }
+    },
+    "/api/platform/employee/GetBasicUserByUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据人员Oid 获取人员 基本类型",
+        "parameters": [
+          {
+            "name": "userOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetbasicuserbyuseroid"
+      }
+    },
+    "/api/employee/GetBasicUserByUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据人员Oid 获取人员 基本类型",
+        "parameters": [
+          {
+            "name": "userOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetbasicuserbyuseroid"
+      }
+    },
+    "/api/platform/employee/GetAllBasicUserByUserOids": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据人员Oid 获取人员列表 基本类型",
+        "parameters": [
+          {
+            "name": "userOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallbasicuserbyuseroids"
+      }
+    },
+    "/api/employee/GetAllBasicUserByUserOids": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据人员Oid 获取人员列表 基本类型",
+        "parameters": [
+          {
+            "name": "userOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallbasicuserbyuseroids"
+      }
+    },
+    "/api/platform/employee/GetOrgByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据部门ID 获取部门 原始类型",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompanyEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetorgbyorgoid"
+      }
+    },
+    "/api/employee/GetOrgByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据部门ID 获取部门 原始类型",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompanyEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetorgbyorgoid"
+      }
+    },
+    "/api/platform/employee/GetBasicOrgByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据部门ID 获取部门",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetbasicorgbyorgoid"
+      }
+    },
+    "/api/employee/GetBasicOrgByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据部门ID 获取部门",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetbasicorgbyorgoid"
+      }
+    },
+    "/api/platform/employee/GetAllOrgByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据部门ID 获取部门列表 原始类型",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompanyEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallorgbyorgoid"
+      }
+    },
+    "/api/employee/GetAllOrgByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据部门ID 获取部门列表 原始类型",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompanyEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallorgbyorgoid"
+      }
+    },
+    "/api/platform/employee/GetAllBasicOrgByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据部门ID 获取部门列表",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallbasicorgbyorgoid"
+      }
+    },
+    "/api/employee/GetAllBasicOrgByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据部门ID 获取部门列表",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallbasicorgbyorgoid"
+      }
+    },
+    "/api/platform/employee/GetAllBasicParentOrg": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "获取父部门列表",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "validempty",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallbasicparentorg"
+      }
+    },
+    "/api/employee/GetAllBasicParentOrg": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "获取父部门列表",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "validempty",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallbasicparentorg"
+      }
+    },
+    "/api/platform/employee/GetAllBasicChildrenOrg": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "获取子部门列表",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "validempty",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallbasicchildrenorg"
+      }
+    },
+    "/api/employee/GetAllBasicChildrenOrg": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "获取子部门列表",
+        "parameters": [
+          {
+            "name": "orgOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "validempty",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallbasicchildrenorg"
+      }
+    },
+    "/api/platform/employee/GetRoleByRoleOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据RoleOid 获取角色 原始类型",
+        "parameters": [
+          {
+            "name": "roleOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetrolebyroleoid"
+      }
+    },
+    "/api/employee/GetRoleByRoleOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据RoleOid 获取角色 原始类型",
+        "parameters": [
+          {
+            "name": "roleOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetrolebyroleoid"
+      }
+    },
+    "/api/platform/employee/GetBasicRoleByRoleOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据RoleOid 获取角色 基本类型",
+        "parameters": [
+          {
+            "name": "roleOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetbasicrolebyroleoid"
+      }
+    },
+    "/api/employee/GetBasicRoleByRoleOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据RoleOid 获取角色 基本类型",
+        "parameters": [
+          {
+            "name": "roleOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetbasicrolebyroleoid"
+      }
+    },
+    "/api/platform/employee/GetAllRoleByRoleOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据RoleOid 获取角色 列表 原始类型",
+        "parameters": [
+          {
+            "name": "roleOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallrolebyroleoid"
+      }
+    },
+    "/api/employee/GetAllRoleByRoleOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据RoleOid 获取角色 列表 原始类型",
+        "parameters": [
+          {
+            "name": "roleOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallrolebyroleoid"
+      }
+    },
+    "/api/platform/employee/GetAllBasicRoleByRoleOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据RoleOid 获取角色 列表 基本类型",
+        "parameters": [
+          {
+            "name": "roleOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallbasicrolebyroleoid"
+      }
+    },
+    "/api/employee/GetAllBasicRoleByRoleOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "根据RoleOid 获取角色 列表 基本类型",
+        "parameters": [
+          {
+            "name": "roleOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicRoleDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallbasicrolebyroleoid"
+      }
+    },
+    "/api/platform/employee/GetAllAdminUser": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "获取管理员用户列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetalladminuser"
+      }
+    },
+    "/api/employee/GetAllAdminUser": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "获取管理员用户列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetalladminuser"
+      }
+    },
+    "/api/platform/employee/GetAllSubAdminUser": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "获取子管理员用户列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallsubadminuser"
+      }
+    },
+    "/api/employee/GetAllSubAdminUser": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "获取子管理员用户列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallsubadminuser"
+      }
+    },
+    "/api/platform/employee/GetAllAdminUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "获取管理员用户Oid列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetalladminuseroid"
+      }
+    },
+    "/api/employee/GetAllAdminUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "获取管理员用户Oid列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetalladminuseroid"
+      }
+    },
+    "/api/platform/employee/GetAllSubAdminUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "获取子管理员用户Oid列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformEmployeeGetallsubadminuseroid"
+      }
+    },
+    "/api/employee/GetAllSubAdminUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Employee"
+        ],
+        "summary": "获取子管理员用户Oid列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiEmployeeGetallsubadminuseroid"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Platform_Employee",
+      "description": "Platform_Employee API"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "CompanyEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CompanyEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringStringListDictionaryResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicUserDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicUserDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RoleGroupEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RoleGroupEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringAbstractPrimaryModelIEnumerableDictionaryResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AbstractPrimaryModel"
+              }
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CompanyEntityResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/CompanyEntity"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicOrgDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicOrgDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrgLeaderTypeEnum": {
+        "enum": [
+          1,
+          2,
+          255
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "RoleEntityResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/RoleEntity"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicRoleDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/BasicRoleDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicRoleDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicRoleDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RoleEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RoleEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllBasicEmployeeDtoInput": {
+        "type": "object",
+        "properties": {
+          "userOids": {
+            "type": "string",
+            "nullable": true
+          },
+          "orgOids": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleOids": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicUserDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/BasicUserDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RoleGroupEntityBasicRoleDtoListBasicRecursiveExtraModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RoleGroupEntityBasicRoleDtoListBasicRecursiveExtraModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicOrgDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/BasicOrgDto"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

@@ -4,14 +4,14 @@ from pydantic import BaseModel, Field
 class AgentCreateReq(BaseModel):
     name: str = Field(..., description="Agent 名称")
     description: str = Field(..., description="Agent 描述")
-    tool_ids: List[str] = Field(default=[], description="绑定的工具ID")
-    llm_id: Optional[str] = Field(None, description="Agent 绑定的LLM ID")
-    mcp_ids: List[str] = Field(default=[], description="绑定的MCP Server")
-    knowledge_ids: List[str] = Field(default=[], description="绑定的知识库ID")
+    tool_ids: List[str] = Field(default=[], description="绑定的工具 ID")
+    llm_id: Optional[str] = Field(None, description="Agent 绑定的 LLM ID")
+    mcp_ids: List[str] = Field(default=[], description="绑定的 MCP Server")
+    knowledge_ids: List[str] = Field(default=[], description="绑定的知识库 ID")
     agent_skill_ids: List[str] = Field(default=[], description="绑定的技能")
     enable_memory: bool = Field(True, description="是否使用嵌入")
     system_prompt: str = Field(..., description="Agent 系统提示词")
-    logo_url: str = Field(..., description="Logo URL")
+    logo_url: Optional[str] = Field(None, description="Logo URL")
 
 
 class AgentUpdateReq(BaseModel):

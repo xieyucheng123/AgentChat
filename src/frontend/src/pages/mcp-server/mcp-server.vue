@@ -278,25 +278,34 @@ const handleSubmit = async () => {
       }
     } else {
       // 创建模式：创建服务器
-      // 处理配置字段：解析JSON，如果用户清空了，使用空对象 {}
+      // 处理配置字段：解析 JSON，如果用户清空了，使用默认的空配置
       let configData = {}
       if (configString.value && configString.value.trim() !== '') {
         try {
           const parsed = JSON.parse(configString.value.trim())
           configData = parsed
         } catch (error) {
-          formErrors.value.imported_config = '配置信息格式不正确，请输入有效的JSON格式'
+          formErrors.value.imported_config = '配置信息格式不正确，请输入有效的 JSON 格式'
           formLoading.value = false
           return
         }
       } else {
-        // 如果为空或未填写，使用空对象
-        configData = {}
+        // 如果为空，提供一个最基本的有效配置结构
+        // 避免后端验证失败（mcpServers 必须存在且非空）
+        configData = {
+          mcpServers: {
+            'default-server': {
+              type: 'sse',
+              url: ''
+            }
+          }
+        }
       }
       
+      // 确保 logo_url 不为空字符串，如果为空则使用默认值
       const submitData = {
         server_name: formData.value.server_name,
-        logo_url: formData.value.logo_url,
+        logo_url: formData.value.logo_url || '/src/assets/robot.svg',  // 使用默认机器人图标
         imported_config: configData
       }
       

@@ -1,0 +1,777 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Yiban.PLM.Web.Platform Api",
+    "description": "Api API Document Create At 2026-03-11 10:42:49",
+    "termsOfService": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/platform",
+    "contact": {
+      "name": "PLM经典版SDK开发组(PLM-Classic SDK Develop Group)",
+      "url": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/"
+    },
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "../../",
+      "description": "Default"
+    },
+    {
+      "url": "http://localhost:6010/",
+      "description": "Service"
+    }
+  ],
+  "paths": {
+    "/api/system/dataitem/GetDataModelTreeOnlyFirstChild": {
+      "get": {
+        "tags": [
+          "System_DataItem"
+        ],
+        "summary": "数据模型定制-菜单树 加载",
+        "description": "className  都为null时，菜单初始化（根菜单）其余情况根据id查询  备注：关联只有一级。",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "className (菜单的className)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "GroupName",
+            "in": "query",
+            "description": "对象分类名称",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AbstractPrimaryModelBasicRecursiveExtraModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiSystemDataitemGetdatamodeltreeonlyfirstchild"
+      }
+    },
+    "/api/system/dataitem/GetDataModelTreeNew": {
+      "get": {
+        "tags": [
+          "System_DataItem"
+        ],
+        "summary": "数据模型返回 --树",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AbstractPrimaryModelBasicRecursiveModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiSystemDataitemGetdatamodeltreenew"
+      }
+    },
+    "/api/system/dataitem/SaveWaterMarkSet": {
+      "get": {
+        "tags": [
+          "System_DataItem"
+        ],
+        "summary": "保存对象是否开启水印设置",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "对象名称",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "默认不开启",
+            "schema": {
+              "type": "string",
+              "default": "N"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiSystemDataitemSavewatermarkset"
+      }
+    },
+    "/api/system/dataitem/GetWaterMarkSet": {
+      "get": {
+        "tags": [
+          "System_DataItem"
+        ],
+        "summary": "查询对象的水印是否启用",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "对象名称[默认不启用]",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiSystemDataitemGetwatermarkset"
+      }
+    },
+    "/api/system/dataitem/GetDataModelTreeForDataUpload": {
+      "get": {
+        "tags": [
+          "System_DataItem"
+        ],
+        "summary": "数据上传菜单树 加载",
+        "description": "className  都为null时，菜单初始化（根菜单）其余情况根据id查询  备注：关联只有一级。",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "className (菜单的className)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "excludeClassNames",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AbstractPrimaryModelBasicRecursiveExtraModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiSystemDataitemGetdatamodeltreefordataupload"
+      }
+    },
+    "/api/system/dataitem/GetAttributeRepeat": {
+      "get": {
+        "tags": [
+          "System_DataItem"
+        ],
+        "summary": "获取对象的属性去重信息",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "对象名称",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AttributeRepeatModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiSystemDataitemGetattributerepeat"
+      }
+    },
+    "/api/system/dataitem/GetAttributeRepeatRule": {
+      "get": {
+        "tags": [
+          "System_DataItem"
+        ],
+        "summary": "获取对象的属性去重信息[规则组]",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "对象名称",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AttributeRepeatModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiSystemDataitemGetattributerepeatrule"
+      }
+    },
+    "/api/system/dataitem/DeleteAttributeRepeatRule": {
+      "get": {
+        "tags": [
+          "System_DataItem"
+        ],
+        "summary": "删除规则信息[规则组]",
+        "parameters": [
+          {
+            "name": "ruleOid",
+            "in": "query",
+            "description": "规则Oid",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiSystemDataitemDeleteattributerepeatrule"
+      }
+    },
+    "/api/system/dataitem/SaveAttributeRepeat": {
+      "post": {
+        "tags": [
+          "System_DataItem"
+        ],
+        "summary": "保存属性去重设置项(单个规则的新增与编辑)",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttributeRepeatModel"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttributeRepeatModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttributeRepeatModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttributeRepeatModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiSystemDataitemSaveattributerepeat"
+      }
+    },
+    "/api/system/dataitem/GetSysytemParameters": {
+      "get": {
+        "tags": [
+          "System_DataItem"
+        ],
+        "summary": "获取系统配置参数",
+        "parameters": [
+          {
+            "name": "queryJson",
+            "in": "query",
+            "description": "查询字符串",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ENVEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiSystemDataitemGetsysytemparameters"
+      },
+      "post": {
+        "tags": [
+          "System_DataItem"
+        ],
+        "summary": "获取系统配置参数",
+        "requestBody": {
+          "description": "查询字符串",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SysytemParametersInputDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SysytemParametersInputDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SysytemParametersInputDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SysytemParametersInputDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ENVEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiSystemDataitemGetsysytemparameters"
+      }
+    },
+    "/api/system/dataitem/ChangeEntityDenyUpLoadFile": {
+      "get": {
+        "tags": [
+          "System_DataItem"
+        ],
+        "summary": "操作类的强制使用模板",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "类名",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "handType",
+            "in": "query",
+            "description": "操作类型 0.删除  1.添加",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiSystemDataitemChangeentitydenyuploadfile"
+      }
+    },
+    "/api/system/dataitem/GetEntityDenyUpLoadFileState": {
+      "get": {
+        "tags": [
+          "System_DataItem"
+        ],
+        "summary": "获取类的强制使用模版状态",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "类名",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiSystemDataitemGetentitydenyuploadfilestate"
+      }
+    },
+    "/api/system/dataitem/GetClassFolderBelong": {
+      "get": {
+        "tags": [
+          "System_DataItem"
+        ],
+        "summary": "获取系统对象应该归属哪些文件夹",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiSystemDataitemGetclassfolderbelong"
+      }
+    },
+    "/api/system/dataitem/GetSystemClassList": {
+      "get": {
+        "tags": [
+          "System_DataItem"
+        ],
+        "summary": "获取系统类型",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiSystemDataitemGetsystemclasslist"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "System_DataItem",
+      "description": "System_DataItem API"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "AbstractPrimaryModelBasicRecursiveExtraModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AbstractPrimaryModelBasicRecursiveExtraModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AttributeRepeatModel": {
+        "type": "object",
+        "properties": {
+          "isShow": {
+            "type": "string",
+            "nullable": true
+          },
+          "isCreate": {
+            "type": "string",
+            "nullable": true
+          },
+          "attributeRepeat": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "ruleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ruleOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "oid": {
+            "type": "string",
+            "nullable": true
+          },
+          "enable": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AbstractPrimaryModelBasicRecursiveModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AbstractPrimaryModelBasicRecursiveModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BooleanResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ENVEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ENVEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AttributeRepeatModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AttributeRepeatModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SysytemParametersInputDto": {
+        "type": "object",
+        "properties": {
+          "queryJson": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AttributeRepeatModelResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/AttributeRepeatModel"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

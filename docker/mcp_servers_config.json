@@ -1,0 +1,207 @@
+[
+  {
+    "mcpServers": {
+      "agentChat": {
+        "url": "http://localhost:3100/mcp",
+        "type": "streamable_http"
+      }
+    }
+  }
+,
+  {
+    "server_name": "Platform_CodeSystem",
+    "description": "代码系统管理平台 - 提供代码系统的增删改查、同步等功能（120 个 API）",
+    "imported_config": {
+      "mcpServers": {
+        "platform-codesystem": {
+          "type": "streamable_http",
+          "url": "http://localhost:3000/mcp"
+        }
+      }
+    },
+    "config_enabled": false,
+    "user_id": 0
+  },
+  {
+    "server_name": "Meta",
+    "description": "元数据管理服务 - 提供类、属性、关联等元数据管理功能（114 个 API）",
+    "imported_config": {
+      "mcpServers": {
+        "meta": {
+          "type": "streamable_http",
+          "url": "http://localhost:3001/mcp"
+        }
+      }
+    },
+    "config_enabled": false,
+    "user_id": 0
+  },
+  {
+    "server_name": "Platform_Employee",
+    "description": "员工管理平台 - 提供员工信息、组织关系、角色管理等功能（80 个 API）",
+    "imported_config": {
+      "mcpServers": {
+        "platform-employee": {
+          "type": "streamable_http",
+          "url": "http://localhost:3002/mcp"
+        }
+      }
+    },
+    "config_enabled": false,
+    "user_id": 0
+  },
+  {
+    "server_name": "Platform_Permissions",
+    "description": "权限管理平台 - 提供权限规则、授权管理等功能（72 个 API）",
+    "imported_config": {
+      "mcpServers": {
+        "platform-permissions": {
+          "type": "streamable_http",
+          "url": "http://localhost:3003/mcp"
+        }
+      }
+    },
+    "config_enabled": false,
+    "user_id": 0
+  },
+  {
+    "server_name": "Platform_Orginization",
+    "description": "组织管理平台 - 提供组织架构、部门管理等功能（68 个 API）",
+    "imported_config": {
+      "mcpServers": {
+        "platform-orginization": {
+          "type": "streamable_http",
+          "url": "http://localhost:3004/mcp"
+        }
+      }
+    },
+    "config_enabled": false,
+    "user_id": 0
+  },
+  {
+    "server_name": "Employee_Sync",
+    "description": "员工同步服务 - 提供员工数据同步、批量处理等功能（38 个 API）",
+    "imported_config": {
+      "mcpServers": {
+        "employee-sync": {
+          "type": "streamable_http",
+          "url": "http://localhost:3005/mcp"
+        }
+      }
+    },
+    "config_enabled": false,
+    "user_id": 0
+  },
+  {
+    "server_name": "CommonLib_Info",
+    "description": "公共库信息服务 - 提供公共库数据查询、管理等功能（31 个 API）",
+    "imported_config": {
+      "mcpServers": {
+        "commonlib-info": {
+          "type": "streamable_http",
+          "url": "http://localhost:3006/mcp"
+        }
+      }
+    },
+    "config_enabled": false,
+    "user_id": 0
+  },
+  {
+    "server_name": "Form",
+    "description": "表单管理服务 - 提供表单创建、配置、管理等功能（31 个 API）",
+    "imported_config": {
+      "mcpServers": {
+        "form": {
+          "type": "streamable_http",
+          "url": "http://localhost:3007/mcp"
+        }
+      }
+    },
+    "config_enabled": false,
+    "user_id": 0
+  },
+  {
+    "server_name": "Platform_Authority",
+    "description": "权限认证平台 - 提供认证、授权、审计等功能（26 个 API）",
+    "imported_config": {
+      "mcpServers": {
+        "platform-authority": {
+          "type": "streamable_http",
+          "url": "http://localhost:3008/mcp"
+        }
+      }
+    },
+    "config_enabled": false,
+    "user_id": 0
+  },
+  {
+    "server_name": "Module",
+    "description": "模块管理服务 - 提供功能模块、按钮权限等管理（25 个 API）",
+    "imported_config": {
+      "mcpServers": {
+        "module": {
+          "type": "streamable_http",
+          "url": "http://localhost:3009/mcp"
+        }
+      }
+    },
+    "config_enabled": false,
+    "user_id": 0
+  },
+  {
+    "server_name": "Platform_Account",
+    "description": "账户管理平台 - 提供账户管理、登录认证等功能（19 个 API）",
+    "imported_config": {
+      "mcpServers": {
+        "platform-account": {
+          "type": "streamable_http",
+          "url": "http://localhost:3010/mcp"
+        }
+      }
+    },
+    "config_enabled": false,
+    "user_id": 0
+  },
+  {
+    "server_name": "Form_Share",
+    "description": "表单共享服务 - 提供表单分享、协作等功能（18 个 API）",
+    "imported_config": {
+      "mcpServers": {
+        "form-share": {
+          "type": "streamable_http",
+          "url": "http://localhost:3011/mcp"
+        }
+      }
+    },
+    "config_enabled": false,
+    "user_id": 0
+  },
+  {
+    "server_name": "System_DataItem",
+    "description": "系统数据项服务 - 提供系统级数据项管理（15 个 API）",
+    "imported_config": {
+      "mcpServers": {
+        "system-dataitem": {
+          "type": "streamable_http",
+          "url": "http://localhost:3012/mcp"
+        }
+      }
+    },
+    "config_enabled": false,
+    "user_id": 0
+  },
+  {
+    "server_name": "Others",
+    "description": "其他服务集合 - 包含 34 个小模块的综合服务（167 个 API）",
+    "imported_config": {
+      "mcpServers": {
+        "others": {
+          "type": "streamable_http",
+          "url": "http://localhost:3013/mcp"
+        }
+      }
+    },
+    "config_enabled": false,
+    "user_id": 0
+  }
+]

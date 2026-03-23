@@ -1,0 +1,1339 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Yiban.PLM.Web.Platform Api",
+    "description": "Api API Document Create At 2026-03-11 10:42:49",
+    "termsOfService": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/platform",
+    "contact": {
+      "name": "PLM经典版SDK开发组(PLM-Classic SDK Develop Group)",
+      "url": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/"
+    },
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "../../",
+      "description": "Default"
+    },
+    {
+      "url": "http://localhost:6010/",
+      "description": "Service"
+    }
+  ],
+  "paths": {
+    "/api/platform/authority/Login": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "登录验证",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "description": "用户名",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "description": "密码",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "verifycode",
+            "in": "query",
+            "description": "验证码",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserLoginDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformAuthorityLogin"
+      }
+    },
+    "/api/authority/Login": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "登录验证",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "description": "用户名",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "description": "密码",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "verifycode",
+            "in": "query",
+            "description": "验证码",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserLoginDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiAuthorityLogin"
+      }
+    },
+    "/api/platform/authority/RefreshLogin": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "登录验证",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLoginInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLoginInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLoginInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLoginInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserLoginDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformAuthorityRefreshlogin"
+      }
+    },
+    "/api/authority/RefreshLogin": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "登录验证",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLoginInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLoginInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLoginInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLoginInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserLoginDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiAuthorityRefreshlogin"
+      }
+    },
+    "/api/platform/authority/LogOut": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "用户注销",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformAuthorityLogout"
+      }
+    },
+    "/api/authority/LogOut": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "用户注销",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiAuthorityLogout"
+      }
+    },
+    "/api/platform/authority/LogOutUser": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "用户注销",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformAuthorityLogoutuser"
+      }
+    },
+    "/api/authority/LogOutUser": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "用户注销",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiAuthorityLogoutuser"
+      }
+    },
+    "/api/platform/authority/GetWebModuleTree": {
+      "get": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "获取树形数据",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformAuthorityGetwebmoduletree"
+      }
+    },
+    "/api/authority/GetWebModuleTree": {
+      "get": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "获取树形数据",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiAuthorityGetwebmoduletree"
+      }
+    },
+    "/api/platform/authority/GetNewModuleList": {
+      "get": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "获取功能模块数据列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ModuleEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformAuthorityGetnewmodulelist"
+      }
+    },
+    "/api/authority/GetNewModuleList": {
+      "get": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "获取功能模块数据列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ModuleEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiAuthorityGetnewmodulelist"
+      }
+    },
+    "/api/platform/authority/QueryOnLineList": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "查询当前在线用户(分页) (自己，下级，分享的)",
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "分页参数",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pagination"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pagination"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pagination"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pagination"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeartBeatEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformAuthorityQueryonlinelist"
+      }
+    },
+    "/api/authority/QueryOnLineList": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "查询当前在线用户(分页) (自己，下级，分享的)",
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "分页参数",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pagination"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pagination"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pagination"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pagination"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeartBeatEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiAuthorityQueryonlinelist"
+      }
+    },
+    "/api/platform/authority/QuitOnLine": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "强制退出账号",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformAuthorityQuitonline"
+      }
+    },
+    "/api/authority/QuitOnLine": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "强制退出账号",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiAuthorityQuitonline"
+      }
+    },
+    "/api/platform/authority/QueryOnLineSummaryForOrgList": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "根据组织统计在线时长情况",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformAuthorityQueryonlinesummaryfororglist"
+      }
+    },
+    "/api/authority/QueryOnLineSummaryForOrgList": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "根据组织统计在线时长情况",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiAuthorityQueryonlinesummaryfororglist"
+      }
+    },
+    "/api/platform/authority/QueryOnLineSummaryForUserList": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "根据用户统计在线时长情况",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformAuthorityQueryonlinesummaryforuserlist"
+      }
+    },
+    "/api/authority/QueryOnLineSummaryForUserList": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "根据用户统计在线时长情况",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiAuthorityQueryonlinesummaryforuserlist"
+      }
+    },
+    "/api/platform/authority/ExportOnLineSummaryForOrgList": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "导出在线时长情况统计",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "PostApiPlatformAuthorityExportonlinesummaryfororglist"
+      }
+    },
+    "/api/authority/ExportOnLineSummaryForOrgList": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "导出在线时长情况统计",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBeatSearchDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "PostApiAuthorityExportonlinesummaryfororglist"
+      }
+    },
+    "/api/platform/authority/QueryHistory": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "根据用户Oid和时间区间,获取用户历史登录记录",
+        "requestBody": {
+          "description": "分页扩展类,包含UserOid,StartTime,EndTime",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBatePagination"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBatePagination"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBatePagination"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBatePagination"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeartBeatEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformAuthorityQueryhistory"
+      }
+    },
+    "/api/authority/QueryHistory": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "根据用户Oid和时间区间,获取用户历史登录记录",
+        "requestBody": {
+          "description": "分页扩展类,包含UserOid,StartTime,EndTime",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBatePagination"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBatePagination"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBatePagination"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBatePagination"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeartBeatEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiAuthorityQueryhistory"
+      }
+    },
+    "/api/platform/authority/ExportHistoryList": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "导出历史登录记录",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBatePagination"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBatePagination"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBatePagination"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBatePagination"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "PostApiPlatformAuthorityExporthistorylist"
+      }
+    },
+    "/api/authority/ExportHistoryList": {
+      "post": {
+        "tags": [
+          "Platform_Authority"
+        ],
+        "summary": "导出历史登录记录",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBatePagination"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBatePagination"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBatePagination"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartBatePagination"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "PostApiAuthorityExporthistorylist"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Platform_Authority",
+      "description": "Platform_Authority API"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "BasicUserDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicUserDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HeartBeatEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HeartBeatEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicOrgDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicOrgDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ModuleEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ModuleEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TreeModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TreeModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserLoginInput": {
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "description": "用户名",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "description": "密码",
+            "nullable": true
+          },
+          "verifyCode": {
+            "type": "string",
+            "description": "验证码",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HeartBeatSearchDto": {
+        "type": "object",
+        "properties": {
+          "keyWord": {
+            "type": "string",
+            "nullable": true
+          },
+          "userOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "loginTimeBegin": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "loginTimeEnd": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Pagination": {
+        "type": "object",
+        "properties": {
+          "recordCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "rows": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "records": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "sidx": {
+            "type": "string",
+            "nullable": true
+          },
+          "sord": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaginationOrder"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HeartBatePagination": {
+        "type": "object",
+        "properties": {
+          "recordCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageCount": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "rows": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "records": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "sidx": {
+            "type": "string",
+            "nullable": true
+          },
+          "sord": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaginationOrder"
+            },
+            "nullable": true
+          },
+          "startTime": {
+            "type": "string",
+            "description": "开始时间",
+            "format": "date-time",
+            "nullable": true
+          },
+          "endTime": {
+            "type": "string",
+            "description": "结束时间",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userOid": {
+            "type": "string",
+            "description": "用户Oid",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserLoginDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/UserLoginDto"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

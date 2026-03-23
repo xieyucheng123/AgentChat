@@ -1,0 +1,2065 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Yiban.PLM.Web.Platform Api",
+    "description": "Api API Document Create At 2026-03-11 10:42:49",
+    "termsOfService": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/platform",
+    "contact": {
+      "name": "PLM经典版SDK开发组(PLM-Classic SDK Develop Group)",
+      "url": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/"
+    },
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "../../",
+      "description": "Default"
+    },
+    {
+      "url": "http://localhost:6010/",
+      "description": "Service"
+    }
+  ],
+  "paths": {
+    "/api/form/-/GetFormData": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取表单模板样式数据",
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "projetOid",
+            "in": "query",
+            "description": "根据项目id获取属性权限",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "MetaType",
+            "in": "query",
+            "description": "class Or rel",
+            "schema": {
+              "type": "string",
+              "default": "class"
+            }
+          },
+          {
+            "name": "ForSetting",
+            "in": "query",
+            "description": "是否用作配置",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "GetRelationWithRightClass",
+            "in": "query",
+            "description": "查询关联表单的时候把右对象的表单也查出来",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormDataResultResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getformdata"
+      }
+    },
+    "/api/form/-/GetFormDataNoToken": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "无token获取表单模板样式数据",
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "projetOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "MetaType",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": "class"
+            }
+          },
+          {
+            "name": "ForSetting",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "GetRelationWithRightClass",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormDataResultResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getformdatanotoken"
+      }
+    },
+    "/api/form/-/GetDefaultClassAttrFormComponent": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取表单模板样式数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "attrName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MetaType",
+            "in": "query",
+            "description": "class Or rel",
+            "schema": {
+              "type": "string",
+              "default": "class"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormComponentModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getdefaultclassattrformcomponent"
+      }
+    },
+    "/api/form/-/GetClassFormComponent": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取表单模板样式数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "categoryId",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "projetOid",
+            "in": "query",
+            "description": "根据项目id获取属性权限",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "ForSetting",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormDataResultResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getclassformcomponent"
+      }
+    },
+    "/api/form/-/GetRelationFormComponent": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取表单模板样式数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "categoryId",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "projetOid",
+            "in": "query",
+            "description": "根据项目id获取属性权限",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "GetRelationWithRightClass",
+            "in": "query",
+            "description": "查询关联表单的时候把右对象的表单也查出来",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormDataResultResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getrelationformcomponent"
+      }
+    },
+    "/api/form/-/GetFormDataEntity": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取表单控件数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "className",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "attrOid",
+            "in": "query",
+            "description": "控件OID",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "attrName",
+            "in": "query",
+            "description": "控件编码",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "projetOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormComponentModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getformdataentity"
+      }
+    },
+    "/api/form/-/GetDefaultFormSchemas": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取默认表单数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MetaType",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": "class"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormDataResultResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getdefaultformschemas"
+      }
+    },
+    "/api/form/-/GetClassFormComponentModels": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取默认表单数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClassFormComponentDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getclassformcomponentmodels"
+      }
+    },
+    "/api/form/-/GetRelationFormComponentModels": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取默认表单数据",
+        "parameters": [
+          {
+            "name": "relClsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RelationFormComponentDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getrelationformcomponentmodels"
+      }
+    },
+    "/api/form/-/ResetScheme": {
+      "post": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "将表单样式控件重置",
+        "parameters": [
+          {
+            "name": "classId",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "attrOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiForm-Resetscheme"
+      }
+    },
+    "/api/form/-/GetItemShareDataForm": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取设计表单数据",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "分享标记",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormComponentModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getitemsharedataform"
+      }
+    },
+    "/api/form/-/SaveItemShareDataForm": {
+      "post": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "保存表单数据",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Oid": {
+                    "type": "string"
+                  },
+                  "KeyValue": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "Oid": {
+                  "style": "form"
+                },
+                "KeyValue": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IterationEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiForm-Saveitemsharedataform"
+      }
+    },
+    "/api/form/-/CommitItemShareDataForm": {
+      "post": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "保存表单数据",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Oid": {
+                    "type": "string"
+                  },
+                  "KeyValue": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "Oid": {
+                  "style": "form"
+                },
+                "KeyValue": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IterationEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiForm-Commititemsharedataform"
+      }
+    },
+    "/api/form/-/GetCommonItemFormDesign": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取通用表单属性列表",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonItemFormModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getcommonitemformdesign"
+      }
+    },
+    "/api/form/-/GetCommonItemFormDesignDefault": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取默认表单数据",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonItemFormModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getcommonitemformdesigndefault"
+      }
+    },
+    "/api/form/-/GetCommonItemFormModel": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取通用表单属性列表",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "rOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "relClassName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "relROid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "iteration",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          },
+          {
+            "name": "Oid",
+            "in": "query",
+            "description": "左表的Oid",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "projectOid",
+            "in": "query",
+            "description": "根据项目id获取属性权限",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RCommonItemFormModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getcommonitemformmodel"
+      }
+    },
+    "/api/form/-/GetCommonItemFormModelList": {
+      "post": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取多个通用表单属性列表",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/GetCommonItemFormModelIn"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/GetCommonItemFormModelIn"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/GetCommonItemFormModelIn"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/GetCommonItemFormModelIn"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RCommonItemFormModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiForm-Getcommonitemformmodellist"
+      }
+    },
+    "/api/form/-/GetClassCusFormSchemas": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "查询对象的额外自定义属性列表",
+        "parameters": [
+          {
+            "name": "ClassName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ROid",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getclasscusformschemas"
+      }
+    },
+    "/api/form/-/GetClassAttrFormInfo": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取类的某个属性的表单样式",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "类名称",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "attrName",
+            "in": "query",
+            "description": "属性名称",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "isClassOrRel",
+            "in": "query",
+            "description": "是类还是关联类",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormComponentModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getclassattrforminfo"
+      }
+    },
+    "/api/form/-/GetItemShareForm": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取设计表单样式",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "类名称",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormComponentModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getitemshareform"
+      }
+    },
+    "/api/form/-/SaveItemShareForm": {
+      "post": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "保存表单数据",
+        "parameters": [
+          {
+            "name": "Oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "KeyValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Oid": {
+                    "type": "string"
+                  },
+                  "KeyValue": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "Oid": {
+                  "style": "form"
+                },
+                "KeyValue": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IterationEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiForm-Saveitemshareform"
+      }
+    },
+    "/api/form/-/GetBaseMetaIterInfo": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "根据className,rOid 获取对象的基本信息",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "对象名称",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "rOid",
+            "in": "query",
+            "description": "Roid",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseIterationDataModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getbasemetaiterinfo"
+      }
+    },
+    "/api/form/-/GetBaseMetaIterInfos": {
+      "post": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "根据className,rOid 获取对象的基本信息",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/MasterView"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/MasterView"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/MasterView"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/MasterView"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseIterationDataModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiForm-Getbasemetaiterinfos"
+      }
+    },
+    "/api/form/-/GetAttrSchemaByResCodeList": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取类的属性模版样式",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "类名",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "attrName",
+            "in": "query",
+            "description": "属性名称",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "isRealClass",
+            "in": "query",
+            "description": "是否是关联对象",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FromAttrSchemeInfoDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getattrschemabyrescodelist"
+      }
+    },
+    "/api/form/-/GetFormComponentModels": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取对象的表单",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "类名",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "classType",
+            "in": "query",
+            "description": "类的类别（0.对象 1.关联）",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormComponentModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getformcomponentmodels"
+      }
+    },
+    "/api/form/-/GetFolderIdByItemOid": {
+      "get": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取对象所在文件夹的id",
+        "parameters": [
+          {
+            "name": "itemOid",
+            "in": "query",
+            "description": "对象oid",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiForm-Getfolderidbyitemoid"
+      }
+    },
+    "/api/form/-/LoadFormRenderInfo": {
+      "post": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "获取表单渲染数据",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FormRenderDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FormRenderDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FormRenderDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FormRenderDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiForm-Loadformrenderinfo"
+      }
+    },
+    "/api/form/-/GetItemFormRender": {
+      "post": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "批量获取表单渲染数据 - 同时支持类和关联",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemFormRenderImplement"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemFormRenderImplement"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemFormRenderImplement"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemFormRenderImplement"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemFormRenderImplementResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiForm-Getitemformrender"
+      }
+    },
+    "/api/form/-/GetItemClassFormRender": {
+      "post": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "批量获取表单渲染数据 - 类",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemFormRenderImplement"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemFormRenderImplement"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemFormRenderImplement"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemFormRenderImplement"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemFormRenderImplementResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiForm-Getitemclassformrender"
+      }
+    },
+    "/api/form/-/GetItemRelationFormRender": {
+      "post": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "批量获取表单渲染数据 - 关联",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemFormRenderImplement"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemFormRenderImplement"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemFormRenderImplement"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemFormRenderImplement"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemFormRenderImplementResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiForm-Getitemrelationformrender"
+      }
+    },
+    "/api/form/-/LoadFormRenderInfoList": {
+      "post": {
+        "tags": [
+          "Form"
+        ],
+        "summary": "批量获取表单渲染数据",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchFormRenderDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchFormRenderDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchFormRenderDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchFormRenderDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiForm-Loadformrenderinfolist"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Form",
+      "description": "Form API"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "RCommonItemFormModelResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/RCommonItemFormModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FormDataResultResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/FormDataResult"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemFormRenderImplementResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/ItemFormRenderImplement"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BatchFormRenderDto": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FormRenderCategoryEnum"
+            },
+            "description": "表单信息种类",
+            "nullable": true
+          },
+          "formRenderInfo": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetCommonItemFormModelIn"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BaseIterationDataModelResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/BaseIterationDataModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RelationFormComponentDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/RelationFormComponentDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RCommonItemFormModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RCommonItemFormModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FormRenderDto": {
+        "type": "object",
+        "properties": {
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "rOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "relClassName": {
+            "type": "string",
+            "nullable": true
+          },
+          "relROid": {
+            "type": "string",
+            "nullable": true
+          },
+          "iteration": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oid": {
+            "type": "string",
+            "nullable": true
+          },
+          "projectOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "category": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FormRenderCategoryEnum"
+            },
+            "description": "表单信息种类",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "表单渲染参数"
+      },
+      "GetCommonItemFormModelIn": {
+        "type": "object",
+        "properties": {
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "rOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "relClassName": {
+            "type": "string",
+            "nullable": true
+          },
+          "relROid": {
+            "type": "string",
+            "nullable": true
+          },
+          "iteration": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oid": {
+            "type": "string",
+            "nullable": true
+          },
+          "projectOid": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClassFormComponentDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/ClassFormComponentDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BaseIterationDataModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BaseIterationDataModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FormComponentModelResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/FormComponentModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemFormRenderImplement": {
+        "type": "object",
+        "properties": {
+          "formModel": {
+            "type": "boolean"
+          },
+          "classGroup": {
+            "type": "boolean"
+          },
+          "attrPage": {
+            "type": "boolean"
+          },
+          "attrExcludeInVisualbe": {
+            "type": "boolean"
+          },
+          "attrExcludeClob": {
+            "type": "boolean"
+          },
+          "attrExcludeConst": {
+            "type": "boolean"
+          },
+          "lifeCycle": {
+            "type": "boolean"
+          },
+          "enableMessageRule": {
+            "type": "boolean"
+          },
+          "loadObjectTemplateTask": {
+            "type": "boolean"
+          },
+          "asSysAdmin": {
+            "type": "boolean"
+          },
+          "pbCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "classModelItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ItemFormRenderClassModelItem"
+            },
+            "nullable": true
+          },
+          "relationModelItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ItemFormRenderRelationModelItem"
+            },
+            "nullable": true
+          },
+          "classItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ItemFormRenderClassFormItem"
+            },
+            "nullable": true
+          },
+          "relationItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ItemFormRenderRelationFormItem"
+            },
+            "nullable": true
+          },
+          "resourceMap": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "nullable": true
+          },
+          "resourceDefineMap": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/CodeSystemEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CommonItemFormModelResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/CommonItemFormModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IterationEntityResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/IterationEntity"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FromAttrSchemeInfoDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FromAttrSchemeInfoDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FormComponentModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FormComponentModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MasterView": {
+        "type": "object",
+        "properties": {
+          "mOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastRevision": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "mId": {
+            "type": "string",
+            "nullable": true
+          },
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "holderId": {
+            "type": "string",
+            "nullable": true
+          },
+          "suspended": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityLevel": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "rOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "revision": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "lastIteration": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "releaseTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "releaseDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "creatorId": {
+            "type": "string",
+            "nullable": true
+          },
+          "releaseId": {
+            "type": "string",
+            "nullable": true
+          },
+          "revLabel": {
+            "type": "string",
+            "nullable": true
+          },
+          "revState": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastRevLabel": {
+            "type": "string",
+            "nullable": true
+          },
+          "classDto": {
+            "$ref": "#/components/schemas/BasicMetaClassDto"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

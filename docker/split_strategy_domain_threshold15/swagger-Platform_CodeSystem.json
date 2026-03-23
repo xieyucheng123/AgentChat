@@ -1,0 +1,5933 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Yiban.PLM.Web.Platform Api",
+    "description": "Api API Document Create At 2026-03-11 10:42:49",
+    "termsOfService": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/platform",
+    "contact": {
+      "name": "PLM经典版SDK开发组(PLM-Classic SDK Develop Group)",
+      "url": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/"
+    },
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "../../",
+      "description": "Default"
+    },
+    {
+      "url": "http://localhost:6010/",
+      "description": "Service"
+    }
+  ],
+  "paths": {
+    "/api/platform/codesystem/GetCodeSystem": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典索引",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetcodesystem"
+      }
+    },
+    "/api/codesystem/GetCodeSystem": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典索引",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetcodesystem"
+      }
+    },
+    "/api/platform/codesystem/GetCodeSystemList": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典索引列表",
+        "parameters": [
+          {
+            "name": "queryJson",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetcodesystemlist"
+      }
+    },
+    "/api/codesystem/GetCodeSystemList": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典索引列表",
+        "parameters": [
+          {
+            "name": "queryJson",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetcodesystemlist"
+      }
+    },
+    "/api/platform/codesystem/GetCodeSystemSelectList": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典索引列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetcodesystemselectlist"
+      }
+    },
+    "/api/codesystem/GetCodeSystemSelectList": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典索引列表",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetcodesystemselectlist"
+      }
+    },
+    "/api/platform/codesystem/GetCodeSystemListByType": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典索引列表 - 枚举映射",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetcodesystemlistbytype"
+      }
+    },
+    "/api/codesystem/GetCodeSystemListByType": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典索引列表 - 枚举映射",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetcodesystemlistbytype"
+      }
+    },
+    "/api/platform/codesystem/CreateCodeSystem": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "创建字典索引",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiPlatformCodesystemCreatecodesystem"
+      }
+    },
+    "/api/codesystem/CreateCodeSystem": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "创建字典索引",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiCodesystemCreatecodesystem"
+      }
+    },
+    "/api/platform/codesystem/UpdateCodeSystem": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "修改字典索引",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemUpdatecodesystem"
+      }
+    },
+    "/api/codesystem/UpdateCodeSystem": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "修改字典索引",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemUpdatecodesystem"
+      }
+    },
+    "/api/platform/codesystem/ValidCodeSystemCode": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "验证字典索引Code",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemValidcodesystemcode"
+      }
+    },
+    "/api/codesystem/ValidCodeSystemCode": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "验证字典索引Code",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemValidcodesystemcode"
+      }
+    },
+    "/api/platform/codesystem/DeleteCodeSystem": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "删除字典索引",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemDeletecodesystem"
+      }
+    },
+    "/api/codesystem/DeleteCodeSystem": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "删除字典索引",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemDeletecodesystem"
+      }
+    },
+    "/api/platform/codesystem/CreateCodeSystemAndMap": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "创建字典索引和映射",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndMapModel"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndMapModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndMapModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndMapModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemAndMapModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiPlatformCodesystemCreatecodesystemandmap"
+      }
+    },
+    "/api/codesystem/CreateCodeSystemAndMap": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "创建字典索引和映射",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndMapModel"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndMapModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndMapModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndMapModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemAndMapModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiCodesystemCreatecodesystemandmap"
+      }
+    },
+    "/api/platform/codesystem/CreateCodeSystemAndRef": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "创建字典索引和引用资源",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndRefModel"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndRefModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndRefModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndRefModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemAndRefModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiPlatformCodesystemCreatecodesystemandref"
+      }
+    },
+    "/api/codesystem/CreateCodeSystemAndRef": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "创建字典索引和引用资源",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndRefModel"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndRefModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndRefModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndRefModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemAndRefModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiCodesystemCreatecodesystemandref"
+      }
+    },
+    "/api/platform/codesystem/CreateCodeSystemAndThird": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "创建字典索引和外部资源",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemAndThirdModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiPlatformCodesystemCreatecodesystemandthird"
+      }
+    },
+    "/api/codesystem/CreateCodeSystemAndThird": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "创建字典索引和外部资源",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemAndThirdModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiCodesystemCreatecodesystemandthird"
+      }
+    },
+    "/api/platform/codesystem/UpdateCodeSystemAndMap": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "更新字典索引和映射",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndMapModel"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndMapModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndMapModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndMapModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemAndMapModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemUpdatecodesystemandmap"
+      }
+    },
+    "/api/codesystem/UpdateCodeSystemAndMap": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "更新字典索引和映射",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndMapModel"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndMapModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndMapModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndMapModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemAndMapModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemUpdatecodesystemandmap"
+      }
+    },
+    "/api/platform/codesystem/UpdateCodeSystemAndRef": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "更新字典索引和引用资源",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndRefModel"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndRefModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndRefModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndRefModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemAndRefModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemUpdatecodesystemandref"
+      }
+    },
+    "/api/codesystem/UpdateCodeSystemAndRef": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "更新字典索引和引用资源",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndRefModel"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndRefModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndRefModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndRefModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemAndRefModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemUpdatecodesystemandref"
+      }
+    },
+    "/api/platform/codesystem/UpdateCodeSystemAndthird": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "更新字典索引和外部资源",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemAndThirdModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemUpdatecodesystemandthird"
+      }
+    },
+    "/api/codesystem/UpdateCodeSystemAndthird": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "更新字典索引和外部资源",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemAndThirdModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemUpdatecodesystemandthird"
+      }
+    },
+    "/api/platform/codesystem/GetCodeSystemAndDetail": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典索引和明细",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetcodesystemanddetail"
+      }
+    },
+    "/api/codesystem/GetCodeSystemAndDetail": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典索引和明细",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetcodesystemanddetail"
+      }
+    },
+    "/api/platform/codesystem/GetCodeSystemMap": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典映射",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetcodesystemmap"
+      }
+    },
+    "/api/codesystem/GetCodeSystemMap": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典映射",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetcodesystemmap"
+      }
+    },
+    "/api/platform/codesystem/GetCodeSystemMapByCodeSystemOid": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典映射",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "skipDisable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetcodesystemmapbycodesystemoid"
+      }
+    },
+    "/api/codesystem/GetCodeSystemMapByCodeSystemOid": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典映射",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "skipDisable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetcodesystemmapbycodesystemoid"
+      }
+    },
+    "/api/platform/codesystem/GetCodeSystemMapByCodeSystemCode": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "字典映射",
+        "parameters": [
+          {
+            "name": "codeSystemCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "skipDisable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetcodesystemmapbycodesystemcode"
+      }
+    },
+    "/api/codesystem/GetCodeSystemMapByCodeSystemCode": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "字典映射",
+        "parameters": [
+          {
+            "name": "codeSystemCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "skipDisable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetcodesystemmapbycodesystemcode"
+      }
+    },
+    "/api/platform/codesystem/GetCodeSystemMapChildrenByCodeSystemOid": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典映射",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "parentmapoid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "skipDisable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetcodesystemmapchildrenbycodesystemoid"
+      }
+    },
+    "/api/codesystem/GetCodeSystemMapChildrenByCodeSystemOid": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典映射",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "parentmapoid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "skipDisable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetcodesystemmapchildrenbycodesystemoid"
+      }
+    },
+    "/api/platform/codesystem/GetCodeSystemMapTreeByCodeSystemOid": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典映射",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "skipDisable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapTreeDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetcodesystemmaptreebycodesystemoid"
+      }
+    },
+    "/api/codesystem/GetCodeSystemMapTreeByCodeSystemOid": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典映射",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "skipDisable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapTreeDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetcodesystemmaptreebycodesystemoid"
+      }
+    },
+    "/api/platform/codesystem/GetCodeSystemMapTreeByCodeSystemCode": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "字典映射",
+        "parameters": [
+          {
+            "name": "codeSystemCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapTreeDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetcodesystemmaptreebycodesystemcode"
+      }
+    },
+    "/api/codesystem/GetCodeSystemMapTreeByCodeSystemCode": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "字典映射",
+        "parameters": [
+          {
+            "name": "codeSystemCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapTreeDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetcodesystemmaptreebycodesystemcode"
+      }
+    },
+    "/api/platform/codesystem/CreateCodeSystemMap": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "创建字典映射",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiPlatformCodesystemCreatecodesystemmap"
+      }
+    },
+    "/api/codesystem/CreateCodeSystemMap": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "创建字典映射",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiCodesystemCreatecodesystemmap"
+      }
+    },
+    "/api/platform/codesystem/CreateCodeSystemMapList": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "创建字典映射",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntity"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntity"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntity"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntity"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiPlatformCodesystemCreatecodesystemmaplist"
+      }
+    },
+    "/api/codesystem/CreateCodeSystemMapList": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "创建字典映射",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntity"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntity"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntity"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntity"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiCodesystemCreatecodesystemmaplist"
+      }
+    },
+    "/api/platform/codesystem/CreateCodeSystemMapAndSortList": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "创建字典映射",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCodeSystemMapListInDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCodeSystemMapListInDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCodeSystemMapListInDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCodeSystemMapListInDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiPlatformCodesystemCreatecodesystemmapandsortlist"
+      }
+    },
+    "/api/codesystem/CreateCodeSystemMapAndSortList": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "创建字典映射",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCodeSystemMapListInDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCodeSystemMapListInDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCodeSystemMapListInDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCodeSystemMapListInDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiCodesystemCreatecodesystemmapandsortlist"
+      }
+    },
+    "/api/platform/codesystem/UpdateCodeSystemMap": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "更新字典映射",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemUpdatecodesystemmap"
+      }
+    },
+    "/api/codesystem/UpdateCodeSystemMap": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "更新字典映射",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemUpdatecodesystemmap"
+      }
+    },
+    "/api/platform/codesystem/UpdateCodeSystemMapName": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "更新字典映射名称",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemUpdatecodesystemmapname"
+      }
+    },
+    "/api/codesystem/UpdateCodeSystemMapName": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "更新字典映射名称",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemUpdatecodesystemmapname"
+      }
+    },
+    "/api/platform/codesystem/UpdateCodeSystemMapDisable": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "更新字典映射",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "disable",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemUpdatecodesystemmapdisable"
+      }
+    },
+    "/api/codesystem/UpdateCodeSystemMapDisable": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "更新字典映射",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "disable",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemUpdatecodesystemmapdisable"
+      }
+    },
+    "/api/platform/codesystem/ValidCodeSystemMapCode": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "验证枚举类型字典选项索引Code",
+        "parameters": [
+          {
+            "name": "codesystemoid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemValidcodesystemmapcode"
+      }
+    },
+    "/api/codesystem/ValidCodeSystemMapCode": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "验证枚举类型字典选项索引Code",
+        "parameters": [
+          {
+            "name": "codesystemoid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemValidcodesystemmapcode"
+      }
+    },
+    "/api/platform/codesystem/DeleteCodeSystemMap": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "删除字典映射",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemDeletecodesystemmap"
+      }
+    },
+    "/api/codesystem/DeleteCodeSystemMap": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "删除字典映射",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemDeletecodesystemmap"
+      }
+    },
+    "/api/platform/codesystem/DownCodeSystemTemplateFile": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "下载人员导入模板",
+        "parameters": [
+          {
+            "name": "Code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemDowncodesystemtemplatefile"
+      }
+    },
+    "/api/codesystem/DownCodeSystemTemplateFile": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "下载人员导入模板",
+        "parameters": [
+          {
+            "name": "Code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "GetApiCodesystemDowncodesystemtemplatefile"
+      }
+    },
+    "/api/platform/codesystem/ImportCodeSystemData": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "导入定制资源数据",
+        "parameters": [
+          {
+            "name": "Code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemImportcodesystemdata"
+      }
+    },
+    "/api/codesystem/ImportCodeSystemData": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "导入定制资源数据",
+        "parameters": [
+          {
+            "name": "Code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemImportcodesystemdata"
+      }
+    },
+    "/api/platform/codesystem/CreateCodeSystemGroup": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "创建字典分类",
+        "parameters": [
+          {
+            "name": "GroupName",
+            "in": "query",
+            "description": "字典分类名称",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "parentOid",
+            "in": "query",
+            "description": "父级ID",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Code",
+            "in": "query",
+            "description": "编码",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiPlatformCodesystemCreatecodesystemgroup"
+      }
+    },
+    "/api/codesystem/CreateCodeSystemGroup": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "创建字典分类",
+        "parameters": [
+          {
+            "name": "GroupName",
+            "in": "query",
+            "description": "字典分类名称",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "parentOid",
+            "in": "query",
+            "description": "父级ID",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Code",
+            "in": "query",
+            "description": "编码",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiCodesystemCreatecodesystemgroup"
+      }
+    },
+    "/api/platform/codesystem/UpdateCodeSystemGroup": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "修改字典分类",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "GroupName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "parentOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemUpdatecodesystemgroup"
+      }
+    },
+    "/api/codesystem/UpdateCodeSystemGroup": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "修改字典分类",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "GroupName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "parentOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemUpdatecodesystemgroup"
+      }
+    },
+    "/api/platform/codesystem/DeleteCodeSystemGroup": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "删除字典分类",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "主键ID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemDeletecodesystemgroup"
+      }
+    },
+    "/api/codesystem/DeleteCodeSystemGroup": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "删除字典分类",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "主键ID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemDeletecodesystemgroup"
+      }
+    },
+    "/api/platform/codesystem/GetTreeCodeSystemGroup": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典分类树形结构",
+        "parameters": [
+          {
+            "name": "Code",
+            "in": "query",
+            "description": "编码，用于查询该编码的子结点",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Withself",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemGroupEntityStringStringDictionaryBasicInheritableModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGettreecodesystemgroup"
+      }
+    },
+    "/api/codesystem/GetTreeCodeSystemGroup": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典分类树形结构",
+        "parameters": [
+          {
+            "name": "Code",
+            "in": "query",
+            "description": "编码，用于查询该编码的子结点",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Withself",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemGroupEntityStringStringDictionaryBasicInheritableModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGettreecodesystemgroup"
+      }
+    },
+    "/api/platform/codesystem/GetCodeSystemGroupCodeIsAvailable": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典分类编码是否可用",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Code",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetcodesystemgroupcodeisavailable"
+      }
+    },
+    "/api/codesystem/GetCodeSystemGroupCodeIsAvailable": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典分类编码是否可用",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Code",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetcodesystemgroupcodeisavailable"
+      }
+    },
+    "/api/platform/codesystem/GetCodeSystemGroupNameAvailable": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典分类名称是否可用",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "GroupName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetcodesystemgroupnameavailable"
+      }
+    },
+    "/api/codesystem/GetCodeSystemGroupNameAvailable": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取字典分类名称是否可用",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "GroupName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetcodesystemgroupnameavailable"
+      }
+    },
+    "/api/platform/codesystem/GetMetaClassModelTree": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取业务对象列表树",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetmetaclassmodeltree"
+      }
+    },
+    "/api/codesystem/GetMetaClassModelTree": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取业务对象列表树",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetmetaclassmodeltree"
+      }
+    },
+    "/api/platform/codesystem/GetMetaClassModelTreeByClass": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取业务对象列表树",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetmetaclassmodeltreebyclass"
+      }
+    },
+    "/api/codesystem/GetMetaClassModelTreeByClass": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取业务对象列表树",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetmetaclassmodeltreebyclass"
+      }
+    },
+    "/api/platform/codesystem/CreateCodeSystemRef": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "配置引用资源",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemRefEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemRefEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemRefEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemRefEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemRefEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemCreatecodesystemref"
+      }
+    },
+    "/api/codesystem/CreateCodeSystemRef": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "配置引用资源",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemRefEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemRefEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemRefEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemRefEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemRefEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemCreatecodesystemref"
+      }
+    },
+    "/api/platform/codesystem/UpdateCodeSystemRef": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "更新字典映射",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemRefEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemRefEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemRefEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemRefEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemRefEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemUpdatecodesystemref"
+      }
+    },
+    "/api/codesystem/UpdateCodeSystemRef": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "更新字典映射",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemRefEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemRefEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemRefEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemRefEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemRefEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemUpdatecodesystemref"
+      }
+    },
+    "/api/platform/codesystem/GetCodeSystemRefByCodeSystemOid": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取引用资源配置",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemRefEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetcodesystemrefbycodesystemoid"
+      }
+    },
+    "/api/codesystem/GetCodeSystemRefByCodeSystemOid": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取引用资源配置",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemRefEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetcodesystemrefbycodesystemoid"
+      }
+    },
+    "/api/platform/codesystem/GetCodeSystemRefList": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取引用资源",
+        "parameters": [
+          {
+            "name": "codeSystemCode",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SystemCodeDataTableDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetcodesystemreflist"
+      }
+    },
+    "/api/codesystem/GetCodeSystemRefList": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取引用资源",
+        "parameters": [
+          {
+            "name": "codeSystemCode",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SystemCodeDataTableDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetcodesystemreflist"
+      }
+    },
+    "/api/platform/codesystem/GetDataTableSourceByCodeSystemCodeInConditionMode": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取引用资源",
+        "parameters": [
+          {
+            "name": "codeSystemCode",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "queryJson",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "getAll",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "skipDisable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "instantParameter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SystemCodeDataTableDtoPaginationModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetdatatablesourcebycodesystemcodeinconditionmode"
+      }
+    },
+    "/api/codesystem/GetDataTableSourceByCodeSystemCodeInConditionMode": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取引用资源",
+        "parameters": [
+          {
+            "name": "codeSystemCode",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "queryJson",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "getAll",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "skipDisable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "instantParameter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SystemCodeDataTableDtoPaginationModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetdatatablesourcebycodesystemcodeinconditionmode"
+      }
+    },
+    "/api/platform/codesystem/QueryDistinctValueSourceByCodeSystemCodeInConditionMode": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取引用资源",
+        "parameters": [
+          {
+            "name": "codeSystemCode",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "column",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Condition"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Condition"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Condition"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Condition"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemQuerydistinctvaluesourcebycodesystemcodeinconditionmode"
+      }
+    },
+    "/api/codesystem/QueryDistinctValueSourceByCodeSystemCodeInConditionMode": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取引用资源",
+        "parameters": [
+          {
+            "name": "codeSystemCode",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "column",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Condition"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Condition"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Condition"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Condition"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemQuerydistinctvaluesourcebycodesystemcodeinconditionmode"
+      }
+    },
+    "/api/platform/codesystem/GetDataTableSourceRef": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDataTableSourceInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDataTableSourceInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDataTableSourceInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDataTableSourceInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SystemCodeDataTableDtoPaginationModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemGetdatatablesourceref"
+      }
+    },
+    "/api/codesystem/GetDataTableSourceRef": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDataTableSourceInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDataTableSourceInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDataTableSourceInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDataTableSourceInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SystemCodeDataTableDtoPaginationModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemGetdatatablesourceref"
+      }
+    },
+    "/api/platform/codesystem/GetDistinctValueSourceRef": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDataTableSourceInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDataTableSourceInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDataTableSourceInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDataTableSourceInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemGetdistinctvaluesourceref"
+      }
+    },
+    "/api/codesystem/GetDistinctValueSourceRef": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDataTableSourceInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDataTableSourceInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDataTableSourceInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetDataTableSourceInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemGetdistinctvaluesourceref"
+      }
+    },
+    "/api/platform/codesystem/GetDataTableSourceByCodeSystemCode": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取引用资源",
+        "parameters": [
+          {
+            "name": "codeSystemCode",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "getAll",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "skipDisable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "instantParameter",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SystemCodeDataTableDtoPaginationModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetdatatablesourcebycodesystemcode"
+      }
+    },
+    "/api/codesystem/GetDataTableSourceByCodeSystemCode": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取引用资源",
+        "parameters": [
+          {
+            "name": "codeSystemCode",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "getAll",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "skipDisable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "instantParameter",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SystemCodeDataTableDtoPaginationModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetdatatablesourcebycodesystemcode"
+      }
+    },
+    "/api/platform/codesystem/QueryDataTableSourceByCodeSystemCode": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取引用资源",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemDataParam"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemDataParam"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemDataParam"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemDataParam"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SystemCodeDataTableDtoPaginationModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemQuerydatatablesourcebycodesystemcode"
+      }
+    },
+    "/api/codesystem/QueryDataTableSourceByCodeSystemCode": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取引用资源",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemDataParam"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemDataParam"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemDataParam"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemDataParam"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SystemCodeDataTableDtoPaginationModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemQuerydatatablesourcebycodesystemcode"
+      }
+    },
+    "/api/platform/codesystem/GetDropDownSourceByCodeSystemCode": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取引用资源",
+        "parameters": [
+          {
+            "name": "codeSystemCode",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetdropdownsourcebycodesystemcode"
+      }
+    },
+    "/api/codesystem/GetDropDownSourceByCodeSystemCode": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取引用资源",
+        "parameters": [
+          {
+            "name": "codeSystemCode",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemMapEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetdropdownsourcebycodesystemcode"
+      }
+    },
+    "/api/platform/codesystem/GetDropDownSourceByCodeSystemCodes": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "批量获取引用资源",
+        "parameters": [
+          {
+            "name": "codeSystemCodes",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "skipDisable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringCodeSystemMapEntityListDictionaryResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetdropdownsourcebycodesystemcodes"
+      }
+    },
+    "/api/codesystem/GetDropDownSourceByCodeSystemCodes": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "批量获取引用资源",
+        "parameters": [
+          {
+            "name": "codeSystemCodes",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "skipDisable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringCodeSystemMapEntityListDictionaryResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetdropdownsourcebycodesystemcodes"
+      }
+    },
+    "/api/platform/codesystem/GetCodeSystemThird": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取外部资源",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemThirdEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemGetcodesystemthird"
+      }
+    },
+    "/api/codesystem/GetCodeSystemThird": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取外部资源",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemThirdEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemGetcodesystemthird"
+      }
+    },
+    "/api/platform/codesystem/CreateCodeSystemThird": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "配置外部资源",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemThirdEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemCreatecodesystemthird"
+      }
+    },
+    "/api/codesystem/CreateCodeSystemThird": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "配置外部资源",
+        "parameters": [
+          {
+            "name": "codeSystemOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemThirdEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemCreatecodesystemthird"
+      }
+    },
+    "/api/platform/codesystem/UpdateCodeSystemThird": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "更新外部资源配置",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemThirdEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemUpdatecodesystemthird"
+      }
+    },
+    "/api/codesystem/UpdateCodeSystemThird": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "更新外部资源配置",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodeSystemThirdEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemUpdatecodesystemthird"
+      }
+    },
+    "/api/platform/codesystem/SyncThirdData": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformCodesystemSyncthirddata"
+      }
+    },
+    "/api/codesystem/SyncThirdData": {
+      "get": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCodesystemSyncthirddata"
+      }
+    },
+    "/api/platform/codesystem/TestDBConnection": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "测试数据库连接",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemTestdbconnection"
+      }
+    },
+    "/api/codesystem/TestDBConnection": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "测试数据库连接",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemTestdbconnection"
+      }
+    },
+    "/api/platform/codesystem/GetDBTableNameList": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取数据库表名",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdQueryDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdQueryDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdQueryDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdQueryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TableInfoModelPaginationRowsResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemGetdbtablenamelist"
+      }
+    },
+    "/api/codesystem/GetDBTableNameList": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取数据库表名",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdQueryDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdQueryDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdQueryDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemThirdQueryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TableInfoModelPaginationRowsResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemGetdbtablenamelist"
+      }
+    },
+    "/api/platform/codesystem/GetDBDataList": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取数据库表数据",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TableDataModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemGetdbdatalist"
+      }
+    },
+    "/api/codesystem/GetDBDataList": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取数据库表数据",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TableDataModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemGetdbdatalist"
+      }
+    },
+    "/api/platform/codesystem/TestInterfaceConnection": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "测试接口连接",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdApi"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdApi"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdApi"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdApi"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemTestinterfaceconnection"
+      }
+    },
+    "/api/codesystem/TestInterfaceConnection": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "测试接口连接",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdApi"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdApi"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdApi"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdApi"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemTestinterfaceconnection"
+      }
+    },
+    "/api/platform/codesystem/GetInterfaceDataList": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取接口处理数据",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdApi"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdApi"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdApi"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdApi"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TableDataModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformCodesystemGetinterfacedatalist"
+      }
+    },
+    "/api/codesystem/GetInterfaceDataList": {
+      "post": {
+        "tags": [
+          "Platform_CodeSystem"
+        ],
+        "summary": "获取接口处理数据",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdApi"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdApi"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdApi"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeSystemConfigThirdApi"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TableDataModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCodesystemGetinterfacedatalist"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Platform_CodeSystem",
+      "description": "Platform_CodeSystem API"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "CodeSystemEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CodeSystemEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemAndRefModel": {
+        "type": "object",
+        "properties": {
+          "codeSystemEntity": {
+            "$ref": "#/components/schemas/CodeSystemEntity"
+          },
+          "codeSystemRefEntity": {
+            "$ref": "#/components/schemas/CodeSystemRefEntity"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemDataParam": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "TableInfoModelPaginationRowsResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/TableInfoModelPaginationRows"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemThirdEntity": {
+        "type": "object",
+        "properties": {
+          "plM_OID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "oid": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_CREATOR": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "creator": {
+            "type": "string",
+            "nullable": true
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "plM_CODESYSTEMOID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "codeSystemOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "mode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updateMode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "plM_CONFIG": {
+            "type": "string",
+            "nullable": true
+          },
+          "config": {
+            "$ref": "#/components/schemas/CodeSystemConfigThird"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemConfigThirdDb": {
+        "type": "object",
+        "properties": {
+          "sql": {
+            "type": "string",
+            "nullable": true
+          },
+          "schema": {
+            "type": "string",
+            "nullable": true
+          },
+          "tableName": {
+            "type": "string",
+            "nullable": true
+          },
+          "dbType": {
+            "type": "string",
+            "nullable": true
+          },
+          "dbConn": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateCodeSystemMapListInDto": {
+        "required": [
+          "codeSystemCode"
+        ],
+        "type": "object",
+        "properties": {
+          "entities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CodeSystemMapEntity"
+            },
+            "description": "",
+            "nullable": true
+          },
+          "codeSystemCode": {
+            "type": "string",
+            "description": "字典code",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "创建字典映射参数"
+      },
+      "SystemCodeDataTableDtoPaginationModelResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/SystemCodeDataTableDtoPaginationModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemAndThirdModelResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/CodeSystemAndThirdModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemMapEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CodeSystemMapEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemEntity": {
+        "type": "object",
+        "properties": {
+          "plM_OID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "oid": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_CREATOR": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "creator": {
+            "type": "string",
+            "nullable": true
+          },
+          "creatorDto": {
+            "$ref": "#/components/schemas/BasicUserDto"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_ENABLE": {
+            "type": "string",
+            "nullable": true
+          },
+          "enable": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "plM_CONFIG": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_GROUPOID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "groupOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "configMap": {
+            "$ref": "#/components/schemas/CodeSystemConfigMap"
+          },
+          "configRef": {
+            "$ref": "#/components/schemas/CodeSystemConfigRef"
+          },
+          "configThird": {
+            "$ref": "#/components/schemas/CodeSystemConfigThird"
+          },
+          "thirdCodeSystemTableName": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemGroupEntityStringStringDictionaryBasicInheritableModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CodeSystemGroupEntityStringStringDictionaryBasicInheritableModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Condition": {
+        "type": "object",
+        "properties": {
+          "fBuild": {
+            "$ref": "#/components/schemas/IAbstractConditionBuildBaseStringStringFunc"
+          },
+          "fVerify": {
+            "$ref": "#/components/schemas/IAbstractConditionBuildBaseStringBooleanFunc"
+          },
+          "field": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDynamicField": {
+            "type": "boolean"
+          },
+          "table": {
+            "type": "string",
+            "nullable": true
+          },
+          "filterOperator": {
+            "$ref": "#/components/schemas/FilterOperatorEnum"
+          },
+          "value": {
+            "nullable": true
+          },
+          "vPreFix": {
+            "type": "string",
+            "nullable": true
+          },
+          "logicalOperator": {
+            "$ref": "#/components/schemas/LogicalOperatorEnum"
+          },
+          "type": {
+            "$ref": "#/components/schemas/PLMDataType"
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Condition"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemEntityResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/CodeSystemEntity"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemThirdEntityResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/CodeSystemThirdEntity"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemMapEntity": {
+        "type": "object",
+        "properties": {
+          "plM_OID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "oid": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_CREATOR": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "creator": {
+            "type": "string",
+            "nullable": true
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "plM_CODESYSTEMOID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "codeSystemOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "orderNum": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "plM_PARENT": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "parent": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_DISABLE": {
+            "type": "string",
+            "nullable": true
+          },
+          "disable": {
+            "type": "boolean"
+          },
+          "plM_DATA": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": {},
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemAndThirdModel": {
+        "type": "object",
+        "properties": {
+          "codeSystemEntity": {
+            "$ref": "#/components/schemas/CodeSystemEntity"
+          },
+          "codeSystemThirdEntity": {
+            "$ref": "#/components/schemas/CodeSystemThirdEntity"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SystemCodeDataTableDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/SystemCodeDataTableDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TreeModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TreeModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemConfigThirdApi": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "type": "string",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "nullable": true
+          },
+          "header": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "parameter": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "body": {
+            "type": "string",
+            "nullable": true
+          },
+          "executeScript": {
+            "type": "string",
+            "nullable": true
+          },
+          "instantParameter": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "instantComponents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FormComponentModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemAndRefModelResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/CodeSystemAndRefModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemRefEntity": {
+        "type": "object",
+        "properties": {
+          "plM_OID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "oid": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_CREATOR": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "creator": {
+            "type": "string",
+            "nullable": true
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "plM_CODESYSTEMOID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "codeSystemOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "displayColumns": {
+            "type": "string",
+            "nullable": true
+          },
+          "nameColumn": {
+            "type": "string",
+            "nullable": true
+          },
+          "valueColumn": {
+            "type": "string",
+            "nullable": true
+          },
+          "conditionJson": {
+            "type": "string",
+            "nullable": true
+          },
+          "sortJson": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemAndMapModel": {
+        "type": "object",
+        "properties": {
+          "codeSystemEntity": {
+            "$ref": "#/components/schemas/CodeSystemEntity"
+          },
+          "codeSystemMapEntityList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CodeSystemMapModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringCodeSystemMapEntityListDictionaryResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/CodeSystemMapEntity"
+              }
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BooleanResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemAndMapModelResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/CodeSystemAndMapModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemMapEntityResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/CodeSystemMapEntity"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ObjectResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemThirdQueryDto": {
+        "type": "object",
+        "properties": {
+          "dbConfig": {
+            "$ref": "#/components/schemas/CodeSystemConfigThirdDb"
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "keyword": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "description": "TABLE,VIEW 若为空则权限",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": ""
+      },
+      "CodeSystemRefEntityResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/CodeSystemRefEntity"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetDataTableSourceInput": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "keyword": {
+            "type": "string",
+            "nullable": true
+          },
+          "condition": {
+            "$ref": "#/components/schemas/Condition"
+          },
+          "headerCondition": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Condition"
+            },
+            "nullable": true
+          },
+          "ignoreNull": {
+            "type": "boolean"
+          },
+          "getAllColumns": {
+            "type": "boolean"
+          },
+          "skipDisable": {
+            "type": "boolean"
+          },
+          "column": {
+            "type": "string",
+            "nullable": true
+          },
+          "instantParameter": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CodeSystemMapTreeDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CodeSystemMapTreeDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TableDataModelResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/TableDataModel"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

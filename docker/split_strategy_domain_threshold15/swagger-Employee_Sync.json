@@ -1,0 +1,2873 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Yiban.PLM.Web.Platform Api",
+    "description": "Api API Document Create At 2026-03-11 10:42:49",
+    "termsOfService": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/platform",
+    "contact": {
+      "name": "PLM经典版SDK开发组(PLM-Classic SDK Develop Group)",
+      "url": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/"
+    },
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "../../",
+      "description": "Default"
+    },
+    {
+      "url": "http://localhost:6010/",
+      "description": "Service"
+    }
+  ],
+  "paths": {
+    "/api/employee/sync/BatchOrgAdd": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "组织移动",
+        "parameters": [
+          {
+            "name": "parent",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncBatchorgadd"
+      }
+    },
+    "/api/employee/sync/OrgAdd": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "组织新增",
+        "parameters": [
+          {
+            "name": "parent",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiEmployeeSyncOrgadd"
+      }
+    },
+    "/api/employee/sync/BatchOrgModify": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "组织移动",
+        "parameters": [
+          {
+            "name": "parent",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncBatchorgmodify"
+      }
+    },
+    "/api/employee/sync/OrgModify": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "组织编辑",
+        "parameters": [
+          {
+            "name": "parent",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncOrgmodify"
+      }
+    },
+    "/api/employee/sync/BatchOrgSave": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "组织移动",
+        "parameters": [
+          {
+            "name": "parent",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncBatchorgsave"
+      }
+    },
+    "/api/employee/sync/OrgSave": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "组织保存 没有新增 存在编辑",
+        "parameters": [
+          {
+            "name": "parent",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiEmployeeSyncOrgsave"
+      }
+    },
+    "/api/employee/sync/BatchOrgDelete": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "批量组织删除",
+        "parameters": [
+          {
+            "name": "parent",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncBatchorgdelete"
+      }
+    },
+    "/api/employee/sync/OrgDelete": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "组织删除",
+        "parameters": [
+          {
+            "name": "parent",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncOrgdelete"
+      }
+    },
+    "/api/employee/sync/BatchOrgForbidden": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "批量组织冻结",
+        "parameters": [
+          {
+            "name": "parent",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncBatchorgforbidden"
+      }
+    },
+    "/api/employee/sync/OrgForbidden": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "组织冻结",
+        "parameters": [
+          {
+            "name": "parent",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncOrgforbidden"
+      }
+    },
+    "/api/employee/sync/BatchOrgRecovery": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "批量组织恢复",
+        "parameters": [
+          {
+            "name": "parent",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncBatchorgrecovery"
+      }
+    },
+    "/api/employee/sync/OrgRecovery": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "组织恢复",
+        "parameters": [
+          {
+            "name": "parent",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncOrgrecovery"
+      }
+    },
+    "/api/employee/sync/BatchOrgMove": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "组织移动",
+        "parameters": [
+          {
+            "name": "parent",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncBatchorgmove"
+      }
+    },
+    "/api/employee/sync/OrgMove": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "组织移动",
+        "parameters": [
+          {
+            "name": "parent",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncOrgmove"
+      }
+    },
+    "/api/employee/sync/BatchAccountAdd": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员新增",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiEmployeeSyncBatchaccountadd"
+      }
+    },
+    "/api/employee/sync/AccountAdd": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员新增",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiEmployeeSyncAccountadd"
+      }
+    },
+    "/api/employee/sync/BatchAccountModify": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员编辑",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncBatchaccountmodify"
+      }
+    },
+    "/api/employee/sync/AccountModify": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员编辑",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncAccountmodify"
+      }
+    },
+    "/api/employee/sync/BatchAccountForbidden": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员冻结",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicUserDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicUserDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicUserDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicUserDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncBatchaccountforbidden"
+      }
+    },
+    "/api/employee/sync/AccountForbidden": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员冻结",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicUserDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicUserDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicUserDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncAccountforbidden"
+      }
+    },
+    "/api/employee/sync/BatchAccountSave": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员保存 没有新增 存在编辑",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiEmployeeSyncBatchaccountsave"
+      }
+    },
+    "/api/employee/sync/AccountSave": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员保存 没有新增 存在编辑",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncUserAccountBindDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiEmployeeSyncAccountsave"
+      }
+    },
+    "/api/employee/sync/BatchAccountDelete": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员删除",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicUserDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicUserDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicUserDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicUserDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncBatchaccountdelete"
+      }
+    },
+    "/api/employee/sync/AccountDelete": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员删除",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicUserDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicUserDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicUserDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncAccountdelete"
+      }
+    },
+    "/api/employee/sync/BatchAccountRecovery": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员恢复",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicUserDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicUserDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicUserDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicUserDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncBatchaccountrecovery"
+      }
+    },
+    "/api/employee/sync/AccountRecovery": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员恢复",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicUserDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicUserDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicUserDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncAccountrecovery"
+      }
+    },
+    "/api/employee/sync/BatchRelOrgUserAdd": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员组织关联新增",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiEmployeeSyncBatchrelorguseradd"
+      }
+    },
+    "/api/employee/sync/RelOrgUserAdd": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员组织关联新增",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiEmployeeSyncRelorguseradd"
+      }
+    },
+    "/api/employee/sync/BatchRelOrgUserDelete": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员组织关联删除",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "replaceall",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncBatchrelorguserdelete"
+      }
+    },
+    "/api/employee/sync/RelOrgUserDelete": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员组织关联删除",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncRelorguserdelete"
+      }
+    },
+    "/api/employee/sync/BatchRelOrgUserReplace": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员组织关联替换   删除人员所有其他组织",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "replace",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncBatchrelorguserreplace"
+      }
+    },
+    "/api/employee/sync/RelOrgUserReplace": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员组织关联替换   删除人员所有其他组织",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "replace",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncOrgAccountRelDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthSyncOrgAccountRelDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncRelorguserreplace"
+      }
+    },
+    "/api/employee/sync/RelOrgUserClearByOrg": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员组织关联清除   删除组织所有人员",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicOrgDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncRelorguserclearbyorg"
+      }
+    },
+    "/api/employee/sync/BatchRelOrgUserClearByOrg": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员组织关联清除   删除组织所有人员",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicOrgDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncBatchrelorguserclearbyorg"
+      }
+    },
+    "/api/employee/sync/RelOrgUserClearByUser": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员组织关联清除   删除人员所有组织",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicUserDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicUserDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicUserDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BasicUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncRelorguserclearbyuser"
+      }
+    },
+    "/api/employee/sync/BatchRelOrgUserClearByUser": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "人员组织关联清除   删除人员所有组织",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicUserDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicUserDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicUserDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicUserDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncBatchrelorguserclearbyuser"
+      }
+    },
+    "/api/employee/sync/RelOrgLeadUserReplace": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "组织负责人设置",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncOrgLeadUserRelDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncOrgLeadUserRelDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncOrgLeadUserRelDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthSyncOrgLeadUserRelDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthSyncOrgLeadUserRelDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncRelorgleaduserreplace"
+      }
+    },
+    "/api/employee/sync/BatchRelOrgLeadUserReplace": {
+      "post": {
+        "tags": [
+          "Employee_Sync"
+        ],
+        "summary": "组织负责人设置",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncOrgLeadUserRelDto"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncOrgLeadUserRelDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncOrgLeadUserRelDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AuthSyncOrgLeadUserRelDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthSyncOrgLeadUserRelDtoResultDtoListResultDto"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiEmployeeSyncBatchrelorgleaduserreplace"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Employee_Sync",
+      "description": "Employee_Sync API"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "AuthSyncOrgAccountRelDtoResultDtoListResultDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AuthSyncOrgAccountRelDtoResultDto"
+            },
+            "nullable": true
+          },
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "resParameter": {
+            "$ref": "#/components/schemas/AuthSyncOrgAccountRelDtoResultDtoListResParameter"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AuthSyncOrgLeadUserRelDtoResultDtoListResultDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AuthSyncOrgLeadUserRelDtoResultDto"
+            },
+            "nullable": true
+          },
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "resParameter": {
+            "$ref": "#/components/schemas/AuthSyncOrgLeadUserRelDtoResultDtoListResParameter"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicUserDtoResultDtoListResultDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicUserDtoResultDto"
+            },
+            "nullable": true
+          },
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "resParameter": {
+            "$ref": "#/components/schemas/BasicUserDtoResultDtoListResParameter"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AuthSyncOrgLeadUserRelDto": {
+        "type": "object",
+        "properties": {
+          "secondLeadUsers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicUserDto"
+            },
+            "nullable": true
+          },
+          "firstLeadUser": {
+            "$ref": "#/components/schemas/BasicUserDto"
+          },
+          "org": {
+            "$ref": "#/components/schemas/BasicOrgDto"
+          },
+          "orgLeaderType": {
+            "$ref": "#/components/schemas/OrgLeaderTypeEnum"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AuthSyncUserAccountBindDto": {
+        "type": "object",
+        "properties": {
+          "extra": {
+            "type": "object",
+            "additionalProperties": {},
+            "nullable": true
+          },
+          "attributes": {
+            "type": "object",
+            "additionalProperties": {},
+            "nullable": true
+          },
+          "plM_OID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "oid": {
+            "type": "string",
+            "nullable": true
+          },
+          "option": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "loginId": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "photoFileOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "isAdmin": {
+            "type": "boolean"
+          },
+          "jobNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "identificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionModel": {
+            "$ref": "#/components/schemas/UserOptionStruct"
+          },
+          "bindAccount": {
+            "type": "string",
+            "nullable": true
+          },
+          "bindIdentify": {
+            "type": "string",
+            "nullable": true
+          },
+          "bindType": {
+            "type": "string",
+            "nullable": true
+          },
+          "disableLocal": {
+            "type": "boolean"
+          },
+          "defaultPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "relOrgs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicOrgDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicUserDto": {
+        "type": "object",
+        "properties": {
+          "extra": {
+            "type": "object",
+            "additionalProperties": {},
+            "nullable": true
+          },
+          "attributes": {
+            "type": "object",
+            "additionalProperties": {},
+            "nullable": true
+          },
+          "plM_OID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "oid": {
+            "type": "string",
+            "nullable": true
+          },
+          "option": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "loginId": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "photoFileOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "isAdmin": {
+            "type": "boolean"
+          },
+          "jobNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "identificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionModel": {
+            "$ref": "#/components/schemas/UserOptionStruct"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicOrgDto": {
+        "type": "object",
+        "properties": {
+          "extra": {
+            "type": "object",
+            "additionalProperties": {},
+            "nullable": true
+          },
+          "attributes": {
+            "type": "object",
+            "additionalProperties": {},
+            "nullable": true
+          },
+          "plM_OID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "oid": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_PARENT": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "parentOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "option": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "parentModel": {
+            "$ref": "#/components/schemas/BasicOrgDto"
+          },
+          "childrenModels": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicOrgDto"
+            },
+            "nullable": true
+          },
+          "level": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "identificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionModel": {
+            "$ref": "#/components/schemas/OrgOptionStruct"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AuthSyncOrgAccountRelDto": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "$ref": "#/components/schemas/BasicUserDto"
+          },
+          "org": {
+            "$ref": "#/components/schemas/BasicOrgDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicOrgDtoResultDtoListResultDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicOrgDtoResultDto"
+            },
+            "nullable": true
+          },
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "resParameter": {
+            "$ref": "#/components/schemas/BasicOrgDtoResultDtoListResParameter"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

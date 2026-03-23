@@ -1,0 +1,3209 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Yiban.PLM.Web.Platform Api",
+    "description": "Api API Document Create At 2026-03-11 10:42:49",
+    "termsOfService": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/platform",
+    "contact": {
+      "name": "PLM经典版SDK开发组(PLM-Classic SDK Develop Group)",
+      "url": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/"
+    },
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "../../",
+      "description": "Default"
+    },
+    {
+      "url": "http://localhost:6010/",
+      "description": "Service"
+    }
+  ],
+  "paths": {
+    "/api/platform/orginization/GetUserPageList": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工分页数据",
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "query",
+            "description": "公司主键",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "关键字",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "description": "分页参数",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withChild",
+            "in": "query",
+            "description": "查询目录穿透 (Y/N)",
+            "schema": {
+              "type": "string",
+              "default": "N"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityPaginationRowsResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetuserpagelist"
+      }
+    },
+    "/api/orginization/GetUserPageList": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工分页数据",
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "query",
+            "description": "公司主键",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "关键字",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "description": "分页参数",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withChild",
+            "in": "query",
+            "description": "查询目录穿透 (Y/N)",
+            "schema": {
+              "type": "string",
+              "default": "N"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityPaginationRowsResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetuserpagelist"
+      }
+    },
+    "/api/platform/orginization/GetUserInfoPageList": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工分页数据",
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "query",
+            "description": "公司主键",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "关键字",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "description": "分页参数",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withChild",
+            "in": "query",
+            "description": "查询目录穿透 (Y/N)",
+            "schema": {
+              "type": "string",
+              "default": "N"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoPaginationRowsResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetuserinfopagelist"
+      }
+    },
+    "/api/orginization/GetUserInfoPageList": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工分页数据",
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "query",
+            "description": "公司主键",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "关键字",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "description": "分页参数",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withChild",
+            "in": "query",
+            "description": "查询目录穿透 (Y/N)",
+            "schema": {
+              "type": "string",
+              "default": "N"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoPaginationRowsResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetuserinfopagelist"
+      }
+    },
+    "/api/platform/orginization/GetAllBasicUserByLogId": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工列表数据-根据LogId",
+        "parameters": [
+          {
+            "name": "logids",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetallbasicuserbylogid"
+      }
+    },
+    "/api/orginization/GetAllBasicUserByLogId": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工列表数据-根据LogId",
+        "parameters": [
+          {
+            "name": "logids",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetallbasicuserbylogid"
+      }
+    },
+    "/api/platform/orginization/GetAllBasicUserByUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工列表数据 根据 UserOid",
+        "parameters": [
+          {
+            "name": "oids",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetallbasicuserbyuseroid"
+      }
+    },
+    "/api/orginization/GetAllBasicUserByUserOid": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工列表数据 根据 UserOid",
+        "parameters": [
+          {
+            "name": "oids",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetallbasicuserbyuseroid"
+      }
+    },
+    "/api/platform/orginization/GetAllBasicUserByName": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工列表数据 根据 Name 名称",
+        "parameters": [
+          {
+            "name": "names",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetallbasicuserbyname"
+      }
+    },
+    "/api/orginization/GetAllBasicUserByName": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工列表数据 根据 Name 名称",
+        "parameters": [
+          {
+            "name": "names",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetallbasicuserbyname"
+      }
+    },
+    "/api/platform/orginization/GetAllBasicUserByIDCode": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工列表数据 根据 IDCODE 用户标识",
+        "parameters": [
+          {
+            "name": "idcodes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetallbasicuserbyidcode"
+      }
+    },
+    "/api/orginization/GetAllBasicUserByIDCode": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工列表数据 根据 IDCODE 用户标识",
+        "parameters": [
+          {
+            "name": "idcodes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetallbasicuserbyidcode"
+      }
+    },
+    "/api/platform/orginization/GetAllBasicOrglist": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取所有组织列表数据",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetallbasicorglist"
+      }
+    },
+    "/api/orginization/GetAllBasicOrglist": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取所有组织列表数据",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetallbasicorglist"
+      }
+    },
+    "/api/platform/orginization/GetAllBasicOrgByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取组织列表数据 根据 OrgOids",
+        "parameters": [
+          {
+            "name": "oids",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetallbasicorgbyorgoid"
+      }
+    },
+    "/api/orginization/GetAllBasicOrgByOrgOid": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取组织列表数据 根据 OrgOids",
+        "parameters": [
+          {
+            "name": "oids",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetallbasicorgbyorgoid"
+      }
+    },
+    "/api/platform/orginization/GetAllBasicOrgByName": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取组织列表数据 根据 Name 名称",
+        "parameters": [
+          {
+            "name": "names",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetallbasicorgbyname"
+      }
+    },
+    "/api/orginization/GetAllBasicOrgByName": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取组织列表数据 根据 Name 名称",
+        "parameters": [
+          {
+            "name": "names",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetallbasicorgbyname"
+      }
+    },
+    "/api/platform/orginization/GetAllBasicOrgByAbbr": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取组织列表数据 根据 Abbreviation 简称",
+        "parameters": [
+          {
+            "name": "abbrs",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetallbasicorgbyabbr"
+      }
+    },
+    "/api/orginization/GetAllBasicOrgByAbbr": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取组织列表数据 根据 Abbreviation 简称",
+        "parameters": [
+          {
+            "name": "abbrs",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetallbasicorgbyabbr"
+      }
+    },
+    "/api/platform/orginization/GetAllBasicChildrenOrg": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取子集组织数据 根据 OrgOid",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "validempty",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetallbasicchildrenorg"
+      }
+    },
+    "/api/orginization/GetAllBasicChildrenOrg": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取子集组织数据 根据 OrgOid",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "validempty",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetallbasicchildrenorg"
+      }
+    },
+    "/api/platform/orginization/GetAllBasicParentOrg": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取父级组装数据 根据 OrgOid",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "validempty",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetallbasicparentorg"
+      }
+    },
+    "/api/orginization/GetAllBasicParentOrg": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取父级组装数据 根据 OrgOid",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "validempty",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicOrgDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetallbasicparentorg"
+      }
+    },
+    "/api/platform/orginization/SearchUserInOrgsOrRoles": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "查询人员在组织或角色",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserInOrgsOrRolesInDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserInOrgsOrRolesInDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserInOrgsOrRolesInDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserInOrgsOrRolesInDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchUserInOrgsOrRolesOutDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformOrginizationSearchuserinorgsorroles"
+      }
+    },
+    "/api/orginization/SearchUserInOrgsOrRoles": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "查询人员在组织或角色",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserInOrgsOrRolesInDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserInOrgsOrRolesInDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserInOrgsOrRolesInDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserInOrgsOrRolesInDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchUserInOrgsOrRolesOutDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiOrginizationSearchuserinorgsorroles"
+      }
+    },
+    "/api/platform/orginization/GetUserInfoMineSubordinates": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "withSubordinates",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "withShared",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetuserinfominesubordinates"
+      }
+    },
+    "/api/orginization/GetUserInfoMineSubordinates": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "withSubordinates",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "withShared",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetuserinfominesubordinates"
+      }
+    },
+    "/api/platform/orginization/GetUserInfoMineShare": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetuserinfomineshare"
+      }
+    },
+    "/api/orginization/GetUserInfoMineShare": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetuserinfomineshare"
+      }
+    },
+    "/api/platform/orginization/GetUserInfoByOids": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工数据",
+        "parameters": [
+          {
+            "name": "oids",
+            "in": "query",
+            "description": ",隔开,用户oid列表",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetuserinfobyoids"
+      }
+    },
+    "/api/orginization/GetUserInfoByOids": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工数据",
+        "parameters": [
+          {
+            "name": "oids",
+            "in": "query",
+            "description": ",隔开,用户oid列表",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetuserinfobyoids"
+      }
+    },
+    "/api/platform/orginization/QueryUserInfoByUserDto": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工数据代替上方 防止oids过长",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserIdsParamDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserIdsParamDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserIdsParamDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserIdsParamDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformOrginizationQueryuserinfobyuserdto"
+      }
+    },
+    "/api/orginization/QueryUserInfoByUserDto": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工数据代替上方 防止oids过长",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserIdsParamDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserIdsParamDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserIdsParamDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserIdsParamDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiOrginizationQueryuserinfobyuserdto"
+      }
+    },
+    "/api/platform/orginization/GetUserInfo": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工数据\n[过时接口,不建议使用]",
+        "parameters": [
+          {
+            "name": "oids",
+            "in": "query",
+            "description": ",隔开,用户oid列表",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApiPlatformOrginizationGetuserinfo"
+      }
+    },
+    "/api/orginization/GetUserInfo": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取员工数据\n[过时接口,不建议使用]",
+        "parameters": [
+          {
+            "name": "oids",
+            "in": "query",
+            "description": ",隔开,用户oid列表",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApiOrginizationGetuserinfo"
+      }
+    },
+    "/api/platform/orginization/GetUserByOid": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取单个人员的信息",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetuserbyoid"
+      }
+    },
+    "/api/orginization/GetUserByOid": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取单个人员的信息",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetuserbyoid"
+      }
+    },
+    "/api/platform/orginization/GetUserMine": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取当前登录人员的信息",
+        "parameters": [
+          {
+            "name": "full",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetusermine"
+      }
+    },
+    "/api/orginization/GetUserMine": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取当前登录人员的信息",
+        "parameters": [
+          {
+            "name": "full",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetusermine"
+      }
+    },
+    "/api/platform/orginization/GetUserInfoMine": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取当前登录人员的信息",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetuserinfomine"
+      }
+    },
+    "/api/orginization/GetUserInfoMine": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取当前登录人员的信息",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicUserDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetuserinfomine"
+      }
+    },
+    "/api/platform/orginization/ModifyUserPassword": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "修改密码",
+        "parameters": [
+          {
+            "name": "oldPsw",
+            "in": "query",
+            "description": "原有密码(必填)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "newPsw",
+            "in": "query",
+            "description": "新密码(必填)",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformOrginizationModifyuserpassword"
+      }
+    },
+    "/api/orginization/ModifyUserPassword": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "修改密码",
+        "parameters": [
+          {
+            "name": "oldPsw",
+            "in": "query",
+            "description": "原有密码(必填)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "newPsw",
+            "in": "query",
+            "description": "新密码(必填)",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiOrginizationModifyuserpassword"
+      }
+    },
+    "/api/platform/orginization/SaveUser": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "个人信息保存",
+        "requestBody": {
+          "description": "PLM_PHONE\nPLM_EXTEND3\nPLM_BIRTHDATE\nPLM_ADDRESS\nPLM_EMAIL\nPLM_DESCRIPTION",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformOrginizationSaveuser"
+      }
+    },
+    "/api/orginization/SaveUser": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "个人信息保存",
+        "requestBody": {
+          "description": "PLM_PHONE\nPLM_EXTEND3\nPLM_BIRTHDATE\nPLM_ADDRESS\nPLM_EMAIL\nPLM_DESCRIPTION",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiOrginizationSaveuser"
+      }
+    },
+    "/api/platform/orginization/SaveUserHeadImage": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "个人头像保存",
+        "parameters": [
+          {
+            "name": "fileOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fileName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformOrginizationSaveuserheadimage"
+      }
+    },
+    "/api/orginization/SaveUserHeadImage": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "个人头像保存",
+        "parameters": [
+          {
+            "name": "fileOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fileName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiOrginizationSaveuserheadimage"
+      }
+    },
+    "/api/platform/orginization/GetOrgTree": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取组织树形数据",
+        "parameters": [
+          {
+            "name": "parentId",
+            "in": "query",
+            "description": "父级id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetorgtree"
+      },
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取树形数据",
+        "parameters": [
+          {
+            "name": "parentId",
+            "in": "query",
+            "description": "父级id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformOrginizationGetorgtree"
+      }
+    },
+    "/api/orginization/GetOrgTree": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取组织树形数据",
+        "parameters": [
+          {
+            "name": "parentId",
+            "in": "query",
+            "description": "父级id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetorgtree"
+      },
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取树形数据",
+        "parameters": [
+          {
+            "name": "parentId",
+            "in": "query",
+            "description": "父级id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiOrginizationGetorgtree"
+      }
+    },
+    "/api/platform/orginization/LoadOrgTree": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取树形数据",
+        "parameters": [
+          {
+            "name": "parentId",
+            "in": "query",
+            "description": "父级id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformOrginizationLoadorgtree"
+      }
+    },
+    "/api/orginization/LoadOrgTree": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取树形数据",
+        "parameters": [
+          {
+            "name": "parentId",
+            "in": "query",
+            "description": "父级id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiOrginizationLoadorgtree"
+      }
+    },
+    "/api/platform/orginization/GetPersonNoPageList": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取不分页数据【人员选择框】--只筛选有效的",
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "companyId",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withChild",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": "N"
+            }
+          },
+          {
+            "name": "filterFrozen",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformOrginizationGetpersonnopagelist"
+      }
+    },
+    "/api/orginization/GetPersonNoPageList": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取不分页数据【人员选择框】--只筛选有效的",
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "companyId",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withChild",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": "N"
+            }
+          },
+          {
+            "name": "filterFrozen",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiOrginizationGetpersonnopagelist"
+      }
+    },
+    "/api/platform/orginization/GetOrgInRange": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取人员框筛选范围涉及的组织范围",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformOrginizationGetorginrange"
+      }
+    },
+    "/api/orginization/GetOrgInRange": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取人员框筛选范围涉及的组织范围",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiOrginizationGetorginrange"
+      }
+    },
+    "/api/platform/orginization/GetPersonNotFromOrgRange": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取来源不是组织的人员列表",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformOrginizationGetpersonnotfromorgrange"
+      }
+    },
+    "/api/orginization/GetPersonNotFromOrgRange": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取来源不是组织的人员列表",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiOrginizationGetpersonnotfromorgrange"
+      }
+    },
+    "/api/platform/orginization/GetPersonInCompanyRange": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取组织下成员或者目标筛选范围下涉及组织的成员",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformOrginizationGetpersonincompanyrange"
+      }
+    },
+    "/api/orginization/GetPersonInCompanyRange": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取组织下成员或者目标筛选范围下涉及组织的成员",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchUserOrgDataRangeParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiOrginizationGetpersonincompanyrange"
+      }
+    },
+    "/api/platform/orginization/GetOrgTreeWithUserCount": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取组织树形数据",
+        "parameters": [
+          {
+            "name": "parentId",
+            "in": "query",
+            "description": "父级id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationGetorgtreewithusercount"
+      }
+    },
+    "/api/orginization/GetOrgTreeWithUserCount": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "获取组织树形数据",
+        "parameters": [
+          {
+            "name": "parentId",
+            "in": "query",
+            "description": "父级id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiOrginizationGetorgtreewithusercount"
+      }
+    },
+    "/api/platform/orginization/DownUserTemplateFile": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "下载人员导入模板",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "GetApiPlatformOrginizationDownusertemplatefile"
+      }
+    },
+    "/api/orginization/DownUserTemplateFile": {
+      "get": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "下载人员导入模板",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "GetApiOrginizationDownusertemplatefile"
+      }
+    },
+    "/api/platform/orginization/ImportUserData": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "导入人员数据",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiPlatformOrginizationImportuserdata"
+      }
+    },
+    "/api/orginization/ImportUserData": {
+      "post": {
+        "tags": [
+          "Platform_Orginization"
+        ],
+        "summary": "导入人员数据",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiOrginizationImportuserdata"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Platform_Orginization",
+      "description": "Platform_Orginization API"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "BasicUserDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicUserDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserIdsParamDto": {
+        "type": "object",
+        "properties": {
+          "oids": {
+            "type": "string",
+            "description": "用户ids",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserEntityResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/UserEntity"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicOrgDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicOrgDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserEntity": {
+        "type": "object",
+        "properties": {
+          "plM_OID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "clientPlmOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_LOGID": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_PASSWORD": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_NAME": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_BIRTHDATE": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_PHONE": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_ADDRESS": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_EMAIL": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_STATUS": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_CREATOR": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_CREATETIME": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "plM_MODIFIER": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_MODIFYTIME": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "plM_DESCRIPTION": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_CALENDAR": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "clientCalendarOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_ONLINE": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_GENDER": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_LASTHOST": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_ISINHERIT": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_ALWAYSVALID": {
+            "type": "string",
+            "nullable": true
+          },
+          "isAlwaysValid": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "plM_STARTTIME": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "plM_ENDTIME": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "plM_SECURITY": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "plM_EXTEND1": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_EXTEND2": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_EXTEND3": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_OPTION": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "plM_REGIONNAME": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_SIGNFILEOID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "signFileOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientRegion": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "plM_ORGANIZATION": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "clientCompanyId": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_ROLE_OID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "clientRoleOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "isFingerVerify": {
+            "type": "boolean"
+          },
+          "isPswVerify": {
+            "type": "boolean"
+          },
+          "clientStatus": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "isAdmin": {
+            "type": "boolean"
+          },
+          "dynAttrIDCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "dynAttrResetPWDMind": {
+            "type": "string",
+            "nullable": true
+          },
+          "dynAttrActiveLimitCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dynPubDPFolder": {
+            "type": "string",
+            "nullable": true
+          },
+          "dynRecDPFolder": {
+            "type": "string",
+            "nullable": true
+          },
+          "dynNormalCost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "dynOverTimeCost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "organizationOids": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleOids": {
+            "type": "string",
+            "nullable": true
+          },
+          "loginMsg": {
+            "type": "string",
+            "nullable": true
+          },
+          "loginOk": {
+            "type": "boolean"
+          },
+          "photoFileOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "photoFileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "photoUrl": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "remainedAttempts": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicUserDtoPaginationRowsResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/BasicUserDtoPaginationRows"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TreeModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TreeModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SearchUserInOrgsOrRolesOutDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SearchUserInOrgsOrRolesOutDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SearchUserOrgDataRangeParameter": {
+        "type": "object",
+        "properties": {
+          "dataRanges": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DataFileterRangeModel"
+            },
+            "description": "筛选范围条件",
+            "nullable": true
+          },
+          "attr": {
+            "type": "object",
+            "additionalProperties": {},
+            "description": "对象属性",
+            "nullable": true
+          },
+          "keyword": {
+            "type": "string",
+            "nullable": true
+          },
+          "companyId": {
+            "type": "string",
+            "nullable": true
+          },
+          "withChild": {
+            "type": "string",
+            "nullable": true
+          },
+          "filterFrozen": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false,
+        "description": "筛选人员框、组织框数据"
+      },
+      "BasicUserDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/BasicUserDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserEntityPaginationRowsResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/UserEntityPaginationRows"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SearchUserInOrgsOrRolesInDto": {
+        "type": "object",
+        "properties": {
+          "orgIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "组织id",
+            "nullable": true
+          },
+          "roleIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "角色id",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "查询人员在组织或角色"
+      }
+    }
+  }
+}

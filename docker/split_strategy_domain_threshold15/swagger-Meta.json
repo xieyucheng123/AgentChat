@@ -1,0 +1,5460 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Yiban.PLM.Web.Platform Api",
+    "description": "Api API Document Create At 2026-03-11 10:42:49",
+    "termsOfService": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/platform",
+    "contact": {
+      "name": "PLM经典版SDK开发组(PLM-Classic SDK Develop Group)",
+      "url": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/"
+    },
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "../../",
+      "description": "Default"
+    },
+    {
+      "url": "http://localhost:6010/",
+      "description": "Service"
+    }
+  ],
+  "paths": {
+    "/api/commonitem/meta/ValidateItemClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "类名不能重复 name",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaValidateitemclassname"
+      }
+    },
+    "/api/meta/-/ValidateItemClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "类名不能重复 name",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Validateitemclassname"
+      }
+    },
+    "/api/commonitem/meta/ValidateItemClassLabel": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "类中文名不能重复 label",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "label",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaValidateitemclasslabel"
+      }
+    },
+    "/api/meta/-/ValidateItemClassLabel": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "类中文名不能重复 label",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "label",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Validateitemclasslabel"
+      }
+    },
+    "/api/commonitem/meta/ValidateItemRelationName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "类名不能重复 name",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaValidateitemrelationname"
+      }
+    },
+    "/api/meta/-/ValidateItemRelationName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "类名不能重复 name",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Validateitemrelationname"
+      }
+    },
+    "/api/commonitem/meta/ValidateItemRelationLabel": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "关联中文名不能重复 label",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "label",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaValidateitemrelationlabel"
+      }
+    },
+    "/api/meta/-/ValidateItemRelationLabel": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "关联中文名不能重复 label",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "label",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Validateitemrelationlabel"
+      }
+    },
+    "/api/commonitem/meta/ValidateItemAttrName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "属性名不能重复 name",
+        "parameters": [
+          {
+            "name": "classoid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaValidateitemattrname"
+      }
+    },
+    "/api/meta/-/ValidateItemAttrName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "属性名不能重复 name",
+        "parameters": [
+          {
+            "name": "classoid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Validateitemattrname"
+      }
+    },
+    "/api/commonitem/meta/ValidateItemAttrLabel": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "属性名不能重复 label",
+        "parameters": [
+          {
+            "name": "classoid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "label",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaValidateitemattrlabel"
+      }
+    },
+    "/api/meta/-/ValidateItemAttrLabel": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "属性名不能重复 label",
+        "parameters": [
+          {
+            "name": "classoid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "label",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Validateitemattrlabel"
+      }
+    },
+    "/api/commonitem/meta/ValidateItemClassAttrLabel": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "属性名不能重复 label",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "label",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaValidateitemclassattrlabel"
+      }
+    },
+    "/api/meta/-/ValidateItemClassAttrLabel": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "属性名不能重复 label",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "label",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Validateitemclassattrlabel"
+      }
+    },
+    "/api/commonitem/meta/ValidateItemClassAttrName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "属性名不能重复 name",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaValidateitemclassattrname"
+      }
+    },
+    "/api/meta/-/ValidateItemClassAttrName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "属性名不能重复 name",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Validateitemclassattrname"
+      }
+    },
+    "/api/commonitem/meta/ValidateItemRelationAttrLabel": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "属性名不能重复 label",
+        "parameters": [
+          {
+            "name": "relationName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "label",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaValidateitemrelationattrlabel"
+      }
+    },
+    "/api/meta/-/ValidateItemRelationAttrLabel": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "属性名不能重复 label",
+        "parameters": [
+          {
+            "name": "relationName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "label",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Validateitemrelationattrlabel"
+      }
+    },
+    "/api/commonitem/meta/ValidateItemRelationAttrName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "属性名不能重复 name",
+        "parameters": [
+          {
+            "name": "relationName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaValidateitemrelationattrname"
+      }
+    },
+    "/api/meta/-/ValidateItemRelationAttrName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "属性名不能重复 name",
+        "parameters": [
+          {
+            "name": "relationName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Validateitemrelationattrname"
+      }
+    },
+    "/api/commonitem/meta/ValidateClassAttrGroupNameExist": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "新增/修改类关联属性组名称可操作验证 \n\n是否存在同名属性组",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaValidateclassattrgroupnameexist"
+      }
+    },
+    "/api/meta/-/ValidateClassAttrGroupNameExist": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "新增/修改类关联属性组名称可操作验证 \n\n是否存在同名属性组",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Validateclassattrgroupnameexist"
+      }
+    },
+    "/api/commonitem/meta/ValidateClassAttrGroupName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "新增/修改类关联属性组名称可操作验证 \n\n是否存在同名属性组",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaValidateclassattrgroupname"
+      }
+    },
+    "/api/meta/-/ValidateClassAttrGroupName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "新增/修改类关联属性组名称可操作验证 \n\n是否存在同名属性组",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Validateclassattrgroupname"
+      }
+    },
+    "/api/commonitem/meta/GetAllParentClass": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有父类",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallparentclass"
+      }
+    },
+    "/api/meta/-/GetAllParentClass": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有父类",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallparentclass"
+      }
+    },
+    "/api/commonitem/meta/GetAllChildrenClass": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有子类",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "filterClassify",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallchildrenclass"
+      }
+    },
+    "/api/meta/-/GetAllChildrenClass": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有子类",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "filterClassify",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallchildrenclass"
+      }
+    },
+    "/api/commonitem/meta/GetBasicMetaClassByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取类信息",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetbasicmetaclassbyclassname"
+      }
+    },
+    "/api/meta/-/GetBasicMetaClassByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取类信息",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getbasicmetaclassbyclassname"
+      }
+    },
+    "/api/commonitem/meta/GetAllBasicMetaClassByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取类信息列表",
+        "parameters": [
+          {
+            "name": "classNames",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallbasicmetaclassbyclassname"
+      }
+    },
+    "/api/meta/-/GetAllBasicMetaClassByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取类信息列表",
+        "parameters": [
+          {
+            "name": "classNames",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallbasicmetaclassbyclassname"
+      }
+    },
+    "/api/commonitem/meta/GetAllParentBasicMetaClassByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有父类",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallparentbasicmetaclassbyclassname"
+      }
+    },
+    "/api/meta/-/GetAllParentBasicMetaClassByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有父类",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallparentbasicmetaclassbyclassname"
+      }
+    },
+    "/api/commonitem/meta/GetAllParentClassNameByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有父类",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallparentclassnamebyclassname"
+      }
+    },
+    "/api/meta/-/GetAllParentClassNameByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有父类",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallparentclassnamebyclassname"
+      }
+    },
+    "/api/commonitem/meta/GetAllChildrenBasicMetaClassByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有子类",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "filterClassify",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallchildrenbasicmetaclassbyclassname"
+      }
+    },
+    "/api/meta/-/GetAllChildrenBasicMetaClassByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有子类",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "filterClassify",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallchildrenbasicmetaclassbyclassname"
+      }
+    },
+    "/api/commonitem/meta/GetAllChildrenClassNameByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有子类",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "filterClassify",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallchildrenclassnamebyclassname"
+      }
+    },
+    "/api/meta/-/GetAllChildrenClassNameByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有子类",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 2147483647
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "filterClassify",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallchildrenclassnamebyclassname"
+      }
+    },
+    "/api/commonitem/meta/GetBasicMetaRelationByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取关联信息",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaRelationDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetbasicmetarelationbyclassname"
+      }
+    },
+    "/api/meta/-/GetBasicMetaRelationByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取关联信息",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaRelationDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getbasicmetarelationbyclassname"
+      }
+    },
+    "/api/commonitem/meta/GetAllBasicMetaRelationByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取关联信息列表",
+        "parameters": [
+          {
+            "name": "classNames",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaRelationDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallbasicmetarelationbyclassname"
+      }
+    },
+    "/api/meta/-/GetAllBasicMetaRelationByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取关联信息列表",
+        "parameters": [
+          {
+            "name": "classNames",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaRelationDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallbasicmetarelationbyclassname"
+      }
+    },
+    "/api/commonitem/meta/GetAllBasicMetaRelationByLeftClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有关联类型结构 根据左类类名",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaRelationDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallbasicmetarelationbyleftclassname"
+      }
+    },
+    "/api/meta/-/GetAllBasicMetaRelationByLeftClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有关联类型结构 根据左类类名",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaRelationDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallbasicmetarelationbyleftclassname"
+      }
+    },
+    "/api/commonitem/meta/GetAllRelationClassNameByLeftClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有关联名称 根据左类类名",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallrelationclassnamebyleftclassname"
+      }
+    },
+    "/api/meta/-/GetAllRelationClassNameByLeftClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有关联名称 根据左类类名",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallrelationclassnamebyleftclassname"
+      }
+    },
+    "/api/commonitem/meta/GetRelationsByLeftClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有关联类型结构 根据左类类名（只查询本身及子类的关联）",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "through",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetaRelationEntityPaginationRowsResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetrelationsbyleftclassname"
+      }
+    },
+    "/api/meta/-/GetRelationsByLeftClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有关联类型结构 根据左类类名（只查询本身及子类的关联）",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "through",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetaRelationEntityPaginationRowsResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getrelationsbyleftclassname"
+      }
+    },
+    "/api/commonitem/meta/GetRelationsByRightClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有关联类型结构 根据右类类名（只查询本身及子类的关联）",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "through",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetaRelationEntityPaginationRowsResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetrelationsbyrightclassname"
+      }
+    },
+    "/api/meta/-/GetRelationsByRightClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有关联类型结构 根据右类类名（只查询本身及子类的关联）",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "through",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetaRelationEntityPaginationRowsResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getrelationsbyrightclassname"
+      }
+    },
+    "/api/commonitem/meta/GetAllBasicMetaRelationByRightClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有关联类型结构 根据右类类名",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaRelationDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallbasicmetarelationbyrightclassname"
+      }
+    },
+    "/api/meta/-/GetAllBasicMetaRelationByRightClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有关联类型结构 根据右类类名",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaRelationDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallbasicmetarelationbyrightclassname"
+      }
+    },
+    "/api/commonitem/meta/GetAllRelationClassNameByRightClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有关联名称 根据右类类名",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallrelationclassnamebyrightclassname"
+      }
+    },
+    "/api/meta/-/GetAllRelationClassNameByRightClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有关联名称 根据右类类名",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallrelationclassnamebyrightclassname"
+      }
+    },
+    "/api/commonitem/meta/GetAllBasicMetaRelationByLeftOrRightClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有关联类型结构 根据左类或右类类名",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaRelationDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallbasicmetarelationbyleftorrightclassname"
+      }
+    },
+    "/api/meta/-/GetAllBasicMetaRelationByLeftOrRightClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有关联类型结构 根据左类或右类类名",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaRelationDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallbasicmetarelationbyleftorrightclassname"
+      }
+    },
+    "/api/commonitem/meta/GetAllRelationClassNameByLeftOrRightClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有关联名称 根据左类或右类类名",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallrelationclassnamebyleftorrightclassname"
+      }
+    },
+    "/api/meta/-/GetAllRelationClassNameByLeftOrRightClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有关联名称 根据左类或右类类名",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallrelationclassnamebyleftorrightclassname"
+      }
+    },
+    "/api/commonitem/meta/GetAllBasicMetaClassAttrByAttrOid": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取属性列表 基本属性信息 依据属性标识",
+        "parameters": [
+          {
+            "name": "attrOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallbasicmetaclassattrbyattroid"
+      }
+    },
+    "/api/meta/-/GetAllBasicMetaClassAttrByAttrOid": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取属性列表 基本属性信息 依据属性标识",
+        "parameters": [
+          {
+            "name": "attrOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallbasicmetaclassattrbyattroid"
+      }
+    },
+    "/api/commonitem/meta/GetAllBasicMetaClassAttrByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取属性列表 基本属性信息 依据类名称",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "full",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "excludeClobs",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallbasicmetaclassattrbyclassname"
+      }
+    },
+    "/api/meta/-/GetAllBasicMetaClassAttrByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取属性列表 基本属性信息 依据类名称",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "full",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "excludeClobs",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallbasicmetaclassattrbyclassname"
+      }
+    },
+    "/api/commonitem/meta/GetAllMetaClassAttrNameByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取属性列表 属性名称 依据类名称",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "full",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "excludeClobs",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallmetaclassattrnamebyclassname"
+      }
+    },
+    "/api/meta/-/GetAllMetaClassAttrNameByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取属性列表 属性名称 依据类名称",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "full",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "excludeClobs",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallmetaclassattrnamebyclassname"
+      }
+    },
+    "/api/commonitem/meta/GetAllBasicMetaRelationAttrByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取属性列表 基本属性信息 依据关联名称",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "excludeClobs",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallbasicmetarelationattrbyclassname"
+      }
+    },
+    "/api/meta/-/GetAllBasicMetaRelationAttrByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取属性列表 基本属性信息 依据关联名称",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "excludeClobs",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallbasicmetarelationattrbyclassname"
+      }
+    },
+    "/api/commonitem/meta/GetAllMetaRelationAttrNameByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取属性列表 属性名称 依据关联名称",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "excludeClobs",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetallmetarelationattrnamebyclassname"
+      }
+    },
+    "/api/meta/-/GetAllMetaRelationAttrNameByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取属性列表 属性名称 依据关联名称",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "excludeClobs",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "filterVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getallmetarelationattrnamebyclassname"
+      }
+    },
+    "/api/commonitem/meta/QueryAllBasicMetaAttrByClassName": {
+      "post": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取属性列表 基本属性信息 依据类名称",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoMetaExtraAttributeSearchResult"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoMetaExtraAttributeSearchResult"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoMetaExtraAttributeSearchResult"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoMetaExtraAttributeSearchResult"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoMetaExtraAttributeSearchResultListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCommonitemMetaQueryallbasicmetaattrbyclassname"
+      }
+    },
+    "/api/meta/-/QueryAllBasicMetaAttrByClassName": {
+      "post": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取属性列表 基本属性信息 依据类名称",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoMetaExtraAttributeSearchResult"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoMetaExtraAttributeSearchResult"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoMetaExtraAttributeSearchResult"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoMetaExtraAttributeSearchResult"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoMetaExtraAttributeSearchResultListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiMeta-Queryallbasicmetaattrbyclassname"
+      }
+    },
+    "/api/commonitem/meta/GetBasicMetaClassAttrWithCodingRulePairByClassName": {
+      "post": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取属性列表 基本属性信息 包含多编码组合属性 依据类名称",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withmid",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "excludeClobs",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "excludeInVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "excludeConst",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCommonitemMetaGetbasicmetaclassattrwithcodingrulepairbyclassname"
+      }
+    },
+    "/api/meta/-/GetBasicMetaClassAttrWithCodingRulePairByClassName": {
+      "post": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取属性列表 基本属性信息 包含多编码组合属性 依据类名称",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withmid",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "excludeClobs",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "excludeInVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "excludeConst",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaAttributeDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiMeta-Getbasicmetaclassattrwithcodingrulepairbyclassname"
+      }
+    },
+    "/api/commonitem/meta/GetMetaClassAttrWithCodingRulePairByClassName": {
+      "post": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取属性列表 原始属性信息 包含多编码组合属性 依据类名称",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withmid",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "excludeClobs",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "excludeInVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "excludeConst",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataItemDetailEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCommonitemMetaGetmetaclassattrwithcodingrulepairbyclassname"
+      }
+    },
+    "/api/meta/-/GetMetaClassAttrWithCodingRulePairByClassName": {
+      "post": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取属性列表 原始属性信息 包含多编码组合属性 依据类名称",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withmid",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "excludeClobs",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "excludeInVisiable",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "excludeConst",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataItemDetailEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiMeta-Getmetaclassattrwithcodingrulepairbyclassname"
+      }
+    },
+    "/api/commonitem/meta/GetPermissionClass": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetpermissionclass"
+      }
+    },
+    "/api/meta/-/GetPermissionClass": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getpermissionclass"
+      }
+    },
+    "/api/commonitem/meta/GetSysMetaClass": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有的系统的对象和关联",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringStringStringArrayDictionaryDictionaryResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetsysmetaclass"
+      }
+    },
+    "/api/meta/-/GetSysMetaClass": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取所有的系统的对象和关联",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringStringStringArrayDictionaryDictionaryResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getsysmetaclass"
+      }
+    },
+    "/api/commonitem/meta/SearchRelsMetaAttrs": {
+      "post": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "查询多个关联类的属性",
+        "requestBody": {
+          "description": "关联类集合",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringDataItemDetailEntityListDictionaryResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCommonitemMetaSearchrelsmetaattrs"
+      }
+    },
+    "/api/meta/-/SearchRelsMetaAttrs": {
+      "post": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "查询多个关联类的属性",
+        "requestBody": {
+          "description": "关联类集合",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringDataItemDetailEntityListDictionaryResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiMeta-Searchrelsmetaattrs"
+      }
+    },
+    "/api/commonitem/meta/GetRuleCodeAttrNameInClass": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取类中的编码字段",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetrulecodeattrnameinclass"
+      }
+    },
+    "/api/meta/-/GetRuleCodeAttrNameInClass": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取类中的编码字段",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getrulecodeattrnameinclass"
+      }
+    },
+    "/api/commonitem/meta/GetInheritRelationsByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取继承的关联结构 且填充是否隐藏配置",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": "LEFT"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetinheritrelationsbyclassname"
+      }
+    },
+    "/api/meta/-/GetInheritRelationsByClassName": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取继承的关联结构 且填充是否隐藏配置",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": "LEFT"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getinheritrelationsbyclassname"
+      }
+    },
+    "/api/commonitem/meta/ChangeInheritRelationVisible": {
+      "post": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "更新继承关联的可见性配置",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCommonitemMetaChangeinheritrelationvisible"
+      }
+    },
+    "/api/meta/-/ChangeInheritRelationVisible": {
+      "post": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "更新继承关联的可见性配置",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiMeta-Changeinheritrelationvisible"
+      }
+    },
+    "/api/commonitem/meta/InitOperation": {
+      "post": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "初始化类的操作权限",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCommonitemMetaInitoperation"
+      }
+    },
+    "/api/meta/-/InitOperation": {
+      "post": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "初始化类的操作权限",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiMeta-Initoperation"
+      }
+    },
+    "/api/commonitem/meta/GetClassOperation": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "查询类的现有操作类型",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetclassoperation"
+      }
+    },
+    "/api/meta/-/GetClassOperation": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "查询类的现有操作类型",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getclassoperation"
+      }
+    },
+    "/api/commonitem/meta/GetObjectEnable": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取类的右侧详情页tab开关\n1.针对对象,对象是否可单独创建配置消息规则提醒 2.是否开启指标管理",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "类名",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetobjectenable"
+      }
+    },
+    "/api/meta/-/GetObjectEnable": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取类的右侧详情页tab开关\n1.针对对象,对象是否可单独创建配置消息规则提醒 2.是否开启指标管理",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "类名",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getobjectenable"
+      }
+    },
+    "/api/commonitem/meta/SaveMetaParameter": {
+      "post": {
+        "tags": [
+          "Meta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CIMetaParameterEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CIMetaParameterEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CIMetaParameterEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CIMetaParameterEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCommonitemMetaSavemetaparameter"
+      }
+    },
+    "/api/meta/-/SaveMetaParameter": {
+      "post": {
+        "tags": [
+          "Meta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CIMetaParameterEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CIMetaParameterEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CIMetaParameterEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CIMetaParameterEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiMeta-Savemetaparameter"
+      }
+    },
+    "/api/commonitem/meta/SaveMetaParameters": {
+      "post": {
+        "tags": [
+          "Meta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CIMetaParameterEntity"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CIMetaParameterEntity"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CIMetaParameterEntity"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CIMetaParameterEntity"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiCommonitemMetaSavemetaparameters"
+      }
+    },
+    "/api/meta/-/SaveMetaParameters": {
+      "post": {
+        "tags": [
+          "Meta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CIMetaParameterEntity"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CIMetaParameterEntity"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CIMetaParameterEntity"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CIMetaParameterEntity"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiMeta-Savemetaparameters"
+      }
+    },
+    "/api/commonitem/meta/GetMetaParameter": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "className",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "relationName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "inherit",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CIMetaParameterEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetmetaparameter"
+      }
+    },
+    "/api/meta/-/GetMetaParameter": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "className",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "relationName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "inherit",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CIMetaParameterEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getmetaparameter"
+      }
+    },
+    "/api/commonitem/meta/GetMetaParameters": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "classNames",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "relationNames",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "inherit",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CIMetaParameterEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetmetaparameters"
+      }
+    },
+    "/api/meta/-/GetMetaParameters": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "classNames",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "relationNames",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "inherit",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CIMetaParameterEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getmetaparameters"
+      }
+    },
+    "/api/commonitem/meta/GetFullMetaClassSenseOption": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取类型 场景配置信息",
+        "parameters": [
+          {
+            "name": "withClass",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "withRelation",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FullMetaSenseOptionDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetfullmetaclasssenseoption"
+      }
+    },
+    "/api/meta/-/GetFullMetaClassSenseOption": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取类型 场景配置信息",
+        "parameters": [
+          {
+            "name": "withClass",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "withRelation",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FullMetaSenseOptionDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getfullmetaclasssenseoption"
+      }
+    },
+    "/api/commonitem/meta/GetMetaClassSenseOption": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取指定 类 元信息 场景选项 \n\nclassname : senseoptdto",
+        "parameters": [
+          {
+            "name": "classNames",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringItemMetaClassSenseOptionModelDictionaryResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetmetaclasssenseoption"
+      }
+    },
+    "/api/meta/-/GetMetaClassSenseOption": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取指定 类 元信息 场景选项 \n\nclassname : senseoptdto",
+        "parameters": [
+          {
+            "name": "classNames",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringItemMetaClassSenseOptionModelDictionaryResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getmetaclasssenseoption"
+      }
+    },
+    "/api/commonitem/meta/GetMetaRelationSenseOption": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取指定 关联 元信息 场景选项 \n\nclassname : senseoptdto",
+        "parameters": [
+          {
+            "name": "classNames",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringItemMetaRelationSenseOptionModelDictionaryResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetmetarelationsenseoption"
+      }
+    },
+    "/api/meta/-/GetMetaRelationSenseOption": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取指定 关联 元信息 场景选项 \n\nclassname : senseoptdto",
+        "parameters": [
+          {
+            "name": "classNames",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringItemMetaRelationSenseOptionModelDictionaryResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getmetarelationsenseoption"
+      }
+    },
+    "/api/commonitem/meta/GetFullClasslTree": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取类树形数据",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetfullclassltree"
+      }
+    },
+    "/api/meta/-/GetFullClasslTree": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取类树形数据",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getfullclassltree"
+      }
+    },
+    "/api/commonitem/meta/GetFullRelationTree": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取关联树形数据",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetfullrelationtree"
+      }
+    },
+    "/api/meta/-/GetFullRelationTree": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取关联树形数据",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getfullrelationtree"
+      }
+    },
+    "/api/commonitem/meta/GetClassifyTree": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取关联树形数据",
+        "parameters": [
+          {
+            "name": "root",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiCommonitemMetaGetclassifytree"
+      }
+    },
+    "/api/meta/-/GetClassifyTree": {
+      "get": {
+        "tags": [
+          "Meta"
+        ],
+        "summary": "获取关联树形数据",
+        "parameters": [
+          {
+            "name": "root",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiMeta-Getclassifytree"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Meta",
+      "description": "Meta API"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "StringStringStringArrayDictionaryDictionaryResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicMetaAttributeDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/BasicMetaAttributeDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicMetaAttributeDtoMetaExtraAttributeSearchResult": {
+        "type": "object",
+        "properties": {
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "full": {
+            "type": "boolean"
+          },
+          "withPair": {
+            "type": "boolean"
+          },
+          "withPairMid": {
+            "type": "boolean"
+          },
+          "excludeClobs": {
+            "type": "boolean"
+          },
+          "excludeInVisiable": {
+            "type": "boolean"
+          },
+          "excludeConst": {
+            "type": "boolean"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "fFilter": {
+            "$ref": "#/components/schemas/DataItemDetailEntityBooleanFunc"
+          },
+          "fBuilder": {
+            "$ref": "#/components/schemas/DataItemDetailEntityBasicMetaAttributeDtoFunc"
+          },
+          "metaAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicMetaAttributeDto"
+            },
+            "nullable": true
+          },
+          "includeCodingRuleExtraAttr": {
+            "type": "boolean",
+            "description": "是否包含多编码字段的额外属性"
+          }
+        },
+        "additionalProperties": false,
+        "description": "类 的 属性查询参数及结果 - 需要转换为类型 T"
+      },
+      "StringDataItemDetailEntityListDictionaryResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/DataItemDetailEntity"
+              }
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicMetaRelationDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/BasicMetaRelationDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicMetaAttributeDtoMetaExtraAttributeSearchResultListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicMetaAttributeDtoMetaExtraAttributeSearchResult"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TreeModelResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/TreeModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CIMetaParameterEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CIMetaParameterEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FullMetaSenseOptionDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/FullMetaSenseOptionDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicMetaAttributeDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicMetaAttributeDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CIMetaParameterEntity": {
+        "type": "object",
+        "properties": {
+          "plM_OID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "oid": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_CLASS": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_RELATION": {
+            "type": "string",
+            "nullable": true
+          },
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "multiClass": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MetaRelationEntityPaginationRowsResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/MetaRelationEntityPaginationRows"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringItemMetaClassSenseOptionModelDictionaryResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ItemMetaClassSenseOptionModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringItemMetaRelationSenseOptionModelDictionaryResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ItemMetaRelationSenseOptionModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicMetaRelationDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicMetaRelationDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TreeModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TreeModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicMetaClassDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicMetaClassDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CIMetaParameterEntityResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/CIMetaParameterEntity"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicMetaClassDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/BasicMetaClassDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DataItemDetailEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DataItemDetailEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

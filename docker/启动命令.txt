@@ -27,44 +27,97 @@ llm_temperature=0.7
 llm_max_tokens=1000
 llm_timeout=30
 
-后端API2MCP启动
-npx -y @ivotoby/openapi-mcp-server --transport http --port 3000 --openapi-spec http://localhost:7860/openapi.json --api-base-url http://localhost:7860 --headers "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ7XCJ1c2VyX25hbWVcIjogXCJ4eWNcIiwgXCJ1c2VyX2lkXCI6IFwiMVwiLCBcInJvbGVcIjogW119IiwiaWF0IjoxNzczMDI0NDIyLCJuYmYiOjE3NzMwMjQ0MjIsImp0aSI6IjJjMGY1Mjg4LTVmMTktNDM5MS1hNGUxLWFhNDkwNjQxMzJiMyIsImV4cCI6MTc3MzExMDgyMiwidHlwZSI6ImFjY2VzcyIsImZyZXNoIjpmYWxzZX0.9NNRDp0hMvQpWkBmaFk7X80H9JmyyQ9uckiE0BfBoIs"
+后端 API2MCP 启动
+$env:NODE_TLS_REJECT_UNAUTHORIZED="0"
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3100 --openapi-spec http://localhost:7860/openapi.json --api-base-url http://localhost:7860 --headers "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ7XCJ1c2VyX25hbWVcIjogXCJ4eWNcIiwgXCJ1c2VyX2lkXCI6IFwiMVwiLCBcInJvbGVcIjogW119IiwiaWF0IjoxNzczNzk5MzI5LCJuYmYiOjE3NzM3OTkzMjksImp0aSI6ImU5MGY4MzY2LWI0NjQtNGM0Yi1hYmY2LWVjMGMxYzRiZmI4OSIsImV4cCI6MTc3Mzg4NTcyOSwidHlwZSI6ImFjY2VzcyIsImZyZXNoIjpmYWxzZX0.p8w8_sVhWFSTeYnea9rEfaqZZZTvr2H5oB_IAWua6IU"
 
-md生成MCP启动
+md 生成 MCP 启动
 uvx --from docling-mcp docling-mcp-server --transport sse --port 3002
 
 
 后端启动命令
-conda activate agentchat-py312
-cd .\src\backend\
-uvicorn agentchat.main:app --host 0.0.0.0 --port 7860
+cd c:\Users\Administrator\workSpace\AI4T\AgentChat\src\backend && python -m uvicorn agentchat.main:app --host 0.0.0.0 --port 7860
 
 前端启动命令
-cd src/frontend
-npm run dev -- --host 0.0.0.0 --port 8090
+cd src/frontend && npm run dev -- --host 0.0.0.0 --port 8090
 
 npx @modelcontextprotocol/inspector
 
-数据库MCP启动
+数据库 MCP 启动
 mysql_mcp_server_pro --mode sse --envfile .env.mysql
 
+# ============================================
+# 通用环境变量配置（三个 MCP服务器共用）
+# ============================================
+$env:NODE_TLS_REJECT_UNAUTHORIZED="0"
+$env:API_BASE_URL="https://huawei.yiban.com.cn/platform"
+# 方式 1：使用 PowerShell 哈希表对象（推荐，避免 JSON 序列化问题）
+$env:API_HEADERS=@{"Authorization"="Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyT2lkIjoiMzRlYjU1OTYtNTdiNy00MDU2LWE1Y2QtMjRlYmE3ODAxMzJhIiwiTG9naW5JZCI6InN5c2FkbWluIiwiVXNlck5hbWUiOiLns7vnu5_nrqHnkIblkZgiLCJUb2tlbiI6ImM5OThhNDcwLTZhM2EtNGJiOS1iNmRlLThlYzhkNWJhYjRhZiIsIkNyZWF0b3IiOiJzeXMiLCJDcmVhdGVUaW1lIjoiMjAyNi0wMy0xOSAxMDowNzo1NyIsIlNjaGVtYSI6InBsbSIsIlBsYXRmb3JtIjoicGMiLCJFeHBpcmVzIjoiMjAyNi0wMy0zMSAxMDowNzo1NyIsIm5iZiI6MTc3Mzg4NjA3NywiZXhwIjoxNzc0OTIyODc3LCJpc3MiOiJXZWJBcHBJc3N1ZXIiLCJhdWQiOiJXZWJBcHBBdWRpZW5jZSJ9.A-9pYQQ6s-jvlvsS7X6TwYX5kT9bw41gyLn56l2whZE"}
+
+# ============================================
+# MCP服务器启动命令（统一使用 @ivotoby/openapi-mcp-server）
+# ============================================
+
+# 一半科技 API (端口 3000)
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3000 --openapi-spec "c:\Users\Administrator\Downloads\swagger1.optimized.json" --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS
+
+# Workflow API (端口 3001)
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3001 --openapi-spec c:\Users\Administrator\workSpace\AI4T\AgentChat\docker\swagger-workflow.optimized.json --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS
+
+# CommonItem API (端口 3002)
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3002 --openapi-spec c:\Users\Administrator\workSpace\AI4T\AgentChat\docker\swagger-commonitem.optimized.json --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS
 
 
-
-
-
-一半科技
-"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyT2lkIjoiMzRlYjU1OTYtNTdiNy00MDU2LWE1Y2QtMjRlYmE3ODAxMzJhIiwiTG9naW5JZCI6InN5c2FkbWluIiwiVXNlck5hbWUiOiLns7vnu5_nrqHnkIblkZgiLCJUb2tlbiI6IjRiMDBkNjI5LWQ1MjMtNGViZi05MTU0LWEyNzg4MTYzYWYzNiIsIkNyZWF0b3IiOiJzeXMiLCJDcmVhdGVUaW1lIjoiMjAyNi0wMy0wNiAxNzoyNDoxMiIsIlNjaGVtYSI6InBsbSIsIlBsYXRmb3JtIjoicGMiLCJFeHBpcmVzIjoiMjAyNi0wMy0xOCAxNzoyNDoxMiIsIm5iZiI6MTc3Mjc4OTA1MiwiZXhwIjoxNzczODI1ODUyLCJpc3MiOiJXZWJBcHBJc3N1ZXIiLCJhdWQiOiJXZWJBcHBBdWRpZW5jZSJ9.Pjks4_DGxz4AiELi0AN3M09OnkttT7eCcf9SpOSm3Zk"
-
-
-filesystem启动命令
-
+# ============================================
+# filesystem 启动命令
+# ============================================
 cd c:\Users\Administrator\workSpace\agentchat\AgentChat && python mcp_filesystem_server.py "C:\Users\Administrator\Documents\report_test" --transport sse --port 3004
-
-
 
 
 npx @playwright/mcp@latest --browser chromium --port 8931
 
 
+# 一键启动所有拆分的 MCP 服务器（14 个服务）
+.\start_all_mcp_quick.ps1
 
+
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3000 --openapi-spec "C:\Users\Administrator\workSpace\AI4T\AgentChat\docker\split_strategy_domain_threshold15\swagger-Platform_CodeSystem.json" --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS
+
+
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3001 --openapi-spec "C:\Users\Administrator\workSpace\AI4T\AgentChat\docker\split_strategy_domain_threshold15\swagger-Meta.json" --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS
+
+
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3002 --openapi-spec "C:\Users\Administrator\workSpace\AI4T\AgentChat\docker\split_strategy_domain_threshold15\swagger-Platform_Employee.json" --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS
+
+
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3003 --openapi-spec "C:\Users\Administrator\workSpace\AI4T\AgentChat\docker\split_strategy_domain_threshold15\swagger-Platform_Permissions.json" --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS
+
+
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3004 --openapi-spec "C:\Users\Administrator\workSpace\AI4T\AgentChat\docker\split_strategy_domain_threshold15\swagger-Platform_Orginization.json" --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS
+
+
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3005 --openapi-spec "C:\Users\Administrator\workSpace\AI4T\AgentChat\docker\split_strategy_domain_threshold15\swagger-Employee_Sync.json" --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS
+
+
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3006 --openapi-spec "C:\Users\Administrator\workSpace\AI4T\AgentChat\docker\split_strategy_domain_threshold15\swagger-CommonLib_Info.json" --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS
+
+
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3007 --openapi-spec "C:\Users\Administrator\workSpace\AI4T\AgentChat\docker\split_strategy_domain_threshold15\swagger-Form.json" --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS
+
+
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3008 --openapi-spec "C:\Users\Administrator\workSpace\AI4T\AgentChat\docker\split_strategy_domain_threshold15\swagger-Platform_Authority.json" --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS
+
+
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3009 --openapi-spec "C:\Users\Administrator\workSpace\AI4T\AgentChat\docker\split_strategy_domain_threshold15\swagger-Module.json" --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS
+
+
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3010 --openapi-spec "C:\Users\Administrator\workSpace\AI4T\AgentChat\docker\split_strategy_domain_threshold15\swagger-Platform_Account.json" --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS
+
+
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3011 --openapi-spec "C:\Users\Administrator\workSpace\AI4T\AgentChat\docker\split_strategy_domain_threshold15\swagger-Form_Share.json" --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS
+
+
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3012 --openapi-spec "C:\Users\Administrator\workSpace\AI4T\AgentChat\docker\split_strategy_domain_threshold15\swagger-System_DataItem.json" --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS
+
+
+npx -y @ivotoby/openapi-mcp-server --transport http --port 3013 --openapi-spec "C:\Users\Administrator\workSpace\AI4T\AgentChat\docker\split_strategy_domain_threshold15\swagger-Others.json" --api-base-url $env:API_BASE_URL --headers $env:API_HEADERS

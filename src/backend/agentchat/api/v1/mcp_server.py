@@ -1,6 +1,6 @@
 import json
 from loguru import logger
-from fastapi import APIRouter, Body, Depends
+from fastapi import APIRouter, Body, Depends, Query
 
 from agentchat.api.services.mcp_server import MCPService
 from agentchat.api.services.user import UserPayload, get_login_user
@@ -68,9 +68,19 @@ async def create_mcp_server(
 
 
 @router.get("/mcp_server")
-async def get_mcp_servers(login_user: UserPayload = Depends(get_login_user)):
+async def get_mcp_servers(
+    withoutDetails: bool = False,
+    login_user: UserPayload = Depends(get_login_user)
+):
     try:
         mcp_servers = await MCPService.get_all_servers(login_user.user_id)
+        
+        # 如果 withoutDetails 为 true，移除 params 和 tools 字段
+        if withoutDetails:
+            for server in mcp_servers:
+                server.pop("params", None)
+                server.pop("tools", None)
+        
         return resp_200(data=mcp_servers)
     except Exception as err:
         logger.error(err)
@@ -95,7 +105,7 @@ async def delete_mcp_server(
 
 @router.get("/mcp_tools")
 async def get_mcp_tools(
-    server_id: str = Body(..., description="MCP Server 的ID", embed=True),
+    server_id: str = Query(..., description="MCP Server 的 ID"),
     login_user: UserPayload = Depends(get_login_user)
 ):
     try:

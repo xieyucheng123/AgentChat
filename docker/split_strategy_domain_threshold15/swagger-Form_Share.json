@@ -1,0 +1,1085 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Yiban.PLM.Web.Platform Api",
+    "description": "Api API Document Create At 2026-03-11 10:42:49",
+    "termsOfService": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/platform",
+    "contact": {
+      "name": "PLM经典版SDK开发组(PLM-Classic SDK Develop Group)",
+      "url": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/"
+    },
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "../../",
+      "description": "Default"
+    },
+    {
+      "url": "http://localhost:6010/",
+      "description": "Service"
+    }
+  ],
+  "paths": {
+    "/api/form/share/GetAnonymousToken": {
+      "get": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "产生匿名token",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "description": "匿名token产生的类型   data(数据目录分享)、 from(数据模型分享) or publish(发布分享)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "groupOid",
+            "in": "query",
+            "description": "分组groupOid :数据目录支持的分组分享",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "shareOid",
+            "in": "query",
+            "description": "分享 oid  or 发布oid",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiFormShareGetanonymoustoken"
+      }
+    },
+    "/api/form/share/GetPriveteFoldersByUser": {
+      "get": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "获取个人文件夹",
+        "parameters": [
+          {
+            "name": "userid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiFormShareGetprivetefoldersbyuser"
+      }
+    },
+    "/api/form/share/GetFormShareByClsName": {
+      "get": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "获取可操作的分享信息",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemFormShareEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiFormShareGetformsharebyclsname"
+      }
+    },
+    "/api/form/share/GetFormShare": {
+      "get": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "获取分享信息",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemFormShareEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiFormShareGetformshare"
+      }
+    },
+    "/api/form/share/CreateFormShare": {
+      "post": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "创建分享",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemFormShareEntity"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemFormShareEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemFormShareEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemFormShareEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemFormShareEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApiFormShareCreateformshare"
+      }
+    },
+    "/api/form/share/DeactivatedFormShare": {
+      "post": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "废弃分享",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Oid_Input"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Oid_Input"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Oid_Input"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Oid_Input"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemFormShareEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiFormShareDeactivatedformshare"
+      }
+    },
+    "/api/form/share/GetFormShareAttrGroups": {
+      "get": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "获取分享对象的属性组",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "分享标记",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AttrGroupEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiFormShareGetformshareattrgroups"
+      }
+    },
+    "/api/form/share/GetFormShareAttrList": {
+      "get": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "获取对象的属性列表",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "query",
+            "description": "分享标记",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonFormModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiFormShareGetformshareattrlist"
+      }
+    },
+    "/api/form/share/GetShareAttributeGroups": {
+      "get": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "属性组信息",
+        "parameters": [
+          {
+            "name": "shareOid",
+            "in": "query",
+            "description": "分享oid",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "类型[data or form 二选一]",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AttrGroupDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiFormShareGetshareattributegroups"
+      }
+    },
+    "/api/form/share/GetAllAttrPageByClassName": {
+      "get": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "获取所有属性页和属性页下面的属性组",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseAttrPageDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiFormShareGetallattrpagebyclassname"
+      }
+    },
+    "/api/form/share/ChangeAttrPageGroupInfo": {
+      "post": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "拖拽修改属性组所属属性页",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseAttrPageGroupDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseAttrPageGroupDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseAttrPageGroupDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseAttrPageGroupDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseAttrPageGroupDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiFormShareChangeattrpagegroupinfo"
+      }
+    },
+    "/api/form/share/GetShareAtrributeAttrList": {
+      "get": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "属性详细信息",
+        "parameters": [
+          {
+            "name": "shareOid",
+            "in": "query",
+            "description": "分享oid",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "类型[data or form 二选一]",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonFormModelResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiFormShareGetshareatrributeattrlist"
+      }
+    },
+    "/api/form/share/GetPageList": {
+      "get": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "获取分页数据",
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "关键字",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "companyId",
+            "in": "query",
+            "description": "公司主键",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withChild",
+            "in": "query",
+            "description": "部门主键",
+            "schema": {
+              "type": "string",
+              "default": "N"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "description": "分页参数",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiFormShareGetpagelist"
+      }
+    },
+    "/api/form/share/GetPersonNoPageList": {
+      "get": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "获取不分页数据【人员选择框】--只筛选有效的",
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "关键字",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "companyId",
+            "in": "query",
+            "description": "公司主键",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withChild",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": "N"
+            }
+          },
+          {
+            "name": "filterFrozen",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiFormShareGetpersonnopagelist"
+      }
+    },
+    "/api/form/share/GetTree": {
+      "get": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "获取树形数据",
+        "parameters": [
+          {
+            "name": "parentId",
+            "in": "query",
+            "description": "父级id",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiFormShareGettree"
+      }
+    },
+    "/api/form/share/GetDataTableSourceByCodeSystemCode": {
+      "get": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "获取引用资源",
+        "parameters": [
+          {
+            "name": "codeSystemCode",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "queryJson",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "getAll",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "instantParameter",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiFormShareGetdatatablesourcebycodesystemcode"
+      }
+    },
+    "/api/form/share/UploadFile": {
+      "post": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "匿名文件上传[改为和MVC的传参一样的格式 formData格式]",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PostApiFormShareUploadfile"
+      }
+    },
+    "/api/form/share/CreateFileAttachment": {
+      "get": {
+        "tags": [
+          "Form_Share"
+        ],
+        "summary": "根据模板生成文件",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApiFormShareCreatefileattachment"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Form_Share",
+      "description": "Form_Share API"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "Oid_Input": {
+        "type": "object",
+        "properties": {
+          "oid": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TreeModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TreeModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BaseAttrPageDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BaseAttrPageDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ObjectResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AttrGroupDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AttrGroupDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AttrGroupEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AttrGroupEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserInfoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/UserInfo"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BaseAttrPageGroupDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/BaseAttrPageGroupDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemFormShareEntityResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/ItemFormShareEntity"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ObjectListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {},
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemFormShareEntity": {
+        "type": "object",
+        "properties": {
+          "plM_OID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "oid": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_CREATOR": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "creator": {
+            "type": "string",
+            "nullable": true
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "plM_MODIFIER": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "modifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "modifyTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "itemClass": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_SHAREUSER": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "plM_FOLDEROID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "user": {
+            "type": "string",
+            "nullable": true
+          },
+          "folderId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CommonFormModelResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/CommonFormModel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BaseAttrPageGroupDto": {
+        "type": "object",
+        "properties": {
+          "oid": {
+            "type": "string",
+            "nullable": true
+          },
+          "attrPageOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "attrGroupOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "attrGroupType": {
+            "type": "string",
+            "nullable": true
+          },
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "enable": {
+            "type": "boolean"
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "attrGroup": {
+            "$ref": "#/components/schemas/BaseAttrGroupDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

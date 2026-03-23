@@ -1,0 +1,2168 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Yiban.PLM.Web.Platform Api",
+    "description": "Api API Document Create At 2026-03-11 10:42:49",
+    "termsOfService": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/platform",
+    "contact": {
+      "name": "PLM经典版SDK开发组(PLM-Classic SDK Develop Group)",
+      "url": "https://gitlab.dev.yiban.com.cn/plm-classic/srv/"
+    },
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "../../",
+      "description": "Default"
+    },
+    {
+      "url": "http://localhost:6010/",
+      "description": "Service"
+    }
+  ],
+  "paths": {
+    "/api/-obsolete-/commonlib/info/ClearRedis": {
+      "post": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "清空缓存",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "PostApi-Obsolete-CommonlibInfoClearredis"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetClassify": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取类信息",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "类名",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataItemEntityResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGetclassify"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetClassifyList": {
+      "post": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取类信息",
+        "requestBody": {
+          "description": "类名",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataItemEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "PostApi-Obsolete-CommonlibInfoGetclassifylist"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetClassifyList2": {
+      "post": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取类信息并确认是否存在子类",
+        "requestBody": {
+          "description": "类名",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataItemEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "PostApi-Obsolete-CommonlibInfoGetclassifylist2"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetAllChildrenClass": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取类下面所有子类",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "description": "是否包含自己",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicMetaClassDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGetallchildrenclass"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetAllParentClass": {
+      "post": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取类所有父类",
+        "parameters": [
+          {
+            "name": "withSelf",
+            "in": "query",
+            "description": "是否包含自己",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataItemEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "PostApi-Obsolete-CommonlibInfoGetallparentclass"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetDirectChildrenClass": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取类下面直接子类",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "description": "是否包含自己",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataItemEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGetdirectchildrenclass"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetDataModelTreeOnlyFirstChild": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "数据模型定制-菜单树 加载",
+        "description": "className  都为null时，菜单初始化（根菜单）其余情况根据id查询  备注：关联只有一级。",
+        "parameters": [
+          {
+            "name": "className",
+            "in": "query",
+            "description": "className (菜单的className)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "GroupName",
+            "in": "query",
+            "description": "对象分类名称",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AbstractPrimaryModelBasicRecursiveExtraModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGetdatamodeltreeonlyfirstchild"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetModelAndAttList": {
+      "post": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetIterationModelListInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetIterationModelListInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetIterationModelListInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetIterationModelListInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "PostApi-Obsolete-CommonlibInfoGetmodelandattlist"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/SaveBaseDataMapModelList": {
+      "post": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "保存对象sheet模版",
+        "parameters": [
+          {
+            "name": "returnData",
+            "in": "query",
+            "description": "是否返回数据",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "结构数据",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BaseDataMapModel"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BaseDataMapModel"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BaseDataMapModel"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BaseDataMapModel"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseIterationDataModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "PostApi-Obsolete-CommonlibInfoSavebasedatamapmodellist"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/BatchUpdateStatus": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "版本控制--批量处理",
+        "parameters": [
+          {
+            "name": "UpdateStatus",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PLMDESC",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "skipAuth",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoBatchupdatestatus"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/SearchClassifyList": {
+      "post": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "根据类名模糊匹配类",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchClassifyInDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchClassifyInDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchClassifyInDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchClassifyInDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataItemEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "PostApi-Obsolete-CommonlibInfoSearchclassifylist"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetFolderTree": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取文件夹树",
+        "parameters": [
+          {
+            "name": "folderTypes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "keyWord",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicFolderDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGetfoldertree"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/SaveFolder": {
+      "post": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "保存文件夹",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FolderParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FolderParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FolderParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FolderParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicFolderDtoResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "PostApi-Obsolete-CommonlibInfoSavefolder"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetFolderInProject": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "判断文件夹是否可删除",
+        "parameters": [
+          {
+            "name": "folder",
+            "in": "query",
+            "description": "文件夹id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringInt32DictionaryResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGetfolderinproject"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/DeleteFolder": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "删除文件夹及其子文件夹下的业务对象",
+        "parameters": [
+          {
+            "name": "keyValue",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoDeletefolder"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/MoveFolder": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "复制或剪切文件夹",
+        "parameters": [
+          {
+            "name": "keyValue",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "parentfolderId",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "folderFlag",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoMovefolder"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetTree": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取树形数据",
+        "parameters": [
+          {
+            "name": "parentId",
+            "in": "query",
+            "description": "父级id",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGettree"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetListByCompanyIds": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取公司列表",
+        "parameters": [
+          {
+            "name": "companyIds",
+            "in": "query",
+            "description": "主键串",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompanyEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGetlistbycompanyids"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetPersonNoPageList": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取不分页数据【人员选择框】--只筛选有效的",
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "关键字",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "companyId",
+            "in": "query",
+            "description": "公司主键",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withChild",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": "N"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGetpersonnopagelist"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetEntityListByUserIds": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取用户信息列表",
+        "parameters": [
+          {
+            "name": "keyValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGetentitylistbyuserids"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetGroupTree": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取分组列表的数据",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TreeModelListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGetgrouptree"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetAllRolesInOneGroup": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取分页数据",
+        "parameters": [
+          {
+            "name": "groupOid",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination",
+            "in": "query",
+            "description": "分页参数",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "关键字",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGetallrolesinonegroup"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetListByRoleIds": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取角色数据列表",
+        "parameters": [
+          {
+            "name": "roleIds",
+            "in": "query",
+            "description": "主键串",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGetlistbyroleids"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/SaveUserEnvData": {
+      "post": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "保存用户配置",
+        "requestBody": {
+          "description": "实体",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/UserENVEntity"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/UserENVEntity"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/UserENVEntity"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/UserENVEntity"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "PostApi-Obsolete-CommonlibInfoSaveuserenvdata"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetUserEnvDatas": {
+      "post": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取用户配置",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserENVEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "PostApi-Obsolete-CommonlibInfoGetuserenvdatas"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetFormData": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取表单模板样式数据",
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "projetOid",
+            "in": "query",
+            "description": "根据项目id获取属性权限",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "MetaType",
+            "in": "query",
+            "description": "class Or rel",
+            "schema": {
+              "type": "string",
+              "default": "class"
+            }
+          },
+          {
+            "name": "ForSetting",
+            "in": "query",
+            "description": "是否用作配置",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "GetRelationWithRightClass",
+            "in": "query",
+            "description": "查询关联表单的时候把右对象的表单也查出来",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormDataResultResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGetformdata"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetClassFormComponent": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取表单模板样式数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "categoryId",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "projetOid",
+            "in": "query",
+            "description": "根据项目id获取属性权限",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "ForSetting",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormDataResultResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGetclassformcomponent"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetRelationFormComponent": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取表单模板样式数据",
+        "parameters": [
+          {
+            "name": "clsName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "categoryId",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "projetOid",
+            "in": "query",
+            "description": "根据项目id获取属性权限",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "withSelf",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "GetRelationWithRightClass",
+            "in": "query",
+            "description": "查询关联表单的时候把右对象的表单也查出来",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormDataResultResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGetrelationformcomponent"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/PostFiles": {
+      "post": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "上传文件",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BasicFileInfoDtoListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "PostApi-Obsolete-CommonlibInfoPostfiles"
+      }
+    },
+    "/api/-obsolete-/commonlib/info/GetFileIndexInfos": {
+      "get": {
+        "tags": [
+          "CommonLib_Info"
+        ],
+        "summary": "获取文件信息",
+        "parameters": [
+          {
+            "name": "fileOid",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceFileIndexEntityListResParameter"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true,
+        "operationId": "GetApi-Obsolete-CommonlibInfoGetfileindexinfos"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "CommonLib_Info",
+      "description": "CommonLib_Info API"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "AbstractPrimaryModelBasicRecursiveExtraModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AbstractPrimaryModelBasicRecursiveExtraModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FormDataResultResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/FormDataResult"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserENVEntity": {
+        "type": "object",
+        "properties": {
+          "plM_OID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "oid": {
+            "type": "string",
+            "nullable": true
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "userOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "plM_USEROID": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BaseDataMapModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "level": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oid": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "moid": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "model": {
+            "$ref": "#/components/schemas/BaseIterationHashModel"
+          },
+          "dataModel": {
+            "$ref": "#/components/schemas/BaseIterationDataModel"
+          },
+          "relationArr": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BaseRelationHashModel"
+            },
+            "nullable": true
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BaseDataMapModel"
+            },
+            "nullable": true
+          },
+          "parentRelPattern": {
+            "$ref": "#/components/schemas/ParentRelPattern"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DataItemEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DataItemEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RoleEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RoleEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SearchClassifyInDto": {
+        "type": "object",
+        "properties": {
+          "classChinaName": {
+            "type": "string",
+            "description": "类名中文名称",
+            "nullable": true
+          },
+          "scopeClassName": {
+            "type": "string",
+            "description": "范围类名",
+            "nullable": true
+          },
+          "isIncludeParentClass": {
+            "type": "boolean",
+            "description": "是否包含父类"
+          }
+        },
+        "additionalProperties": false,
+        "description": "查询类"
+      },
+      "CompanyEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CompanyEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserENVEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserENVEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicFolderDtoResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/BasicFolderDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TreeModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TreeModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetIterationModelListInput": {
+        "type": "object",
+        "properties": {
+          "extra": {
+            "type": "object",
+            "additionalProperties": {},
+            "nullable": true
+          },
+          "attributes": {
+            "type": "object",
+            "additionalProperties": {},
+            "nullable": true
+          },
+          "attrList": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "attrEntities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DataItemDetailEntity"
+            },
+            "nullable": true
+          },
+          "classAttrHashMap": {
+            "type": "object",
+            "additionalProperties": {
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "nullable": true
+          },
+          "mode": {
+            "type": "string",
+            "nullable": true
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "condition": {
+            "$ref": "#/components/schemas/Condition"
+          },
+          "headerCondition": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Condition"
+            },
+            "nullable": true
+          },
+          "excludeClobs": {
+            "type": "boolean"
+          },
+          "keyWord": {
+            "type": "string",
+            "nullable": true
+          },
+          "isKeyWordMatchAll": {
+            "type": "boolean"
+          },
+          "attributesWithAll": {
+            "type": "boolean"
+          },
+          "searchMode": {
+            "$ref": "#/components/schemas/SearchModeEnum"
+          },
+          "ignorePG": {
+            "type": "boolean"
+          },
+          "extraFilterSql": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "classNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "folderOids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "masterAttrList": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "codingRulePairList": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "codingRulePairEntities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ItemCodingRulePairEntity"
+            },
+            "nullable": true
+          },
+          "classCodingRulePairHashMap": {
+            "type": "object",
+            "additionalProperties": {
+              "uniqueItems": true,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "nullable": true
+          },
+          "latestIter": {
+            "type": "boolean"
+          },
+          "latestRev": {
+            "type": "boolean"
+          },
+          "extraField": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StringStringStringValueTuple"
+            },
+            "nullable": true
+          },
+          "isFocus": {
+            "type": "boolean"
+          },
+          "isCheckOut": {
+            "type": "boolean"
+          },
+          "className": {
+            "type": "string",
+            "nullable": true
+          },
+          "through": {
+            "type": "boolean"
+          },
+          "classFilterVisiable": {
+            "type": "boolean"
+          },
+          "classFilterClassify": {
+            "type": "boolean"
+          },
+          "excludeClasses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "folderOid": {
+            "type": "string",
+            "nullable": true
+          },
+          "folderThrought": {
+            "type": "boolean"
+          },
+          "skipAuth": {
+            "type": "boolean"
+          },
+          "extraParameter": {
+            "type": "object",
+            "additionalProperties": {},
+            "nullable": true
+          },
+          "filterMeta": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BaseIterationDataModelListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BaseIterationDataModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StringInt32DictionaryResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicFileInfoDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicFileInfoDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicMetaClassDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicMetaClassDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResourceFileIndexEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceFileIndexEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FolderParameter": {
+        "type": "object",
+        "properties": {
+          "parentOid": {
+            "type": "string",
+            "description": "父级文件夹主键",
+            "nullable": true
+          },
+          "folderFlag": {
+            "type": "boolean",
+            "description": ""
+          },
+          "entity": {
+            "$ref": "#/components/schemas/FolderEntity"
+          }
+        },
+        "additionalProperties": false,
+        "description": "文件夹参数"
+      },
+      "ObjectResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DataItemEntityResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/DataItemEntity"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BasicFolderDtoListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasicFolderDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserEntityListResParameter": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "errcode": {
+            "$ref": "#/components/schemas/ResponseCode"
+          },
+          "info": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
